@@ -436,5 +436,10 @@ namespace PhoneBook.Controls
             searchResults = new Dictionary<int, List<NumberPhoneView>>();
             UpdateData(new List<NumberPhoneView>());
         }
+
+        private void btnListResultAddresses_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

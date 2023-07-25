@@ -70,13 +70,13 @@
             // tabControlAdv
             // 
             this.tabControlAdv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.tabControlAdv.BeforeTouchSize = new System.Drawing.Size(825, 249);
+            this.tabControlAdv.BeforeTouchSize = new System.Drawing.Size(825, 250);
             this.tabControlAdv.Controls.Add(this.searchByAddressTab);
             this.tabControlAdv.Controls.Add(this.tabPageAdv2);
             this.tabControlAdv.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControlAdv.Location = new System.Drawing.Point(5, 5);
             this.tabControlAdv.Name = "tabControlAdv";
-            this.tabControlAdv.Size = new System.Drawing.Size(825, 249);
+            this.tabControlAdv.Size = new System.Drawing.Size(825, 250);
             this.tabControlAdv.TabIndex = 4;
             this.tabControlAdv.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv_SelectedIndexChanged);
             // 
@@ -103,7 +103,7 @@
             this.searchByAddressTab.Location = new System.Drawing.Point(1, 31);
             this.searchByAddressTab.Name = "searchByAddressTab";
             this.searchByAddressTab.ShowCloseButton = true;
-            this.searchByAddressTab.Size = new System.Drawing.Size(822, 216);
+            this.searchByAddressTab.Size = new System.Drawing.Size(822, 217);
             this.searchByAddressTab.TabFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.searchByAddressTab.TabForeColor = System.Drawing.Color.White;
             this.searchByAddressTab.TabIndex = 1;
@@ -138,6 +138,7 @@
             this.btnListResultAddresses.Size = new System.Drawing.Size(35, 32);
             this.btnListResultAddresses.TabIndex = 13;
             this.btnListResultAddresses.UseVisualStyleBackColor = false;
+            this.btnListResultAddresses.Click += new System.EventHandler(this.btnListResultAddresses_Click);
             // 
             // btnAddSearch
             // 
@@ -440,10 +441,10 @@
             this.gridPhones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPhones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gridPhones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.gridPhones.Location = new System.Drawing.Point(5, 254);
+            this.gridPhones.Location = new System.Drawing.Point(5, 255);
             this.gridPhones.Name = "gridPhones";
             this.gridPhones.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.gridPhones.Size = new System.Drawing.Size(825, 336);
+            this.gridPhones.Size = new System.Drawing.Size(825, 335);
             this.gridPhones.TabIndex = 5;
             // 
             // SearchControl

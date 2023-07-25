@@ -80,7 +80,7 @@ namespace PhoneBook
         {
             MoveSidePanel(btnAdd);
             //if (CheckExistDb())
-            //    AddControlToPanel(new UC_Add());
+                AddControlToPanel(new AddControl());
             //else
             //    AddControlToPanel(new UC_ErrorConnect());
         }
