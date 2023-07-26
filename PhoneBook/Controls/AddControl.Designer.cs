@@ -142,6 +142,7 @@
             this.btnEditCityAdd.Size = new System.Drawing.Size(40, 35);
             this.btnEditCityAdd.TabIndex = 15;
             this.btnEditCityAdd.UseVisualStyleBackColor = false;
+            this.btnEditCityAdd.Click += new System.EventHandler(this.btnEditCityAdd_Click);
             // 
             // btnEditCountryAdd
             // 

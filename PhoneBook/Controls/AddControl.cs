@@ -23,16 +23,17 @@ namespace PhoneBook.Controls
 
         private void CountryControlAddApartments_CountryChanged(int countryId)
         {
-            cityControlAddApartments.LoadCity(countryId);
             ClearDataOnAddApartmentsTab("CountryControl");
+            cityControlAddApartments.LoadCity(countryId);
         }
 
         private void CityControlAddApartments_CityChanged(int cityId)
         {
+            ClearDataOnAddApartmentsTab("CityControl");
+
             maskNumber = City.GetMaskNumberbyCityId(cityId);
 
             addressControlAddApartments.LoadAddress(cityId, chkPrivateHouse.Checked);
-            ClearDataOnAddApartmentsTab("CityControl");
         }
 
         private void tabControlAddAdv_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,6 +70,30 @@ namespace PhoneBook.Controls
                 countryControlAddApartments.ClearDataCountry();
                 ClearDataOnAddApartmentsTab("CountryControl");
                 countryControlAddApartments.LoadCountry();
+            }
+        }
+
+        private void btnEditCityAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(countryControlAddApartments.GetTextCountry()))
+            {
+                MessageBox.Show("Укажите Страну.", "Уведомление",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var editCityForm = new EditCity();
+                var countryId = countryControlAddApartments.GetCountryId();
+                using (var db = new ApplicationContext())
+                {
+                    editCityForm.Country = db.Country.Where(c => c.Id == countryId).FirstOrDefault();
+                }
+                if (editCityForm.ShowDialog() == DialogResult.OK)
+                {
+                    cityControlAddApartments.ClearDataCity();
+                    ClearDataOnAddApartmentsTab("CityControl");
+                    cityControlAddApartments.LoadCity(countryId);
+                }
             }
         }
     }

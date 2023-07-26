@@ -55,5 +55,15 @@ namespace PhoneBook.UserControls
             autoCompleteControlCountry.AutoComplete.DataSource = null;
             autoCompleteControlCountry.AutoComplete.ResetHistory();
         }
+
+        public int GetCountryId()
+        {
+            return Convert.ToInt32(autoCompleteControlCountry.AutoComplete.GetItemArray(autoCompleteControlCountry.TextBox.Text)[0]);
+        }
+
+        public string GetTextCountry()
+        {
+            return autoCompleteControlCountry.TextBox.Text;
+        }
     }
 }
