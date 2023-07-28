@@ -46,5 +46,23 @@ namespace PhoneBook.UserControls
             autoCompleteControlCity.AutoComplete.DataSource = null;
             autoCompleteControlCity.AutoComplete.ResetHistory();
         }
+
+        public string GetTextCity()
+        {
+            return autoCompleteControlCity.TextBox.Text;
+        }
+
+        public int GetCityId()
+        {
+            return Convert.ToInt32(autoCompleteControlCity.AutoComplete.GetItemArray(autoCompleteControlCity.TextBox.Text)[0]);
+        }
+
+        public void SelectCity(int cityId)
+        {
+            autoCompleteControlCity.AutoComplete.ActiveFocusControl = autoCompleteControlCity.TextBox;
+            autoCompleteControlCity.AutoComplete.SelectedValue = autoCompleteControlCity.TextBox.Text;
+            autoCompleteControlCity.AutoComplete.ActiveFocusControl = null;
+            CityChanged?.Invoke(Convert.ToInt32(cityId));
+        }
     }
 }

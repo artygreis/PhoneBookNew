@@ -28,7 +28,7 @@ namespace PhoneBook.Types
                         .Select(a => new AddressCollection()
                         {
                             AddressId = a.Id,
-                            DataAddress = $"{(string.IsNullOrEmpty(a.Locality) ? "" : a.Locality + ", ")}{a.TypeStreet?.TypeName} {a.StreetName}, {a.House}",
+                            DataAddress = $"{(string.IsNullOrEmpty(a.Locality) ? "" : a.Locality + ", ")}{a.TypeStreet?.TypeName} {a.StreetName}{(string.IsNullOrEmpty(a.House) ? "" : ", " + a.House)}",
                             PrivateHouse = a.PrivateHouse
                         })
                         .Where(p => p.PrivateHouse == privateHouse)

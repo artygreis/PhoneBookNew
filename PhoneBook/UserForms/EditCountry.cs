@@ -8,14 +8,14 @@ namespace PhoneBook.Forms
     {
         Regex regex = new Regex(@"[^0-9]");
         const int errorPadding = 4;
-        private Country? currentCountry => GridCountries.DataGrid.SelectedItem as Country;
+        private Country? currentCountry => gridCountries.DataGrid.SelectedItem as Country;
         public EditCountry()
         {
             InitializeComponent();
-            GridCountries.SelectionModeGrid = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Single;
-            GridCountries.SelectionUnitGrid = Syncfusion.WinForms.DataGrid.Enums.SelectionUnit.Row;
-            GridCountries.DataGrid.HeaderRowHeight = 40;
-            GridCountries.DataGrid.AllowSorting = false;
+            gridCountries.SelectionModeGrid = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Single;
+            gridCountries.SelectionUnitGrid = Syncfusion.WinForms.DataGrid.Enums.SelectionUnit.Row;
+            gridCountries.DataGrid.HeaderRowHeight = 40;
+            gridCountries.DataGrid.AllowSorting = false;
 
             UpdateData(new List<Country>() { new Country() });
         }
@@ -53,13 +53,13 @@ namespace PhoneBook.Forms
 
         private void UpdateData(List<Country> countries)
         {
-            GridCountries.DataGrid.DataSource = countries;
-            GridCountries.DataGrid.Columns["Id"].Visible = false;
-            GridCountries.DataGrid.Columns["CountryName"].Width = 140;
-            GridCountries.DataGrid.Columns["CountryCode"].Width = 103;
-            GridCountries.DataGrid.Columns["CountDigits"].Width = 100;
-            GridCountries.DataGrid.Columns["CountDigits"].AllowHeaderTextWrapping = true;
-            GridCountries.DataGrid.Columns["Example"].Width = 140;
+            gridCountries.DataGrid.DataSource = countries;
+            gridCountries.DataGrid.Columns["Id"].Visible = false;
+            gridCountries.DataGrid.Columns["CountryName"].Width = 140;
+            gridCountries.DataGrid.Columns["CountryCode"].Width = 103;
+            gridCountries.DataGrid.Columns["CountDigits"].Width = 100;
+            gridCountries.DataGrid.Columns["CountDigits"].AllowHeaderTextWrapping = true;
+            gridCountries.DataGrid.Columns["Example"].Width = 140;
         }
 
         private void btnClose_Click(object sender, System.EventArgs e)

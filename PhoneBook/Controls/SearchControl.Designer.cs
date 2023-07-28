@@ -430,7 +430,7 @@
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 31);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(822, 216);
+            this.tabPageAdv2.Size = new System.Drawing.Size(822, 217);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;

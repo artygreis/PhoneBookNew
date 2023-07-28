@@ -1,7 +1,6 @@
 using PhoneBook.Controls;
 using PhoneBook.Types.Settings;
 using System.Reflection;
-using System.Runtime.InteropServices;
 
 namespace PhoneBook
 {

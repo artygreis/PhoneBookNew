@@ -40,7 +40,7 @@ namespace PhoneBook.Forms
             this.lblFormatNumber = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtFormatNumber = new System.Windows.Forms.MaskedTextBox();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.uC_GridCities = new PhoneBook.UserControls.GridControl();
+            this.gridCities = new PhoneBook.UserControls.GridControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblCountry = new System.Windows.Forms.Label();
@@ -131,25 +131,25 @@ namespace PhoneBook.Forms
             // pnlGrid
             // 
             this.pnlGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.pnlGrid.Controls.Add(this.uC_GridCities);
+            this.pnlGrid.Controls.Add(this.gridCities);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlGrid.Location = new System.Drawing.Point(4, 217);
+            this.pnlGrid.Location = new System.Drawing.Point(4, 213);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(476, 280);
+            this.pnlGrid.Size = new System.Drawing.Size(472, 280);
             this.pnlGrid.TabIndex = 0;
             // 
-            // uC_GridCities
+            // gridCities
             // 
-            this.uC_GridCities.BackColor = System.Drawing.Color.White;
-            this.uC_GridCities.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_GridCities.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uC_GridCities.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.uC_GridCities.Location = new System.Drawing.Point(0, 0);
-            this.uC_GridCities.Margin = new System.Windows.Forms.Padding(4);
-            this.uC_GridCities.Name = "uC_GridCities";
-            this.uC_GridCities.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.uC_GridCities.Size = new System.Drawing.Size(476, 280);
-            this.uC_GridCities.TabIndex = 6;
+            this.gridCities.BackColor = System.Drawing.Color.White;
+            this.gridCities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridCities.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gridCities.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.gridCities.Location = new System.Drawing.Point(0, 0);
+            this.gridCities.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCities.Name = "gridCities";
+            this.gridCities.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.gridCities.Size = new System.Drawing.Size(472, 280);
+            this.gridCities.TabIndex = 6;
             // 
             // panel1
             // 
@@ -171,7 +171,7 @@ namespace PhoneBook.Forms
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 213);
+            this.panel1.Size = new System.Drawing.Size(472, 209);
             this.panel1.TabIndex = 1;
             // 
             // btnClose
@@ -215,7 +215,7 @@ namespace PhoneBook.Forms
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.btnDelete.Image = global::PhoneBook.Properties.Resources.delete;
-            this.btnDelete.Location = new System.Drawing.Point(318, 169);
+            this.btnDelete.Location = new System.Drawing.Point(316, 167);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(136, 32);
             this.btnDelete.TabIndex = 5;
@@ -232,7 +232,7 @@ namespace PhoneBook.Forms
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.btnEdit.Image = global::PhoneBook.Properties.Resources.edit;
-            this.btnEdit.Location = new System.Drawing.Point(170, 169);
+            this.btnEdit.Location = new System.Drawing.Point(168, 167);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(136, 32);
             this.btnEdit.TabIndex = 4;
@@ -249,7 +249,7 @@ namespace PhoneBook.Forms
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.btnAdd.Image = global::PhoneBook.Properties.Resources.add;
-            this.btnAdd.Location = new System.Drawing.Point(22, 169);
+            this.btnAdd.Location = new System.Drawing.Point(20, 167);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(136, 32);
             this.btnAdd.TabIndex = 3;
@@ -271,7 +271,7 @@ namespace PhoneBook.Forms
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(486, 503);
+            this.panel2.Size = new System.Drawing.Size(482, 499);
             this.panel2.TabIndex = 9;
             // 
             // panel3
@@ -283,14 +283,14 @@ namespace PhoneBook.Forms
             this.panel3.Location = new System.Drawing.Point(1, 1);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(4);
-            this.panel3.Size = new System.Drawing.Size(484, 501);
+            this.panel3.Size = new System.Drawing.Size(480, 497);
             this.panel3.TabIndex = 10;
             // 
             // EditCity
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(486, 503);
+            this.ClientSize = new System.Drawing.Size(482, 499);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -322,7 +322,7 @@ namespace PhoneBook.Forms
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private UserControls.GridControl uC_GridCities;
+        private UserControls.GridControl gridCities;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCountry;

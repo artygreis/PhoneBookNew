@@ -6,27 +6,27 @@ namespace PhoneBook.Forms
 {
     public partial class EditCity : Form
     {
-        private City? currentCity => uC_GridCities.DataGrid.SelectedItem as City;
-        public Country? Country { get; set; } = new Country();
+        private City? currentCity => gridCities.DataGrid.SelectedItem as City;
+        public Country Country { get; set; } = new Country();
         public EditCity()
         {
             InitializeComponent();
-            uC_GridCities.SelectionModeGrid = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Single;
-            uC_GridCities.SelectionUnitGrid = Syncfusion.WinForms.DataGrid.Enums.SelectionUnit.Row;
-            uC_GridCities.DataGrid.HeaderRowHeight = 40;
-            uC_GridCities.DataGrid.AllowSorting = false;
+            gridCities.SelectionModeGrid = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Single;
+            gridCities.SelectionUnitGrid = Syncfusion.WinForms.DataGrid.Enums.SelectionUnit.Row;
+            gridCities.DataGrid.HeaderRowHeight = 40;
+            gridCities.DataGrid.AllowSorting = false;
 
             UpdateData(new List<City>() { new City() });
         }
 
         private void UpdateData(List<City> cities)
         {
-            uC_GridCities.DataGrid.DataSource = cities;
-            uC_GridCities.DataGrid.Columns["Id"].Visible = false;
-            uC_GridCities.DataGrid.Columns["CityName"].Width = 201;
-            uC_GridCities.DataGrid.Columns["CityCode"].Width = 121;
-            uC_GridCities.DataGrid.Columns["MaskNumber"].Width = 161;
-            uC_GridCities.DataGrid.Columns["CountryId"].Visible = false;
+            gridCities.DataGrid.DataSource = cities;
+            gridCities.DataGrid.Columns["Id"].Visible = false;
+            gridCities.DataGrid.Columns["CityName"].Width = 201;
+            gridCities.DataGrid.Columns["CityCode"].Width = 121;
+            gridCities.DataGrid.Columns["MaskNumber"].Width = 161;
+            gridCities.DataGrid.Columns["CountryId"].Visible = false;
         }
 
         private void btnClose_Click(object sender, System.EventArgs e)

@@ -42,7 +42,7 @@ namespace PhoneBook.Forms
             this.lblExample = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtExample = new System.Windows.Forms.MaskedTextBox();
             this.pnlGrid = new System.Windows.Forms.Panel();
-            this.GridCountries = new PhoneBook.UserControls.GridControl();
+            this.gridCountries = new PhoneBook.UserControls.GridControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -157,25 +157,25 @@ namespace PhoneBook.Forms
             // pnlGrid
             // 
             this.pnlGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.pnlGrid.Controls.Add(this.GridCountries);
+            this.pnlGrid.Controls.Add(this.gridCountries);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlGrid.Location = new System.Drawing.Point(4, 233);
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(488, 292);
             this.pnlGrid.TabIndex = 0;
             // 
-            // GridCountries
+            // gridCountries
             // 
-            this.GridCountries.BackColor = System.Drawing.Color.White;
-            this.GridCountries.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GridCountries.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GridCountries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.GridCountries.Location = new System.Drawing.Point(0, 0);
-            this.GridCountries.Margin = new System.Windows.Forms.Padding(4);
-            this.GridCountries.Name = "GridCountries";
-            this.GridCountries.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.GridCountries.Size = new System.Drawing.Size(488, 292);
-            this.GridCountries.TabIndex = 7;
+            this.gridCountries.BackColor = System.Drawing.Color.White;
+            this.gridCountries.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridCountries.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gridCountries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.gridCountries.Location = new System.Drawing.Point(0, 0);
+            this.gridCountries.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCountries.Name = "gridCountries";
+            this.gridCountries.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.gridCountries.Size = new System.Drawing.Size(488, 292);
+            this.gridCountries.TabIndex = 7;
             // 
             // panel1
             // 
@@ -337,7 +337,7 @@ namespace PhoneBook.Forms
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private UserControls.GridControl GridCountries;
+        private UserControls.GridControl gridCountries;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtCountDigits;

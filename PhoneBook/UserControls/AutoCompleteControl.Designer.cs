@@ -38,7 +38,7 @@
             // autoComplete
             // 
             this.autoComplete.HeaderFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.autoComplete.ItemFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoComplete.ItemFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoComplete.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             this.autoComplete.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Default;
             this.autoComplete.ThemeName = "Default";
@@ -46,6 +46,7 @@
             // 
             // txtContent
             // 
+            this.autoComplete.SetAutoComplete(this.txtContent, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.AutoSuggest);
             this.txtContent.BeforeTouchSize = new System.Drawing.Size(150, 26);
             this.txtContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);

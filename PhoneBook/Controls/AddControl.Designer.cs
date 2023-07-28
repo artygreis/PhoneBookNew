@@ -118,6 +118,7 @@
             this.chkPrivateHouse.TabIndex = 17;
             this.chkPrivateHouse.Text = "Частные дома";
             this.chkPrivateHouse.UseVisualStyleBackColor = true;
+            this.chkPrivateHouse.CheckedChanged += new System.EventHandler(this.chkPrivateHouse_CheckedChanged);
             // 
             // btnEditAddressAdd
             // 
@@ -130,6 +131,7 @@
             this.btnEditAddressAdd.Size = new System.Drawing.Size(40, 35);
             this.btnEditAddressAdd.TabIndex = 16;
             this.btnEditAddressAdd.UseVisualStyleBackColor = false;
+            this.btnEditAddressAdd.Click += new System.EventHandler(this.btnEditAddressAdd_Click);
             // 
             // btnEditCityAdd
             // 
