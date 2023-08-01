@@ -23,7 +23,7 @@ namespace PhoneBook.Forms
         {
             gridCities.DataGrid.DataSource = cities;
             gridCities.DataGrid.Columns["Id"].Visible = false;
-            gridCities.DataGrid.Columns["CityName"].Width = 201;
+            gridCities.DataGrid.Columns["CityName"].AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.LastColumnFill;
             gridCities.DataGrid.Columns["CityCode"].Width = 121;
             gridCities.DataGrid.Columns["MaskNumber"].Width = 161;
             gridCities.DataGrid.Columns["CountryId"].Visible = false;
@@ -205,7 +205,7 @@ namespace PhoneBook.Forms
                 var dialog = MessageBox.Show($"Вы действительно хотите удалить запись:\n " +
                     $"{currentCity.CityName} {currentCity.CityCode} {currentCity.MaskNumber}", "Уведомление",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialog == DialogResult.No) return; 
+                if (dialog == DialogResult.No) return;
                 using (var db = new ApplicationContext())
                 {
                     db.City.Remove(currentCity);

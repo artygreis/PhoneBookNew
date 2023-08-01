@@ -28,248 +28,247 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsControl));
-            this.pnlContent = new System.Windows.Forms.Panel();
-            this.grpSelectColor = new System.Windows.Forms.GroupBox();
-            this.btnResetColorNotDoor = new PhoneBook.UserControls.ButtonControl();
-            this.btnResetColorNotCall = new PhoneBook.UserControls.ButtonControl();
-            this.clrSelectNotDoor = new Syncfusion.Windows.Forms.ColorPickerButton();
-            this.clrSelectNotCall = new Syncfusion.Windows.Forms.ColorPickerButton();
-            this.lblColorNotDoor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.lblColorNotCall = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.grpSourceDataBase = new System.Windows.Forms.GroupBox();
-            this.btnSearchFile = new PhoneBook.UserControls.ButtonControl();
-            this.textBoxSourceFile = new System.Windows.Forms.TextBox();
-            this.grpUpdate = new System.Windows.Forms.GroupBox();
-            this.btnApplyUpdate = new PhoneBook.UserControls.ButtonControl();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.clrDialog = new System.Windows.Forms.ColorDialog();
-            this.pnlContent.SuspendLayout();
-            this.grpSelectColor.SuspendLayout();
-            this.grpSourceDataBase.SuspendLayout();
-            this.grpUpdate.SuspendLayout();
-            this.SuspendLayout();
+            pnlContent = new Panel();
+            grpSelectColor = new GroupBox();
+            btnResetColorNotDoor = new UserControls.ButtonControl();
+            btnResetColorNotCall = new UserControls.ButtonControl();
+            clrSelectNotDoor = new Syncfusion.Windows.Forms.ColorPickerButton();
+            clrSelectNotCall = new Syncfusion.Windows.Forms.ColorPickerButton();
+            lblColorNotDoor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            lblColorNotCall = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            grpSourceDataBase = new GroupBox();
+            btnSearchFile = new UserControls.ButtonControl();
+            textBoxSourceFile = new TextBox();
+            grpUpdate = new GroupBox();
+            btnApplyUpdate = new UserControls.ButtonControl();
+            linkLabel1 = new LinkLabel();
+            clrDialog = new ColorDialog();
+            pnlContent.SuspendLayout();
+            grpSelectColor.SuspendLayout();
+            grpSourceDataBase.SuspendLayout();
+            grpUpdate.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlContent
             // 
-            this.pnlContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.pnlContent.Controls.Add(this.grpSelectColor);
-            this.pnlContent.Controls.Add(this.grpSourceDataBase);
-            this.pnlContent.Controls.Add(this.grpUpdate);
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(5, 5);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(820, 580);
-            this.pnlContent.TabIndex = 0;
+            pnlContent.BackColor = Color.FromArgb(0, 71, 160);
+            pnlContent.Controls.Add(grpSelectColor);
+            pnlContent.Controls.Add(grpSourceDataBase);
+            pnlContent.Controls.Add(grpUpdate);
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(5, 5);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(820, 580);
+            pnlContent.TabIndex = 0;
             // 
             // grpSelectColor
             // 
-            this.grpSelectColor.Controls.Add(this.btnResetColorNotDoor);
-            this.grpSelectColor.Controls.Add(this.btnResetColorNotCall);
-            this.grpSelectColor.Controls.Add(this.clrSelectNotDoor);
-            this.grpSelectColor.Controls.Add(this.clrSelectNotCall);
-            this.grpSelectColor.Controls.Add(this.lblColorNotDoor);
-            this.grpSelectColor.Controls.Add(this.lblColorNotCall);
-            this.grpSelectColor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpSelectColor.ForeColor = System.Drawing.Color.White;
-            this.grpSelectColor.Location = new System.Drawing.Point(26, 162);
-            this.grpSelectColor.Name = "grpSelectColor";
-            this.grpSelectColor.Size = new System.Drawing.Size(773, 139);
-            this.grpSelectColor.TabIndex = 18;
-            this.grpSelectColor.TabStop = false;
-            this.grpSelectColor.Text = "Выберите цвета:";
+            grpSelectColor.Controls.Add(btnResetColorNotDoor);
+            grpSelectColor.Controls.Add(btnResetColorNotCall);
+            grpSelectColor.Controls.Add(clrSelectNotDoor);
+            grpSelectColor.Controls.Add(clrSelectNotCall);
+            grpSelectColor.Controls.Add(lblColorNotDoor);
+            grpSelectColor.Controls.Add(lblColorNotCall);
+            grpSelectColor.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpSelectColor.ForeColor = Color.White;
+            grpSelectColor.Location = new Point(26, 162);
+            grpSelectColor.Name = "grpSelectColor";
+            grpSelectColor.Size = new Size(773, 139);
+            grpSelectColor.TabIndex = 18;
+            grpSelectColor.TabStop = false;
+            grpSelectColor.Text = "Выберите цвета:";
             // 
             // btnResetColorNotDoor
             // 
-            this.btnResetColorNotDoor.FontButton = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnResetColorNotDoor.ImageButton = ((System.Drawing.Image)(resources.GetObject("btnResetColorNotDoor.ImageButton")));
-            this.btnResetColorNotDoor.Location = new System.Drawing.Point(419, 75);
-            this.btnResetColorNotDoor.Margin = new System.Windows.Forms.Padding(0);
-            this.btnResetColorNotDoor.Name = "btnResetColorNotDoor";
-            this.btnResetColorNotDoor.Size = new System.Drawing.Size(120, 35);
-            this.btnResetColorNotDoor.TabIndex = 22;
-            this.btnResetColorNotDoor.TextButton = " Сбросить";
-            this.btnResetColorNotDoor.ButtonClick += new System.EventHandler(this.btnResetColorNotDoor_Click);
+            btnResetColorNotDoor.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotDoor.ImageButton = (Image)resources.GetObject("btnResetColorNotDoor.ImageButton");
+            btnResetColorNotDoor.Location = new Point(419, 75);
+            btnResetColorNotDoor.Margin = new Padding(0);
+            btnResetColorNotDoor.Name = "btnResetColorNotDoor";
+            btnResetColorNotDoor.Size = new Size(120, 35);
+            btnResetColorNotDoor.TabIndex = 22;
+            btnResetColorNotDoor.TextButton = " Сбросить";
+            btnResetColorNotDoor.ButtonClick += btnResetColorNotDoor_Click;
             // 
             // btnResetColorNotCall
             // 
-            this.btnResetColorNotCall.FontButton = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnResetColorNotCall.ImageButton = ((System.Drawing.Image)(resources.GetObject("btnResetColorNotCall.ImageButton")));
-            this.btnResetColorNotCall.Location = new System.Drawing.Point(408, 29);
-            this.btnResetColorNotCall.Margin = new System.Windows.Forms.Padding(0);
-            this.btnResetColorNotCall.Name = "btnResetColorNotCall";
-            this.btnResetColorNotCall.Size = new System.Drawing.Size(120, 35);
-            this.btnResetColorNotCall.TabIndex = 21;
-            this.btnResetColorNotCall.TextButton = " Сбросить";
-            this.btnResetColorNotCall.ButtonClick += new System.EventHandler(this.btnResetColorNotCall_Click);
+            btnResetColorNotCall.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotCall.ImageButton = (Image)resources.GetObject("btnResetColorNotCall.ImageButton");
+            btnResetColorNotCall.Location = new Point(408, 29);
+            btnResetColorNotCall.Margin = new Padding(0);
+            btnResetColorNotCall.Name = "btnResetColorNotCall";
+            btnResetColorNotCall.Size = new Size(120, 35);
+            btnResetColorNotCall.TabIndex = 21;
+            btnResetColorNotCall.TextButton = " Сбросить";
+            btnResetColorNotCall.ButtonClick += btnResetColorNotCall_Click;
             // 
             // clrSelectNotDoor
             // 
-            this.clrSelectNotDoor.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.clrSelectNotDoor.BackColor = System.Drawing.Color.LightSalmon;
-            this.clrSelectNotDoor.BeforeTouchSize = new System.Drawing.Size(115, 35);
-            this.clrSelectNotDoor.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
-            this.clrSelectNotDoor.ColorUISize = new System.Drawing.Size(220, 230);
-            this.clrSelectNotDoor.FlatAppearance.BorderSize = 5;
-            this.clrSelectNotDoor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clrSelectNotDoor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clrSelectNotDoor.ForeColor = System.Drawing.Color.White;
-            this.clrSelectNotDoor.Location = new System.Drawing.Point(297, 75);
-            this.clrSelectNotDoor.MetroColor = System.Drawing.Color.LightSalmon;
-            this.clrSelectNotDoor.Name = "clrSelectNotDoor";
-            this.clrSelectNotDoor.SelectedAsBackcolor = true;
-            this.clrSelectNotDoor.SelectedColor = System.Drawing.Color.LightSalmon;
-            this.clrSelectNotDoor.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
-            this.clrSelectNotDoor.Size = new System.Drawing.Size(115, 35);
-            this.clrSelectNotDoor.StandardTabName = "Цвета";
-            this.clrSelectNotDoor.TabIndex = 20;
-            this.clrSelectNotDoor.Text = "Выбрать";
-            this.clrSelectNotDoor.ThemeName = "Metro";
-            this.clrSelectNotDoor.ThemeStyle.BorderColor = System.Drawing.Color.Transparent;
-            this.clrSelectNotDoor.ThemeStyle.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clrSelectNotDoor.UseVisualStyle = false;
-            this.clrSelectNotDoor.UseVisualStyleBackColor = false;
-            this.clrSelectNotDoor.ColorSelected += new System.EventHandler(this.clrSelectNotDoor_ColorSelected);
+            clrSelectNotDoor.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            clrSelectNotDoor.BackColor = Color.LightSalmon;
+            clrSelectNotDoor.BeforeTouchSize = new Size(115, 35);
+            clrSelectNotDoor.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
+            clrSelectNotDoor.ColorUISize = new Size(220, 230);
+            clrSelectNotDoor.FlatAppearance.BorderSize = 5;
+            clrSelectNotDoor.FlatStyle = FlatStyle.Flat;
+            clrSelectNotDoor.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            clrSelectNotDoor.ForeColor = Color.White;
+            clrSelectNotDoor.Location = new Point(297, 75);
+            clrSelectNotDoor.MetroColor = Color.LightSalmon;
+            clrSelectNotDoor.Name = "clrSelectNotDoor";
+            clrSelectNotDoor.SelectedAsBackcolor = true;
+            clrSelectNotDoor.SelectedColor = Color.LightSalmon;
+            clrSelectNotDoor.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
+            clrSelectNotDoor.Size = new Size(115, 35);
+            clrSelectNotDoor.StandardTabName = "Цвета";
+            clrSelectNotDoor.TabIndex = 20;
+            clrSelectNotDoor.Text = "Выбрать";
+            clrSelectNotDoor.ThemeName = "Metro";
+            clrSelectNotDoor.ThemeStyle.BorderColor = Color.Transparent;
+            clrSelectNotDoor.ThemeStyle.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            clrSelectNotDoor.UseVisualStyle = false;
+            clrSelectNotDoor.UseVisualStyleBackColor = false;
+            clrSelectNotDoor.ColorSelected += clrSelectNotDoor_ColorSelected;
             // 
             // clrSelectNotCall
             // 
-            this.clrSelectNotCall.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.clrSelectNotCall.BackColor = System.Drawing.Color.LightCoral;
-            this.clrSelectNotCall.BeforeTouchSize = new System.Drawing.Size(115, 35);
-            this.clrSelectNotCall.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
-            this.clrSelectNotCall.ColorUISize = new System.Drawing.Size(220, 230);
-            this.clrSelectNotCall.FlatAppearance.BorderSize = 5;
-            this.clrSelectNotCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clrSelectNotCall.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clrSelectNotCall.ForeColor = System.Drawing.Color.White;
-            this.clrSelectNotCall.Location = new System.Drawing.Point(286, 29);
-            this.clrSelectNotCall.MetroColor = System.Drawing.Color.LightCoral;
-            this.clrSelectNotCall.Name = "clrSelectNotCall";
-            this.clrSelectNotCall.SelectedAsBackcolor = true;
-            this.clrSelectNotCall.SelectedColor = System.Drawing.Color.LightCoral;
-            this.clrSelectNotCall.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
-            this.clrSelectNotCall.Size = new System.Drawing.Size(115, 35);
-            this.clrSelectNotCall.StandardTabName = "Цвета";
-            this.clrSelectNotCall.TabIndex = 19;
-            this.clrSelectNotCall.Text = "Выбрать";
-            this.clrSelectNotCall.ThemeName = "Metro";
-            this.clrSelectNotCall.ThemeStyle.BorderColor = System.Drawing.Color.Transparent;
-            this.clrSelectNotCall.ThemeStyle.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clrSelectNotCall.UseVisualStyle = false;
-            this.clrSelectNotCall.UseVisualStyleBackColor = false;
-            this.clrSelectNotCall.ColorSelected += new System.EventHandler(this.clrSelectNotCall_ColorSelected);
+            clrSelectNotCall.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            clrSelectNotCall.BackColor = Color.LightCoral;
+            clrSelectNotCall.BeforeTouchSize = new Size(115, 35);
+            clrSelectNotCall.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
+            clrSelectNotCall.ColorUISize = new Size(220, 230);
+            clrSelectNotCall.FlatAppearance.BorderSize = 5;
+            clrSelectNotCall.FlatStyle = FlatStyle.Flat;
+            clrSelectNotCall.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            clrSelectNotCall.ForeColor = Color.White;
+            clrSelectNotCall.Location = new Point(286, 29);
+            clrSelectNotCall.MetroColor = Color.LightCoral;
+            clrSelectNotCall.Name = "clrSelectNotCall";
+            clrSelectNotCall.SelectedAsBackcolor = true;
+            clrSelectNotCall.SelectedColor = Color.LightCoral;
+            clrSelectNotCall.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
+            clrSelectNotCall.Size = new Size(115, 35);
+            clrSelectNotCall.StandardTabName = "Цвета";
+            clrSelectNotCall.TabIndex = 19;
+            clrSelectNotCall.Text = "Выбрать";
+            clrSelectNotCall.ThemeName = "Metro";
+            clrSelectNotCall.ThemeStyle.BorderColor = Color.Transparent;
+            clrSelectNotCall.ThemeStyle.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            clrSelectNotCall.UseVisualStyle = false;
+            clrSelectNotCall.UseVisualStyleBackColor = false;
+            clrSelectNotCall.ColorSelected += clrSelectNotCall_ColorSelected;
             // 
             // lblColorNotDoor
             // 
-            this.lblColorNotDoor.Location = new System.Drawing.Point(23, 82);
-            this.lblColorNotDoor.Name = "lblColorNotDoor";
-            this.lblColorNotDoor.Size = new System.Drawing.Size(268, 19);
-            this.lblColorNotDoor.TabIndex = 1;
-            this.lblColorNotDoor.Text = "Цвет записей куда не заходить:";
+            lblColorNotDoor.Location = new Point(23, 82);
+            lblColorNotDoor.Name = "lblColorNotDoor";
+            lblColorNotDoor.Size = new Size(283, 20);
+            lblColorNotDoor.TabIndex = 1;
+            lblColorNotDoor.Text = "Цвет записей куда не заходить:";
             // 
             // lblColorNotCall
             // 
-            this.lblColorNotCall.Location = new System.Drawing.Point(23, 36);
-            this.lblColorNotCall.Name = "lblColorNotCall";
-            this.lblColorNotCall.Size = new System.Drawing.Size(257, 19);
-            this.lblColorNotCall.TabIndex = 0;
-            this.lblColorNotCall.Text = "Цвет записей куда не звонить:";
+            lblColorNotCall.Location = new Point(23, 36);
+            lblColorNotCall.Name = "lblColorNotCall";
+            lblColorNotCall.Size = new Size(273, 20);
+            lblColorNotCall.TabIndex = 0;
+            lblColorNotCall.Text = "Цвет записей куда не звонить:";
             // 
             // grpSourceDataBase
             // 
-            this.grpSourceDataBase.Controls.Add(this.btnSearchFile);
-            this.grpSourceDataBase.Controls.Add(this.textBoxSourceFile);
-            this.grpSourceDataBase.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpSourceDataBase.ForeColor = System.Drawing.Color.White;
-            this.grpSourceDataBase.Location = new System.Drawing.Point(26, 30);
-            this.grpSourceDataBase.Name = "grpSourceDataBase";
-            this.grpSourceDataBase.Size = new System.Drawing.Size(773, 126);
-            this.grpSourceDataBase.TabIndex = 17;
-            this.grpSourceDataBase.TabStop = false;
-            this.grpSourceDataBase.Text = "Путь к справочнику:";
+            grpSourceDataBase.Controls.Add(btnSearchFile);
+            grpSourceDataBase.Controls.Add(textBoxSourceFile);
+            grpSourceDataBase.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpSourceDataBase.ForeColor = Color.White;
+            grpSourceDataBase.Location = new Point(26, 30);
+            grpSourceDataBase.Name = "grpSourceDataBase";
+            grpSourceDataBase.Size = new Size(773, 126);
+            grpSourceDataBase.TabIndex = 17;
+            grpSourceDataBase.TabStop = false;
+            grpSourceDataBase.Text = "Путь к справочнику:";
             // 
             // btnSearchFile
             // 
-            this.btnSearchFile.FontButton = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchFile.ImageButton = ((System.Drawing.Image)(resources.GetObject("btnSearchFile.ImageButton")));
-            this.btnSearchFile.Location = new System.Drawing.Point(634, 76);
-            this.btnSearchFile.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSearchFile.Name = "btnSearchFile";
-            this.btnSearchFile.Size = new System.Drawing.Size(115, 34);
-            this.btnSearchFile.TabIndex = 19;
-            this.btnSearchFile.TextButton = " Изменить";
-            this.btnSearchFile.ButtonClick += new System.EventHandler(this.btnSearchFile_Click);
+            btnSearchFile.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearchFile.ImageButton = (Image)resources.GetObject("btnSearchFile.ImageButton");
+            btnSearchFile.Location = new Point(629, 75);
+            btnSearchFile.Margin = new Padding(0);
+            btnSearchFile.Name = "btnSearchFile";
+            btnSearchFile.Size = new Size(120, 34);
+            btnSearchFile.TabIndex = 19;
+            btnSearchFile.TextButton = " Изменить";
+            btnSearchFile.ButtonClick += btnSearchFile_Click;
             // 
             // textBoxSourceFile
             // 
-            this.textBoxSourceFile.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSourceFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBoxSourceFile.Location = new System.Drawing.Point(23, 37);
-            this.textBoxSourceFile.Name = "textBoxSourceFile";
-            this.textBoxSourceFile.ReadOnly = true;
-            this.textBoxSourceFile.Size = new System.Drawing.Size(726, 26);
-            this.textBoxSourceFile.TabIndex = 13;
+            textBoxSourceFile.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxSourceFile.ForeColor = Color.FromArgb(0, 71, 160);
+            textBoxSourceFile.Location = new Point(23, 37);
+            textBoxSourceFile.Name = "textBoxSourceFile";
+            textBoxSourceFile.ReadOnly = true;
+            textBoxSourceFile.Size = new Size(726, 24);
+            textBoxSourceFile.TabIndex = 13;
             // 
             // grpUpdate
             // 
-            this.grpUpdate.Controls.Add(this.btnApplyUpdate);
-            this.grpUpdate.Controls.Add(this.linkLabel1);
-            this.grpUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpUpdate.ForeColor = System.Drawing.Color.White;
-            this.grpUpdate.Location = new System.Drawing.Point(26, 450);
-            this.grpUpdate.Name = "grpUpdate";
-            this.grpUpdate.Size = new System.Drawing.Size(773, 81);
-            this.grpUpdate.TabIndex = 16;
-            this.grpUpdate.TabStop = false;
-            this.grpUpdate.Text = "Обновление:";
+            grpUpdate.Controls.Add(btnApplyUpdate);
+            grpUpdate.Controls.Add(linkLabel1);
+            grpUpdate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpUpdate.ForeColor = Color.White;
+            grpUpdate.Location = new Point(26, 450);
+            grpUpdate.Name = "grpUpdate";
+            grpUpdate.Size = new Size(773, 81);
+            grpUpdate.TabIndex = 16;
+            grpUpdate.TabStop = false;
+            grpUpdate.Text = "Обновление:";
             // 
             // btnApplyUpdate
             // 
-            this.btnApplyUpdate.FontButton = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnApplyUpdate.ImageButton = ((System.Drawing.Image)(resources.GetObject("btnApplyUpdate.ImageButton")));
-            this.btnApplyUpdate.Location = new System.Drawing.Point(611, 27);
-            this.btnApplyUpdate.Margin = new System.Windows.Forms.Padding(0);
-            this.btnApplyUpdate.Name = "btnApplyUpdate";
-            this.btnApplyUpdate.Size = new System.Drawing.Size(138, 35);
-            this.btnApplyUpdate.TabIndex = 19;
-            this.btnApplyUpdate.TextButton = " Обновить !!!";
+            btnApplyUpdate.FontButton = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnApplyUpdate.ImageButton = (Image)resources.GetObject("btnApplyUpdate.ImageButton");
+            btnApplyUpdate.Location = new Point(604, 27);
+            btnApplyUpdate.Margin = new Padding(0);
+            btnApplyUpdate.Name = "btnApplyUpdate";
+            btnApplyUpdate.Size = new Size(145, 35);
+            btnApplyUpdate.TabIndex = 19;
+            btnApplyUpdate.TextButton = " Обновить !!!";
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightGray;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(41, 36);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(275, 21);
-            this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Проверить наличие обновлений";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.White;
+            linkLabel1.ActiveLinkColor = Color.LightGray;
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            linkLabel1.ForeColor = Color.Transparent;
+            linkLabel1.LinkColor = Color.White;
+            linkLabel1.Location = new Point(41, 36);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(284, 20);
+            linkLabel1.TabIndex = 14;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Проверить наличие обновлений";
+            linkLabel1.VisitedLinkColor = Color.White;
             // 
             // SettingsControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pnlContent);
-            this.Name = "SettingsControl";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(830, 590);
-            this.Load += new System.EventHandler(this.SettingsControl_Load);
-            this.pnlContent.ResumeLayout(false);
-            this.grpSelectColor.ResumeLayout(false);
-            this.grpSelectColor.PerformLayout();
-            this.grpSourceDataBase.ResumeLayout(false);
-            this.grpSourceDataBase.PerformLayout();
-            this.grpUpdate.ResumeLayout(false);
-            this.grpUpdate.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(pnlContent);
+            Name = "SettingsControl";
+            Padding = new Padding(5);
+            Size = new Size(830, 590);
+            Load += SettingsControl_Load;
+            pnlContent.ResumeLayout(false);
+            grpSelectColor.ResumeLayout(false);
+            grpSelectColor.PerformLayout();
+            grpSourceDataBase.ResumeLayout(false);
+            grpSourceDataBase.PerformLayout();
+            grpUpdate.ResumeLayout(false);
+            grpUpdate.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

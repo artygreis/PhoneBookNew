@@ -55,7 +55,7 @@ namespace PhoneBook.Forms
         {
             gridCountries.DataGrid.DataSource = countries;
             gridCountries.DataGrid.Columns["Id"].Visible = false;
-            gridCountries.DataGrid.Columns["CountryName"].Width = 140;
+            gridCountries.DataGrid.Columns["CountryName"].AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.LastColumnFill;
             gridCountries.DataGrid.Columns["CountryCode"].Width = 103;
             gridCountries.DataGrid.Columns["CountDigits"].Width = 100;
             gridCountries.DataGrid.Columns["CountDigits"].AllowHeaderTextWrapping = true;

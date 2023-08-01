@@ -38,12 +38,13 @@ namespace PhoneBook.UserForms
         {
             gridAddresses.DataGrid.DataSource = addresses;
             gridAddresses.DataGrid.Columns["Id"].Visible = false;
-            gridAddresses.DataGrid.Columns["Locality"].Width = 160;
+            gridAddresses.DataGrid.Columns["Locality"].Width = 150;
             gridAddresses.DataGrid.Columns["TypeStreetId"].Visible = false;
-            gridAddresses.DataGrid.Columns["TypeStreetName"].Width = 130;
-            gridAddresses.DataGrid.Columns["StreetName"].Width = 140;
-            gridAddresses.DataGrid.Columns["House"].Width = 110;
+            gridAddresses.DataGrid.Columns["TypeStreetName"].Width = 100;
+            gridAddresses.DataGrid.Columns["House"].Visible = !_privateHouse;
+            gridAddresses.DataGrid.Columns["House"].Width = 90;
             gridAddresses.DataGrid.Columns["PrivateHouse"].Visible = false;
+            gridAddresses.DataGrid.Columns["StreetName"].AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.LastColumnFill;
 
             localityControl.LoadLocality(addresses);
 

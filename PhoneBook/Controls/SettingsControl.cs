@@ -25,7 +25,7 @@ namespace PhoneBook.Controls
         {
             if (sender is ColorPickerButton color)
             {
-                SaveColor(colorNotCall:color.SelectedColor.ToKnownColor().ToString());
+                SaveColor(colorNotCall: color.SelectedColor.ToKnownColor().ToString());
             }
         }
 
