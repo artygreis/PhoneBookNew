@@ -107,7 +107,7 @@ namespace PhoneBook.UserForms
             if (checkBoxDefault.Checked)
                 textBoxSourceDb.Text = DefaultPath;
         }
-        
+
         /// <summary>
         /// Проврека информации для настройки
         /// </summary>

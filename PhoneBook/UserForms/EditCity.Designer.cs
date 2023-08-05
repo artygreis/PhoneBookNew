@@ -133,9 +133,9 @@ namespace PhoneBook.Forms
             pnlGrid.BackColor = Color.FromArgb(0, 71, 160);
             pnlGrid.Controls.Add(gridCities);
             pnlGrid.Dock = DockStyle.Bottom;
-            pnlGrid.Location = new Point(4, 205);
+            pnlGrid.Location = new Point(4, 211);
             pnlGrid.Name = "pnlGrid";
-            pnlGrid.Size = new Size(464, 280);
+            pnlGrid.Size = new Size(464, 274);
             pnlGrid.TabIndex = 0;
             // 
             // gridCities
@@ -148,7 +148,7 @@ namespace PhoneBook.Forms
             gridCities.Margin = new Padding(4);
             gridCities.Name = "gridCities";
             gridCities.Padding = new Padding(0, 5, 0, 0);
-            gridCities.Size = new Size(464, 280);
+            gridCities.Size = new Size(464, 274);
             gridCities.TabIndex = 6;
             // 
             // panel1
@@ -171,7 +171,7 @@ namespace PhoneBook.Forms
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(464, 201);
+            panel1.Size = new Size(464, 207);
             panel1.TabIndex = 1;
             // 
             // btnClose
@@ -180,7 +180,7 @@ namespace PhoneBook.Forms
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(434, 3);
+            btnClose.Location = new Point(434, -1);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(31, 29);
             btnClose.TabIndex = 8;
@@ -215,7 +215,7 @@ namespace PhoneBook.Forms
             btnDelete.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.FromArgb(0, 71, 160);
             btnDelete.Image = Properties.Resources.delete;
-            btnDelete.Location = new Point(312, 163);
+            btnDelete.Location = new Point(312, 166);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(136, 32);
             btnDelete.TabIndex = 5;
@@ -232,7 +232,7 @@ namespace PhoneBook.Forms
             btnEdit.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEdit.ForeColor = Color.FromArgb(0, 71, 160);
             btnEdit.Image = Properties.Resources.edit;
-            btnEdit.Location = new Point(164, 163);
+            btnEdit.Location = new Point(164, 166);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(136, 32);
             btnEdit.TabIndex = 4;
@@ -249,7 +249,7 @@ namespace PhoneBook.Forms
             btnAdd.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.FromArgb(0, 71, 160);
             btnAdd.Image = Properties.Resources.add;
-            btnAdd.Location = new Point(16, 163);
+            btnAdd.Location = new Point(16, 166);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(136, 32);
             btnAdd.TabIndex = 3;

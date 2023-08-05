@@ -150,7 +150,7 @@ namespace PhoneBook.Controls
         /// <param name="nameAutoCompletControlCountry"></param>
         /// <param name="nameAutoCompleteControlCity"></param>
         /// <param name="args"></param>
-        private void SelectCountryAndComplete(string nameAutoCompletControlCountry, 
+        private void SelectCountryAndComplete(string nameAutoCompletControlCountry,
             string nameAutoCompleteControlCity, AutoCompleteItemEventArgs args)
         {
             var autoCompleteCountry = ((AutoCompleteControl)Controls.Find(nameAutoCompletControlCountry, true).First()).AutoComplete;
@@ -159,7 +159,7 @@ namespace PhoneBook.Controls
             var textBoxCity = ((AutoCompleteControl)Controls.Find(nameAutoCompleteControlCity, true).First()).TextBox;
 
             var countryId = autoCompleteCountry.GetItemArray(args.SelectedValue)[0];
-                
+
             var cities = CityCollection.GetCityCollections(Convert.ToInt32(countryId));
 
             autoCompleteCity.Columns.Clear();
@@ -178,7 +178,7 @@ namespace PhoneBook.Controls
                 autoCompleteCity.ActiveFocusControl = null;
             }
         }
-        
+
         /// <summary>
         /// Выбор страны и формирование списка городов (вкладка Поиск по адресу)
         /// </summary>

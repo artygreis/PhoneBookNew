@@ -29,447 +29,446 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchControl));
-            this.tabControlAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.searchByAddressTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.btnClearResultSearch = new System.Windows.Forms.Button();
-            this.btnListResultAddresses = new System.Windows.Forms.Button();
-            this.btnAddSearch = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.pnlFilterPrivateHouse = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rdbOdd = new System.Windows.Forms.RadioButton();
-            this.rdbEven = new System.Windows.Forms.RadioButton();
-            this.rdbAll = new System.Windows.Forms.RadioButton();
-            this.chkPrivateHouse = new System.Windows.Forms.CheckBox();
-            this.grpApartment = new System.Windows.Forms.GroupBox();
-            this.txtSingle = new System.Windows.Forms.TextBox();
-            this.grpApartments = new System.Windows.Forms.GroupBox();
-            this.lblTo = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.lblFrom = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.autoCompleteControlAddress = new PhoneBook.UserControls.AutoCompleteControl();
-            this.lblAddress = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.lblCity = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.autoCompleteControlCity = new PhoneBook.UserControls.AutoCompleteControl();
-            this.lblCountry = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.autoCompleteControlCountry = new PhoneBook.UserControls.AutoCompleteControl();
-            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.gridPhones = new PhoneBook.UserControls.GridControl();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv)).BeginInit();
-            this.tabControlAdv.SuspendLayout();
-            this.searchByAddressTab.SuspendLayout();
-            this.pnlFilterPrivateHouse.SuspendLayout();
-            this.grpApartment.SuspendLayout();
-            this.grpApartments.SuspendLayout();
-            this.SuspendLayout();
+            tabControlAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            searchByAddressTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            btnClearResultSearch = new Button();
+            btnListResultAddresses = new Button();
+            btnAddSearch = new Button();
+            btnSearch = new Button();
+            pnlFilterPrivateHouse = new Panel();
+            panel4 = new Panel();
+            panel3 = new Panel();
+            panel2 = new Panel();
+            panel1 = new Panel();
+            rdbOdd = new RadioButton();
+            rdbEven = new RadioButton();
+            rdbAll = new RadioButton();
+            chkPrivateHouse = new CheckBox();
+            grpApartment = new GroupBox();
+            txtSingle = new TextBox();
+            grpApartments = new GroupBox();
+            lblTo = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            txtTo = new TextBox();
+            lblFrom = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            txtFrom = new TextBox();
+            autoCompleteControlAddress = new UserControls.AutoCompleteControl();
+            lblAddress = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            lblCity = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoCompleteControlCity = new UserControls.AutoCompleteControl();
+            lblCountry = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoCompleteControlCountry = new UserControls.AutoCompleteControl();
+            tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            gridPhones = new UserControls.GridControl();
+            ((System.ComponentModel.ISupportInitialize)tabControlAdv).BeginInit();
+            tabControlAdv.SuspendLayout();
+            searchByAddressTab.SuspendLayout();
+            pnlFilterPrivateHouse.SuspendLayout();
+            grpApartment.SuspendLayout();
+            grpApartments.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControlAdv
             // 
-            this.tabControlAdv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.tabControlAdv.BeforeTouchSize = new System.Drawing.Size(825, 250);
-            this.tabControlAdv.Controls.Add(this.searchByAddressTab);
-            this.tabControlAdv.Controls.Add(this.tabPageAdv2);
-            this.tabControlAdv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControlAdv.Location = new System.Drawing.Point(5, 5);
-            this.tabControlAdv.Name = "tabControlAdv";
-            this.tabControlAdv.Size = new System.Drawing.Size(825, 250);
-            this.tabControlAdv.TabIndex = 4;
-            this.tabControlAdv.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv_SelectedIndexChanged);
+            tabControlAdv.BackColor = Color.FromArgb(0, 71, 160);
+            tabControlAdv.BeforeTouchSize = new Size(825, 250);
+            tabControlAdv.Controls.Add(searchByAddressTab);
+            tabControlAdv.Controls.Add(tabPageAdv2);
+            tabControlAdv.Dock = DockStyle.Top;
+            tabControlAdv.Location = new Point(5, 5);
+            tabControlAdv.Name = "tabControlAdv";
+            tabControlAdv.Size = new Size(825, 250);
+            tabControlAdv.TabIndex = 4;
+            tabControlAdv.SelectedIndexChanged += tabControlAdv_SelectedIndexChanged;
             // 
             // searchByAddressTab
             // 
-            this.searchByAddressTab.Controls.Add(this.btnClearResultSearch);
-            this.searchByAddressTab.Controls.Add(this.btnListResultAddresses);
-            this.searchByAddressTab.Controls.Add(this.btnAddSearch);
-            this.searchByAddressTab.Controls.Add(this.btnSearch);
-            this.searchByAddressTab.Controls.Add(this.pnlFilterPrivateHouse);
-            this.searchByAddressTab.Controls.Add(this.chkPrivateHouse);
-            this.searchByAddressTab.Controls.Add(this.grpApartment);
-            this.searchByAddressTab.Controls.Add(this.grpApartments);
-            this.searchByAddressTab.Controls.Add(this.autoCompleteControlAddress);
-            this.searchByAddressTab.Controls.Add(this.lblAddress);
-            this.searchByAddressTab.Controls.Add(this.lblCity);
-            this.searchByAddressTab.Controls.Add(this.autoCompleteControlCity);
-            this.searchByAddressTab.Controls.Add(this.lblCountry);
-            this.searchByAddressTab.Controls.Add(this.autoCompleteControlCountry);
-            this.searchByAddressTab.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchByAddressTab.ForeColor = System.Drawing.Color.White;
-            this.searchByAddressTab.Image = null;
-            this.searchByAddressTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.searchByAddressTab.Location = new System.Drawing.Point(1, 31);
-            this.searchByAddressTab.Name = "searchByAddressTab";
-            this.searchByAddressTab.ShowCloseButton = true;
-            this.searchByAddressTab.Size = new System.Drawing.Size(822, 217);
-            this.searchByAddressTab.TabFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.searchByAddressTab.TabForeColor = System.Drawing.Color.White;
-            this.searchByAddressTab.TabIndex = 1;
-            this.searchByAddressTab.Text = "Поиск по адресу";
-            this.searchByAddressTab.ThemesEnabled = false;
+            searchByAddressTab.Controls.Add(btnClearResultSearch);
+            searchByAddressTab.Controls.Add(btnListResultAddresses);
+            searchByAddressTab.Controls.Add(btnAddSearch);
+            searchByAddressTab.Controls.Add(btnSearch);
+            searchByAddressTab.Controls.Add(pnlFilterPrivateHouse);
+            searchByAddressTab.Controls.Add(chkPrivateHouse);
+            searchByAddressTab.Controls.Add(grpApartment);
+            searchByAddressTab.Controls.Add(grpApartments);
+            searchByAddressTab.Controls.Add(autoCompleteControlAddress);
+            searchByAddressTab.Controls.Add(lblAddress);
+            searchByAddressTab.Controls.Add(lblCity);
+            searchByAddressTab.Controls.Add(autoCompleteControlCity);
+            searchByAddressTab.Controls.Add(lblCountry);
+            searchByAddressTab.Controls.Add(autoCompleteControlCountry);
+            searchByAddressTab.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            searchByAddressTab.ForeColor = Color.White;
+            searchByAddressTab.Image = null;
+            searchByAddressTab.ImageSize = new Size(16, 16);
+            searchByAddressTab.Location = new Point(1, 31);
+            searchByAddressTab.Name = "searchByAddressTab";
+            searchByAddressTab.ShowCloseButton = true;
+            searchByAddressTab.Size = new Size(822, 217);
+            searchByAddressTab.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            searchByAddressTab.TabForeColor = Color.White;
+            searchByAddressTab.TabIndex = 1;
+            searchByAddressTab.Text = "Поиск по адресу";
+            searchByAddressTab.ThemesEnabled = false;
             // 
             // btnClearResultSearch
             // 
-            this.btnClearResultSearch.BackColor = System.Drawing.Color.White;
-            this.btnClearResultSearch.Enabled = false;
-            this.btnClearResultSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearResultSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClearResultSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnClearResultSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnClearResultSearch.Image")));
-            this.btnClearResultSearch.Location = new System.Drawing.Point(571, 146);
-            this.btnClearResultSearch.Name = "btnClearResultSearch";
-            this.btnClearResultSearch.Size = new System.Drawing.Size(35, 32);
-            this.btnClearResultSearch.TabIndex = 14;
-            this.btnClearResultSearch.UseVisualStyleBackColor = false;
-            this.btnClearResultSearch.Click += new System.EventHandler(this.btnClearResultSearch_Click);
+            btnClearResultSearch.BackColor = Color.White;
+            btnClearResultSearch.Enabled = false;
+            btnClearResultSearch.FlatStyle = FlatStyle.Flat;
+            btnClearResultSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearResultSearch.ForeColor = Color.FromArgb(0, 71, 160);
+            btnClearResultSearch.Image = (Image)resources.GetObject("btnClearResultSearch.Image");
+            btnClearResultSearch.Location = new Point(571, 146);
+            btnClearResultSearch.Name = "btnClearResultSearch";
+            btnClearResultSearch.Size = new Size(35, 32);
+            btnClearResultSearch.TabIndex = 14;
+            btnClearResultSearch.UseVisualStyleBackColor = false;
+            btnClearResultSearch.Click += btnClearResultSearch_Click;
             // 
             // btnListResultAddresses
             // 
-            this.btnListResultAddresses.BackColor = System.Drawing.Color.White;
-            this.btnListResultAddresses.Enabled = false;
-            this.btnListResultAddresses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListResultAddresses.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnListResultAddresses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnListResultAddresses.Image = ((System.Drawing.Image)(resources.GetObject("btnListResultAddresses.Image")));
-            this.btnListResultAddresses.Location = new System.Drawing.Point(530, 146);
-            this.btnListResultAddresses.Name = "btnListResultAddresses";
-            this.btnListResultAddresses.Size = new System.Drawing.Size(35, 32);
-            this.btnListResultAddresses.TabIndex = 13;
-            this.btnListResultAddresses.UseVisualStyleBackColor = false;
-            this.btnListResultAddresses.Click += new System.EventHandler(this.btnListResultAddresses_Click);
+            btnListResultAddresses.BackColor = Color.White;
+            btnListResultAddresses.Enabled = false;
+            btnListResultAddresses.FlatStyle = FlatStyle.Flat;
+            btnListResultAddresses.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnListResultAddresses.ForeColor = Color.FromArgb(0, 71, 160);
+            btnListResultAddresses.Image = (Image)resources.GetObject("btnListResultAddresses.Image");
+            btnListResultAddresses.Location = new Point(530, 146);
+            btnListResultAddresses.Name = "btnListResultAddresses";
+            btnListResultAddresses.Size = new Size(35, 32);
+            btnListResultAddresses.TabIndex = 13;
+            btnListResultAddresses.UseVisualStyleBackColor = false;
+            btnListResultAddresses.Click += btnListResultAddresses_Click;
             // 
             // btnAddSearch
             // 
-            this.btnAddSearch.BackColor = System.Drawing.Color.White;
-            this.btnAddSearch.Enabled = false;
-            this.btnAddSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnAddSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSearch.Image")));
-            this.btnAddSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSearch.Location = new System.Drawing.Point(323, 146);
-            this.btnAddSearch.Name = "btnAddSearch";
-            this.btnAddSearch.Size = new System.Drawing.Size(201, 32);
-            this.btnAddSearch.TabIndex = 12;
-            this.btnAddSearch.Text = "     Добавить к поиску";
-            this.btnAddSearch.UseVisualStyleBackColor = false;
-            this.btnAddSearch.Click += new System.EventHandler(this.btnAddSearch_Click);
+            btnAddSearch.BackColor = Color.White;
+            btnAddSearch.Enabled = false;
+            btnAddSearch.FlatStyle = FlatStyle.Flat;
+            btnAddSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddSearch.ForeColor = Color.FromArgb(0, 71, 160);
+            btnAddSearch.Image = (Image)resources.GetObject("btnAddSearch.Image");
+            btnAddSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddSearch.Location = new Point(323, 146);
+            btnAddSearch.Name = "btnAddSearch";
+            btnAddSearch.Size = new Size(201, 32);
+            btnAddSearch.TabIndex = 12;
+            btnAddSearch.Text = "     Добавить к поиску";
+            btnAddSearch.UseVisualStyleBackColor = false;
+            btnAddSearch.Click += btnAddSearch_Click;
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(216, 146);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(101, 32);
-            this.btnSearch.TabIndex = 11;
-            this.btnSearch.Text = "     Найти";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            btnSearch.BackColor = Color.White;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.FromArgb(0, 71, 160);
+            btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
+            btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearch.Location = new Point(216, 146);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(101, 32);
+            btnSearch.TabIndex = 11;
+            btnSearch.Text = "     Найти";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // pnlFilterPrivateHouse
             // 
-            this.pnlFilterPrivateHouse.Controls.Add(this.panel4);
-            this.pnlFilterPrivateHouse.Controls.Add(this.panel3);
-            this.pnlFilterPrivateHouse.Controls.Add(this.panel2);
-            this.pnlFilterPrivateHouse.Controls.Add(this.panel1);
-            this.pnlFilterPrivateHouse.Controls.Add(this.rdbOdd);
-            this.pnlFilterPrivateHouse.Controls.Add(this.rdbEven);
-            this.pnlFilterPrivateHouse.Controls.Add(this.rdbAll);
-            this.pnlFilterPrivateHouse.Enabled = false;
-            this.pnlFilterPrivateHouse.Location = new System.Drawing.Point(517, 104);
-            this.pnlFilterPrivateHouse.Name = "pnlFilterPrivateHouse";
-            this.pnlFilterPrivateHouse.Size = new System.Drawing.Size(295, 29);
-            this.pnlFilterPrivateHouse.TabIndex = 10;
+            pnlFilterPrivateHouse.Controls.Add(panel4);
+            pnlFilterPrivateHouse.Controls.Add(panel3);
+            pnlFilterPrivateHouse.Controls.Add(panel2);
+            pnlFilterPrivateHouse.Controls.Add(panel1);
+            pnlFilterPrivateHouse.Controls.Add(rdbOdd);
+            pnlFilterPrivateHouse.Controls.Add(rdbEven);
+            pnlFilterPrivateHouse.Controls.Add(rdbAll);
+            pnlFilterPrivateHouse.Enabled = false;
+            pnlFilterPrivateHouse.Location = new Point(517, 104);
+            pnlFilterPrivateHouse.Name = "pnlFilterPrivateHouse";
+            pnlFilterPrivateHouse.Size = new Size(295, 29);
+            pnlFilterPrivateHouse.TabIndex = 10;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(294, 1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 27);
-            this.panel4.TabIndex = 6;
+            panel4.BackColor = Color.White;
+            panel4.Dock = DockStyle.Right;
+            panel4.Location = new Point(294, 1);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1, 27);
+            panel4.TabIndex = 6;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 27);
-            this.panel3.TabIndex = 5;
+            panel3.BackColor = Color.White;
+            panel3.Dock = DockStyle.Left;
+            panel3.Location = new Point(0, 1);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1, 27);
+            panel3.TabIndex = 5;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(295, 1);
-            this.panel2.TabIndex = 4;
+            panel2.BackColor = Color.White;
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 28);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(295, 1);
+            panel2.TabIndex = 4;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 1);
-            this.panel1.TabIndex = 3;
+            panel1.BackColor = Color.White;
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(295, 1);
+            panel1.TabIndex = 3;
             // 
             // rdbOdd
             // 
-            this.rdbOdd.AutoSize = true;
-            this.rdbOdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbOdd.Location = new System.Drawing.Point(187, 4);
-            this.rdbOdd.Name = "rdbOdd";
-            this.rdbOdd.Size = new System.Drawing.Size(90, 20);
-            this.rdbOdd.TabIndex = 2;
-            this.rdbOdd.TabStop = true;
-            this.rdbOdd.Text = "Нечетные";
-            this.rdbOdd.UseVisualStyleBackColor = true;
+            rdbOdd.AutoSize = true;
+            rdbOdd.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rdbOdd.Location = new Point(187, 4);
+            rdbOdd.Name = "rdbOdd";
+            rdbOdd.Size = new Size(90, 20);
+            rdbOdd.TabIndex = 2;
+            rdbOdd.TabStop = true;
+            rdbOdd.Text = "Нечетные";
+            rdbOdd.UseVisualStyleBackColor = true;
             // 
             // rdbEven
             // 
-            this.rdbEven.AutoSize = true;
-            this.rdbEven.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbEven.Location = new System.Drawing.Point(94, 4);
-            this.rdbEven.Name = "rdbEven";
-            this.rdbEven.Size = new System.Drawing.Size(74, 20);
-            this.rdbEven.TabIndex = 1;
-            this.rdbEven.TabStop = true;
-            this.rdbEven.Text = "Четные";
-            this.rdbEven.UseVisualStyleBackColor = true;
+            rdbEven.AutoSize = true;
+            rdbEven.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rdbEven.Location = new Point(94, 4);
+            rdbEven.Name = "rdbEven";
+            rdbEven.Size = new Size(74, 20);
+            rdbEven.TabIndex = 1;
+            rdbEven.TabStop = true;
+            rdbEven.Text = "Четные";
+            rdbEven.UseVisualStyleBackColor = true;
             // 
             // rdbAll
             // 
-            this.rdbAll.AutoSize = true;
-            this.rdbAll.Checked = true;
-            this.rdbAll.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdbAll.Location = new System.Drawing.Point(26, 4);
-            this.rdbAll.Name = "rdbAll";
-            this.rdbAll.Size = new System.Drawing.Size(49, 20);
-            this.rdbAll.TabIndex = 0;
-            this.rdbAll.TabStop = true;
-            this.rdbAll.Text = "Все";
-            this.rdbAll.UseVisualStyleBackColor = true;
+            rdbAll.AutoSize = true;
+            rdbAll.Checked = true;
+            rdbAll.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            rdbAll.Location = new Point(26, 4);
+            rdbAll.Name = "rdbAll";
+            rdbAll.Size = new Size(49, 20);
+            rdbAll.TabIndex = 0;
+            rdbAll.TabStop = true;
+            rdbAll.Text = "Все";
+            rdbAll.UseVisualStyleBackColor = true;
             // 
             // chkPrivateHouse
             // 
-            this.chkPrivateHouse.AutoSize = true;
-            this.chkPrivateHouse.Enabled = false;
-            this.chkPrivateHouse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chkPrivateHouse.Location = new System.Drawing.Point(93, 108);
-            this.chkPrivateHouse.Name = "chkPrivateHouse";
-            this.chkPrivateHouse.Size = new System.Drawing.Size(123, 20);
-            this.chkPrivateHouse.TabIndex = 9;
-            this.chkPrivateHouse.Text = "Частные дома";
-            this.chkPrivateHouse.UseVisualStyleBackColor = true;
-            this.chkPrivateHouse.CheckedChanged += new System.EventHandler(this.chkPrivateHouse_CheckedChanged);
+            chkPrivateHouse.AutoSize = true;
+            chkPrivateHouse.Enabled = false;
+            chkPrivateHouse.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            chkPrivateHouse.Location = new Point(93, 108);
+            chkPrivateHouse.Name = "chkPrivateHouse";
+            chkPrivateHouse.Size = new Size(123, 20);
+            chkPrivateHouse.TabIndex = 9;
+            chkPrivateHouse.Text = "Частные дома";
+            chkPrivateHouse.UseVisualStyleBackColor = true;
+            chkPrivateHouse.CheckedChanged += chkPrivateHouse_CheckedChanged;
             // 
             // grpApartment
             // 
-            this.grpApartment.Controls.Add(this.txtSingle);
-            this.grpApartment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpApartment.ForeColor = System.Drawing.Color.White;
-            this.grpApartment.Location = new System.Drawing.Point(517, 13);
-            this.grpApartment.Name = "grpApartment";
-            this.grpApartment.Size = new System.Drawing.Size(112, 85);
-            this.grpApartment.TabIndex = 8;
-            this.grpApartment.TabStop = false;
-            this.grpApartment.Text = "Квартира:";
+            grpApartment.Controls.Add(txtSingle);
+            grpApartment.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpApartment.ForeColor = Color.White;
+            grpApartment.Location = new Point(517, 13);
+            grpApartment.Name = "grpApartment";
+            grpApartment.Size = new Size(112, 85);
+            grpApartment.TabIndex = 8;
+            grpApartment.TabStop = false;
+            grpApartment.Text = "Квартира:";
             // 
             // txtSingle
             // 
-            this.txtSingle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtSingle.Location = new System.Drawing.Point(31, 35);
-            this.txtSingle.Name = "txtSingle";
-            this.txtSingle.Size = new System.Drawing.Size(50, 27);
-            this.txtSingle.TabIndex = 3;
-            this.txtSingle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSingle.TextChanged += new System.EventHandler(this.txtSingle_TextChanged);
+            txtSingle.ForeColor = Color.FromArgb(0, 71, 160);
+            txtSingle.Location = new Point(31, 35);
+            txtSingle.Name = "txtSingle";
+            txtSingle.Size = new Size(50, 27);
+            txtSingle.TabIndex = 3;
+            txtSingle.TextAlign = HorizontalAlignment.Center;
+            txtSingle.TextChanged += txtSingle_TextChanged;
             // 
             // grpApartments
             // 
-            this.grpApartments.Controls.Add(this.lblTo);
-            this.grpApartments.Controls.Add(this.lblFrom);
-            this.grpApartments.Controls.Add(this.txtTo);
-            this.grpApartments.Controls.Add(this.txtFrom);
-            this.grpApartments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpApartments.ForeColor = System.Drawing.Color.White;
-            this.grpApartments.Location = new System.Drawing.Point(635, 13);
-            this.grpApartments.Name = "grpApartments";
-            this.grpApartments.Size = new System.Drawing.Size(177, 85);
-            this.grpApartments.TabIndex = 7;
-            this.grpApartments.TabStop = false;
-            this.grpApartments.Text = "Квартиры:";
+            grpApartments.Controls.Add(lblTo);
+            grpApartments.Controls.Add(lblFrom);
+            grpApartments.Controls.Add(txtTo);
+            grpApartments.Controls.Add(txtFrom);
+            grpApartments.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpApartments.ForeColor = Color.White;
+            grpApartments.Location = new Point(635, 13);
+            grpApartments.Name = "grpApartments";
+            grpApartments.Size = new Size(177, 85);
+            grpApartments.TabIndex = 7;
+            grpApartments.TabStop = false;
+            grpApartments.Text = "Квартиры:";
             // 
             // lblTo
             // 
-            this.lblTo.DX = -33;
-            this.lblTo.DY = 2;
-            this.lblTo.LabeledControl = this.txtTo;
-            this.lblTo.Location = new System.Drawing.Point(84, 37);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(29, 19);
-            this.lblTo.TabIndex = 3;
-            this.lblTo.Text = "по";
+            lblTo.DX = -33;
+            lblTo.DY = 2;
+            lblTo.LabeledControl = txtTo;
+            lblTo.Location = new Point(84, 37);
+            lblTo.Name = "lblTo";
+            lblTo.Size = new Size(29, 19);
+            lblTo.TabIndex = 3;
+            lblTo.Text = "по";
             // 
             // txtTo
             // 
-            this.txtTo.Enabled = false;
-            this.txtTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtTo.Location = new System.Drawing.Point(117, 35);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(50, 27);
-            this.txtTo.TabIndex = 4;
-            this.txtTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            txtTo.Enabled = false;
+            txtTo.ForeColor = Color.FromArgb(0, 71, 160);
+            txtTo.Location = new Point(117, 35);
+            txtTo.Name = "txtTo";
+            txtTo.Size = new Size(50, 27);
+            txtTo.TabIndex = 4;
+            txtTo.TextAlign = HorizontalAlignment.Center;
             // 
             // lblFrom
             // 
-            this.lblFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.lblFrom.DX = -23;
-            this.lblFrom.DY = 2;
-            this.lblFrom.LabeledControl = this.txtFrom;
-            this.lblFrom.Location = new System.Drawing.Point(6, 37);
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(19, 19);
-            this.lblFrom.TabIndex = 2;
-            this.lblFrom.Text = "с";
+            lblFrom.BackColor = Color.FromArgb(0, 71, 160);
+            lblFrom.DX = -23;
+            lblFrom.DY = 2;
+            lblFrom.LabeledControl = txtFrom;
+            lblFrom.Location = new Point(6, 37);
+            lblFrom.Name = "lblFrom";
+            lblFrom.Size = new Size(19, 19);
+            lblFrom.TabIndex = 2;
+            lblFrom.Text = "с";
             // 
             // txtFrom
             // 
-            this.txtFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtFrom.Location = new System.Drawing.Point(29, 35);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(50, 27);
-            this.txtFrom.TabIndex = 3;
-            this.txtFrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFrom.TextChanged += new System.EventHandler(this.txtFrom_TextChanged);
+            txtFrom.ForeColor = Color.FromArgb(0, 71, 160);
+            txtFrom.Location = new Point(29, 35);
+            txtFrom.Name = "txtFrom";
+            txtFrom.Size = new Size(50, 27);
+            txtFrom.TabIndex = 3;
+            txtFrom.TextAlign = HorizontalAlignment.Center;
+            txtFrom.TextChanged += txtFrom_TextChanged;
             // 
             // autoCompleteControlAddress
             // 
-            this.autoCompleteControlAddress.AutoSize = true;
-            this.autoCompleteControlAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.autoCompleteControlAddress.Location = new System.Drawing.Point(93, 72);
-            this.autoCompleteControlAddress.MinimumSize = new System.Drawing.Size(150, 26);
-            this.autoCompleteControlAddress.Name = "autoCompleteControlAddress";
-            this.autoCompleteControlAddress.Size = new System.Drawing.Size(407, 26);
-            this.autoCompleteControlAddress.TabIndex = 2;
-            this.autoCompleteControlAddress.TextBoxFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            autoCompleteControlAddress.AutoSize = true;
+            autoCompleteControlAddress.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlAddress.Location = new Point(93, 72);
+            autoCompleteControlAddress.MinimumSize = new Size(150, 26);
+            autoCompleteControlAddress.Name = "autoCompleteControlAddress";
+            autoCompleteControlAddress.Size = new Size(407, 26);
+            autoCompleteControlAddress.TabIndex = 2;
+            autoCompleteControlAddress.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             // 
             // lblAddress
             // 
-            this.lblAddress.DX = -70;
-            this.lblAddress.DY = 3;
-            this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAddress.LabeledControl = this.autoCompleteControlAddress;
-            this.lblAddress.Location = new System.Drawing.Point(23, 75);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(66, 19);
-            this.lblAddress.TabIndex = 5;
-            this.lblAddress.Text = "Адрес:";
+            lblAddress.DX = -70;
+            lblAddress.DY = 3;
+            lblAddress.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAddress.LabeledControl = autoCompleteControlAddress;
+            lblAddress.Location = new Point(23, 75);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(66, 19);
+            lblAddress.TabIndex = 5;
+            lblAddress.Text = "Адрес:";
             // 
             // lblCity
             // 
-            this.lblCity.DX = -65;
-            this.lblCity.DY = 3;
-            this.lblCity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCity.LabeledControl = this.autoCompleteControlCity;
-            this.lblCity.Location = new System.Drawing.Point(264, 25);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(61, 19);
-            this.lblCity.TabIndex = 4;
-            this.lblCity.Text = "Город:";
+            lblCity.DX = -65;
+            lblCity.DY = 3;
+            lblCity.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCity.LabeledControl = autoCompleteControlCity;
+            lblCity.Location = new Point(264, 25);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new Size(61, 19);
+            lblCity.TabIndex = 4;
+            lblCity.Text = "Город:";
             // 
             // autoCompleteControlCity
             // 
-            this.autoCompleteControlCity.AutoSize = true;
-            this.autoCompleteControlCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.autoCompleteControlCity.Location = new System.Drawing.Point(329, 22);
-            this.autoCompleteControlCity.MinimumSize = new System.Drawing.Size(150, 26);
-            this.autoCompleteControlCity.Name = "autoCompleteControlCity";
-            this.autoCompleteControlCity.Size = new System.Drawing.Size(171, 26);
-            this.autoCompleteControlCity.TabIndex = 1;
-            this.autoCompleteControlCity.TextBoxFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            autoCompleteControlCity.AutoSize = true;
+            autoCompleteControlCity.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlCity.Location = new Point(329, 22);
+            autoCompleteControlCity.MinimumSize = new Size(150, 26);
+            autoCompleteControlCity.Name = "autoCompleteControlCity";
+            autoCompleteControlCity.Size = new Size(171, 26);
+            autoCompleteControlCity.TabIndex = 1;
+            autoCompleteControlCity.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             // 
             // lblCountry
             // 
-            this.lblCountry.DX = -80;
-            this.lblCountry.DY = 3;
-            this.lblCountry.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCountry.LabeledControl = this.autoCompleteControlCountry;
-            this.lblCountry.Location = new System.Drawing.Point(12, 25);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(76, 19);
-            this.lblCountry.TabIndex = 1;
-            this.lblCountry.Text = "Страна:";
+            lblCountry.DX = -80;
+            lblCountry.DY = 3;
+            lblCountry.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCountry.LabeledControl = autoCompleteControlCountry;
+            lblCountry.Location = new Point(12, 25);
+            lblCountry.Name = "lblCountry";
+            lblCountry.Size = new Size(76, 19);
+            lblCountry.TabIndex = 1;
+            lblCountry.Text = "Страна:";
             // 
             // autoCompleteControlCountry
             // 
-            this.autoCompleteControlCountry.AutoSize = true;
-            this.autoCompleteControlCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.autoCompleteControlCountry.Location = new System.Drawing.Point(92, 22);
-            this.autoCompleteControlCountry.MinimumSize = new System.Drawing.Size(150, 26);
-            this.autoCompleteControlCountry.Name = "autoCompleteControlCountry";
-            this.autoCompleteControlCountry.Size = new System.Drawing.Size(150, 26);
-            this.autoCompleteControlCountry.TabIndex = 0;
-            this.autoCompleteControlCountry.TextBoxFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            autoCompleteControlCountry.AutoSize = true;
+            autoCompleteControlCountry.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlCountry.Location = new Point(92, 22);
+            autoCompleteControlCountry.MinimumSize = new Size(150, 26);
+            autoCompleteControlCountry.Name = "autoCompleteControlCountry";
+            autoCompleteControlCountry.Size = new Size(150, 26);
+            autoCompleteControlCountry.TabIndex = 0;
+            autoCompleteControlCountry.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             // 
             // tabPageAdv2
             // 
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 31);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(822, 217);
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.Text = "tabPageAdv2";
-            this.tabPageAdv2.ThemesEnabled = false;
+            tabPageAdv2.Image = null;
+            tabPageAdv2.ImageSize = new Size(16, 16);
+            tabPageAdv2.Location = new Point(1, 31);
+            tabPageAdv2.Name = "tabPageAdv2";
+            tabPageAdv2.ShowCloseButton = true;
+            tabPageAdv2.Size = new Size(822, 217);
+            tabPageAdv2.TabIndex = 2;
+            tabPageAdv2.Text = "tabPageAdv2";
+            tabPageAdv2.ThemesEnabled = false;
             // 
             // gridPhones
             // 
-            this.gridPhones.BackColor = System.Drawing.Color.White;
-            this.gridPhones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridPhones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gridPhones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.gridPhones.Location = new System.Drawing.Point(5, 255);
-            this.gridPhones.Name = "gridPhones";
-            this.gridPhones.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.gridPhones.Size = new System.Drawing.Size(825, 335);
-            this.gridPhones.TabIndex = 5;
+            gridPhones.BackColor = Color.White;
+            gridPhones.Dock = DockStyle.Fill;
+            gridPhones.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gridPhones.ForeColor = Color.FromArgb(0, 71, 160);
+            gridPhones.Location = new Point(5, 255);
+            gridPhones.Name = "gridPhones";
+            gridPhones.Padding = new Padding(0, 5, 0, 0);
+            gridPhones.Size = new Size(825, 335);
+            gridPhones.TabIndex = 5;
             // 
             // SearchControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gridPhones);
-            this.Controls.Add(this.tabControlAdv);
-            this.Name = "SearchControl";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(835, 595);
-            this.Load += new System.EventHandler(this.SearchControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv)).EndInit();
-            this.tabControlAdv.ResumeLayout(false);
-            this.searchByAddressTab.ResumeLayout(false);
-            this.searchByAddressTab.PerformLayout();
-            this.pnlFilterPrivateHouse.ResumeLayout(false);
-            this.pnlFilterPrivateHouse.PerformLayout();
-            this.grpApartment.ResumeLayout(false);
-            this.grpApartment.PerformLayout();
-            this.grpApartments.ResumeLayout(false);
-            this.grpApartments.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(gridPhones);
+            Controls.Add(tabControlAdv);
+            Name = "SearchControl";
+            Padding = new Padding(5);
+            Size = new Size(835, 595);
+            Load += SearchControl_Load;
+            ((System.ComponentModel.ISupportInitialize)tabControlAdv).EndInit();
+            tabControlAdv.ResumeLayout(false);
+            searchByAddressTab.ResumeLayout(false);
+            searchByAddressTab.PerformLayout();
+            pnlFilterPrivateHouse.ResumeLayout(false);
+            pnlFilterPrivateHouse.PerformLayout();
+            grpApartment.ResumeLayout(false);
+            grpApartment.PerformLayout();
+            grpApartments.ResumeLayout(false);
+            grpApartments.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

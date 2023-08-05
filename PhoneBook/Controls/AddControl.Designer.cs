@@ -29,166 +29,236 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddControl));
-            this.tabControlAddAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.addApartmentsTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.addressControlAddApartments = new PhoneBook.UserControls.AddressControl();
-            this.cityControlAddApartments = new PhoneBook.UserControls.CityControl();
-            this.countryControlAddApartments = new PhoneBook.UserControls.CountryControl();
-            this.chkPrivateHouse = new System.Windows.Forms.CheckBox();
-            this.btnEditAddressAdd = new System.Windows.Forms.Button();
-            this.btnEditCityAdd = new System.Windows.Forms.Button();
-            this.btnEditCountryAdd = new System.Windows.Forms.Button();
-            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAddAdv)).BeginInit();
-            this.tabControlAddAdv.SuspendLayout();
-            this.addApartmentsTab.SuspendLayout();
-            this.SuspendLayout();
+            tabControlAddAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            addApartmentsTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            btnAddRange = new Button();
+            btnEditNumber = new Button();
+            btnAddSingle = new Button();
+            addressControlAddApartments = new UserControls.AddressControl();
+            cityControlAddApartments = new UserControls.CityControl();
+            countryControlAddApartments = new UserControls.CountryControl();
+            chkPrivateHouse = new CheckBox();
+            btnEditAddressAdd = new Button();
+            btnEditCityAdd = new Button();
+            btnEditCountryAdd = new Button();
+            tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            gridPhones = new UserControls.GridControl();
+            ((System.ComponentModel.ISupportInitialize)tabControlAddAdv).BeginInit();
+            tabControlAddAdv.SuspendLayout();
+            addApartmentsTab.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControlAddAdv
             // 
-            this.tabControlAddAdv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.tabControlAddAdv.BeforeTouchSize = new System.Drawing.Size(825, 250);
-            this.tabControlAddAdv.Controls.Add(this.addApartmentsTab);
-            this.tabControlAddAdv.Controls.Add(this.tabPageAdv2);
-            this.tabControlAddAdv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControlAddAdv.Location = new System.Drawing.Point(5, 5);
-            this.tabControlAddAdv.Name = "tabControlAddAdv";
-            this.tabControlAddAdv.Size = new System.Drawing.Size(825, 250);
-            this.tabControlAddAdv.TabIndex = 0;
-            this.tabControlAddAdv.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
-            this.tabControlAddAdv.SelectedIndexChanged += new System.EventHandler(this.tabControlAddAdv_SelectedIndexChanged);
+            tabControlAddAdv.BackColor = Color.FromArgb(0, 71, 160);
+            tabControlAddAdv.BeforeTouchSize = new Size(825, 224);
+            tabControlAddAdv.Controls.Add(addApartmentsTab);
+            tabControlAddAdv.Controls.Add(tabPageAdv2);
+            tabControlAddAdv.Dock = DockStyle.Fill;
+            tabControlAddAdv.Location = new Point(5, 5);
+            tabControlAddAdv.Name = "tabControlAddAdv";
+            tabControlAddAdv.Size = new Size(825, 224);
+            tabControlAddAdv.TabIndex = 0;
+            tabControlAddAdv.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
+            tabControlAddAdv.SelectedIndexChanged += tabControlAddAdv_SelectedIndexChanged;
             // 
             // addApartmentsTab
             // 
-            this.addApartmentsTab.Controls.Add(this.addressControlAddApartments);
-            this.addApartmentsTab.Controls.Add(this.cityControlAddApartments);
-            this.addApartmentsTab.Controls.Add(this.countryControlAddApartments);
-            this.addApartmentsTab.Controls.Add(this.chkPrivateHouse);
-            this.addApartmentsTab.Controls.Add(this.btnEditAddressAdd);
-            this.addApartmentsTab.Controls.Add(this.btnEditCityAdd);
-            this.addApartmentsTab.Controls.Add(this.btnEditCountryAdd);
-            this.addApartmentsTab.ForeColor = System.Drawing.Color.White;
-            this.addApartmentsTab.Image = null;
-            this.addApartmentsTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.addApartmentsTab.Location = new System.Drawing.Point(1, 31);
-            this.addApartmentsTab.Name = "addApartmentsTab";
-            this.addApartmentsTab.ShowCloseButton = true;
-            this.addApartmentsTab.Size = new System.Drawing.Size(822, 217);
-            this.addApartmentsTab.TabFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addApartmentsTab.TabForeColor = System.Drawing.Color.White;
-            this.addApartmentsTab.TabIndex = 1;
-            this.addApartmentsTab.Text = "Добавить квартиры";
-            this.addApartmentsTab.ThemesEnabled = false;
+            addApartmentsTab.Controls.Add(btnAddRange);
+            addApartmentsTab.Controls.Add(btnEditNumber);
+            addApartmentsTab.Controls.Add(btnAddSingle);
+            addApartmentsTab.Controls.Add(addressControlAddApartments);
+            addApartmentsTab.Controls.Add(cityControlAddApartments);
+            addApartmentsTab.Controls.Add(countryControlAddApartments);
+            addApartmentsTab.Controls.Add(chkPrivateHouse);
+            addApartmentsTab.Controls.Add(btnEditAddressAdd);
+            addApartmentsTab.Controls.Add(btnEditCityAdd);
+            addApartmentsTab.Controls.Add(btnEditCountryAdd);
+            addApartmentsTab.ForeColor = Color.White;
+            addApartmentsTab.Image = null;
+            addApartmentsTab.ImageSize = new Size(16, 16);
+            addApartmentsTab.Location = new Point(1, 32);
+            addApartmentsTab.Name = "addApartmentsTab";
+            addApartmentsTab.ShowCloseButton = true;
+            addApartmentsTab.Size = new Size(822, 190);
+            addApartmentsTab.TabFont = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            addApartmentsTab.TabForeColor = Color.White;
+            addApartmentsTab.TabIndex = 1;
+            addApartmentsTab.Text = "Добавить квартиры";
+            addApartmentsTab.ThemesEnabled = false;
+            // 
+            // btnAddRange
+            // 
+            btnAddRange.BackColor = Color.White;
+            btnAddRange.FlatAppearance.BorderSize = 0;
+            btnAddRange.FlatStyle = FlatStyle.Flat;
+            btnAddRange.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddRange.ForeColor = Color.FromArgb(0, 71, 160);
+            btnAddRange.Image = (Image)resources.GetObject("btnAddRange.Image");
+            btnAddRange.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddRange.Location = new Point(320, 137);
+            btnAddRange.Name = "btnAddRange";
+            btnAddRange.Size = new Size(252, 33);
+            btnAddRange.TabIndex = 23;
+            btnAddRange.Text = "      Добавить список квартир";
+            btnAddRange.UseVisualStyleBackColor = false;
+            btnAddRange.Click += btnAddRange_Click;
+            // 
+            // btnEditNumber
+            // 
+            btnEditNumber.BackColor = Color.White;
+            btnEditNumber.FlatAppearance.BorderSize = 0;
+            btnEditNumber.FlatStyle = FlatStyle.Flat;
+            btnEditNumber.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEditNumber.ForeColor = Color.FromArgb(0, 71, 160);
+            btnEditNumber.Image = (Image)resources.GetObject("btnEditNumber.Image");
+            btnEditNumber.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditNumber.Location = new Point(578, 137);
+            btnEditNumber.Name = "btnEditNumber";
+            btnEditNumber.Size = new Size(168, 33);
+            btnEditNumber.TabIndex = 21;
+            btnEditNumber.Text = "     Редактировать";
+            btnEditNumber.UseVisualStyleBackColor = false;
+            btnEditNumber.Click += btnEditNumber_Click;
+            // 
+            // btnAddSingle
+            // 
+            btnAddSingle.BackColor = Color.White;
+            btnAddSingle.FlatAppearance.BorderSize = 0;
+            btnAddSingle.FlatStyle = FlatStyle.Flat;
+            btnAddSingle.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddSingle.ForeColor = Color.FromArgb(0, 71, 160);
+            btnAddSingle.Image = (Image)resources.GetObject("btnAddSingle.Image");
+            btnAddSingle.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddSingle.Location = new Point(101, 137);
+            btnAddSingle.Name = "btnAddSingle";
+            btnAddSingle.Size = new Size(213, 33);
+            btnAddSingle.TabIndex = 22;
+            btnAddSingle.Text = "     Добавить 1 квартиру";
+            btnAddSingle.UseVisualStyleBackColor = false;
+            btnAddSingle.Click += btnAddSingle_Click;
             // 
             // addressControlAddApartments
             // 
-            this.addressControlAddApartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.addressControlAddApartments.Location = new System.Drawing.Point(10, 69);
-            this.addressControlAddApartments.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.addressControlAddApartments.Name = "addressControlAddApartments";
-            this.addressControlAddApartments.Size = new System.Drawing.Size(523, 26);
-            this.addressControlAddApartments.TabIndex = 20;
+            addressControlAddApartments.BackColor = Color.FromArgb(0, 71, 160);
+            addressControlAddApartments.Location = new Point(129, 69);
+            addressControlAddApartments.Margin = new Padding(0, 0, 5, 0);
+            addressControlAddApartments.Name = "addressControlAddApartments";
+            addressControlAddApartments.Size = new Size(523, 26);
+            addressControlAddApartments.TabIndex = 20;
             // 
             // cityControlAddApartments
             // 
-            this.cityControlAddApartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.cityControlAddApartments.Location = new System.Drawing.Point(291, 22);
-            this.cityControlAddApartments.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.cityControlAddApartments.Name = "cityControlAddApartments";
-            this.cityControlAddApartments.Size = new System.Drawing.Size(242, 26);
-            this.cityControlAddApartments.TabIndex = 19;
+            cityControlAddApartments.BackColor = Color.FromArgb(0, 71, 160);
+            cityControlAddApartments.Location = new Point(410, 22);
+            cityControlAddApartments.Margin = new Padding(0, 0, 5, 0);
+            cityControlAddApartments.Name = "cityControlAddApartments";
+            cityControlAddApartments.Size = new Size(242, 26);
+            cityControlAddApartments.TabIndex = 19;
             // 
             // countryControlAddApartments
             // 
-            this.countryControlAddApartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.countryControlAddApartments.Location = new System.Drawing.Point(3, 22);
-            this.countryControlAddApartments.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.countryControlAddApartments.Name = "countryControlAddApartments";
-            this.countryControlAddApartments.Size = new System.Drawing.Size(237, 26);
-            this.countryControlAddApartments.TabIndex = 18;
+            countryControlAddApartments.BackColor = Color.FromArgb(0, 71, 160);
+            countryControlAddApartments.Location = new Point(122, 22);
+            countryControlAddApartments.Margin = new Padding(0, 0, 5, 0);
+            countryControlAddApartments.Name = "countryControlAddApartments";
+            countryControlAddApartments.Size = new Size(237, 26);
+            countryControlAddApartments.TabIndex = 18;
             // 
             // chkPrivateHouse
             // 
-            this.chkPrivateHouse.AutoSize = true;
-            this.chkPrivateHouse.Enabled = false;
-            this.chkPrivateHouse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chkPrivateHouse.Location = new System.Drawing.Point(92, 111);
-            this.chkPrivateHouse.Name = "chkPrivateHouse";
-            this.chkPrivateHouse.Size = new System.Drawing.Size(123, 20);
-            this.chkPrivateHouse.TabIndex = 17;
-            this.chkPrivateHouse.Text = "Частные дома";
-            this.chkPrivateHouse.UseVisualStyleBackColor = true;
-            this.chkPrivateHouse.CheckedChanged += new System.EventHandler(this.chkPrivateHouse_CheckedChanged);
+            chkPrivateHouse.AutoSize = true;
+            chkPrivateHouse.Enabled = false;
+            chkPrivateHouse.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            chkPrivateHouse.Location = new Point(211, 98);
+            chkPrivateHouse.Name = "chkPrivateHouse";
+            chkPrivateHouse.Size = new Size(130, 20);
+            chkPrivateHouse.TabIndex = 17;
+            chkPrivateHouse.Text = "Частные дома";
+            chkPrivateHouse.UseVisualStyleBackColor = true;
+            chkPrivateHouse.CheckedChanged += chkPrivateHouse_CheckedChanged;
             // 
             // btnEditAddressAdd
             // 
-            this.btnEditAddressAdd.BackColor = System.Drawing.Color.White;
-            this.btnEditAddressAdd.FlatAppearance.BorderSize = 0;
-            this.btnEditAddressAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditAddressAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnEditAddressAdd.Image")));
-            this.btnEditAddressAdd.Location = new System.Drawing.Point(541, 65);
-            this.btnEditAddressAdd.Name = "btnEditAddressAdd";
-            this.btnEditAddressAdd.Size = new System.Drawing.Size(40, 35);
-            this.btnEditAddressAdd.TabIndex = 16;
-            this.btnEditAddressAdd.UseVisualStyleBackColor = false;
-            this.btnEditAddressAdd.Click += new System.EventHandler(this.btnEditAddressAdd_Click);
+            btnEditAddressAdd.BackColor = Color.White;
+            btnEditAddressAdd.FlatAppearance.BorderSize = 0;
+            btnEditAddressAdd.FlatStyle = FlatStyle.Flat;
+            btnEditAddressAdd.Image = (Image)resources.GetObject("btnEditAddressAdd.Image");
+            btnEditAddressAdd.Location = new Point(660, 65);
+            btnEditAddressAdd.Name = "btnEditAddressAdd";
+            btnEditAddressAdd.Size = new Size(40, 35);
+            btnEditAddressAdd.TabIndex = 16;
+            btnEditAddressAdd.UseVisualStyleBackColor = false;
+            btnEditAddressAdd.Click += btnEditAddressAdd_Click;
             // 
             // btnEditCityAdd
             // 
-            this.btnEditCityAdd.BackColor = System.Drawing.Color.White;
-            this.btnEditCityAdd.FlatAppearance.BorderSize = 0;
-            this.btnEditCityAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCityAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCityAdd.Image")));
-            this.btnEditCityAdd.Location = new System.Drawing.Point(541, 18);
-            this.btnEditCityAdd.Name = "btnEditCityAdd";
-            this.btnEditCityAdd.Size = new System.Drawing.Size(40, 35);
-            this.btnEditCityAdd.TabIndex = 15;
-            this.btnEditCityAdd.UseVisualStyleBackColor = false;
-            this.btnEditCityAdd.Click += new System.EventHandler(this.btnEditCityAdd_Click);
+            btnEditCityAdd.BackColor = Color.White;
+            btnEditCityAdd.FlatAppearance.BorderSize = 0;
+            btnEditCityAdd.FlatStyle = FlatStyle.Flat;
+            btnEditCityAdd.Image = (Image)resources.GetObject("btnEditCityAdd.Image");
+            btnEditCityAdd.Location = new Point(660, 18);
+            btnEditCityAdd.Name = "btnEditCityAdd";
+            btnEditCityAdd.Size = new Size(40, 35);
+            btnEditCityAdd.TabIndex = 15;
+            btnEditCityAdd.UseVisualStyleBackColor = false;
+            btnEditCityAdd.Click += btnEditCityAdd_Click;
             // 
             // btnEditCountryAdd
             // 
-            this.btnEditCountryAdd.BackColor = System.Drawing.Color.White;
-            this.btnEditCountryAdd.FlatAppearance.BorderSize = 0;
-            this.btnEditCountryAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCountryAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCountryAdd.Image")));
-            this.btnEditCountryAdd.Location = new System.Drawing.Point(248, 18);
-            this.btnEditCountryAdd.Name = "btnEditCountryAdd";
-            this.btnEditCountryAdd.Size = new System.Drawing.Size(40, 35);
-            this.btnEditCountryAdd.TabIndex = 14;
-            this.btnEditCountryAdd.UseVisualStyleBackColor = false;
-            this.btnEditCountryAdd.Click += new System.EventHandler(this.btnEditCountryAdd_Click);
+            btnEditCountryAdd.BackColor = Color.White;
+            btnEditCountryAdd.FlatAppearance.BorderSize = 0;
+            btnEditCountryAdd.FlatStyle = FlatStyle.Flat;
+            btnEditCountryAdd.Image = (Image)resources.GetObject("btnEditCountryAdd.Image");
+            btnEditCountryAdd.Location = new Point(367, 18);
+            btnEditCountryAdd.Name = "btnEditCountryAdd";
+            btnEditCountryAdd.Size = new Size(40, 35);
+            btnEditCountryAdd.TabIndex = 14;
+            btnEditCountryAdd.UseVisualStyleBackColor = false;
+            btnEditCountryAdd.Click += btnEditCountryAdd_Click;
             // 
             // tabPageAdv2
             // 
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 31);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(822, 217);
-            this.tabPageAdv2.TabFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabPageAdv2.TabForeColor = System.Drawing.Color.White;
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.Text = "tabPageAdv2";
-            this.tabPageAdv2.ThemesEnabled = false;
+            tabPageAdv2.Image = null;
+            tabPageAdv2.ImageSize = new Size(16, 16);
+            tabPageAdv2.Location = new Point(1, 32);
+            tabPageAdv2.Name = "tabPageAdv2";
+            tabPageAdv2.ShowCloseButton = true;
+            tabPageAdv2.Size = new Size(822, 190);
+            tabPageAdv2.TabFont = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            tabPageAdv2.TabForeColor = Color.White;
+            tabPageAdv2.TabIndex = 2;
+            tabPageAdv2.Text = "tabPageAdv2";
+            tabPageAdv2.ThemesEnabled = false;
+            // 
+            // gridPhones
+            // 
+            gridPhones.BackColor = Color.White;
+            gridPhones.Dock = DockStyle.Bottom;
+            gridPhones.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gridPhones.ForeColor = Color.FromArgb(0, 71, 160);
+            gridPhones.Location = new Point(5, 229);
+            gridPhones.Name = "gridPhones";
+            gridPhones.Padding = new Padding(0, 5, 0, 0);
+            gridPhones.Size = new Size(825, 361);
+            gridPhones.TabIndex = 1;
             // 
             // AddControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.tabControlAddAdv);
-            this.Name = "AddControl";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(835, 595);
-            this.Load += new System.EventHandler(this.AddControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAddAdv)).EndInit();
-            this.tabControlAddAdv.ResumeLayout(false);
-            this.addApartmentsTab.ResumeLayout(false);
-            this.addApartmentsTab.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(tabControlAddAdv);
+            Controls.Add(gridPhones);
+            Name = "AddControl";
+            Padding = new Padding(5);
+            Size = new Size(835, 595);
+            Load += AddControl_Load;
+            ((System.ComponentModel.ISupportInitialize)tabControlAddAdv).EndInit();
+            tabControlAddAdv.ResumeLayout(false);
+            addApartmentsTab.ResumeLayout(false);
+            addApartmentsTab.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -203,5 +273,9 @@
         private UserControls.CountryControl countryControlAddApartments;
         private UserControls.CityControl cityControlAddApartments;
         private UserControls.AddressControl addressControlAddApartments;
+        private UserControls.GridControl gridPhones;
+        private Button btnAddRange;
+        private Button btnEditNumber;
+        private Button btnAddSingle;
     }
 }

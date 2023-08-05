@@ -105,7 +105,7 @@ namespace PhoneBook.Forms
             }
             else
             {
-                MessageBox.Show("Выберите в таблице страну для редактирования.", "Уведомление", 
+                MessageBox.Show("Выберите в таблице страну для редактирования.", "Уведомление",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -120,51 +120,51 @@ namespace PhoneBook.Forms
                 return;
 
             var example = "";
-                if (txtExample.Text.Replace(" ", "").Length > txtCountryCode.Text.Replace(" ", "").Length) example = txtExample.Text;
-                if (btnAdd.Text == "Сохранить")
+            if (txtExample.Text.Replace(" ", "").Length > txtCountryCode.Text.Replace(" ", "").Length) example = txtExample.Text;
+            if (btnAdd.Text == "Сохранить")
+            {
+                using (var db = new ApplicationContext())
                 {
-                    using (var db = new ApplicationContext())
+                    if (currentCountry != null)
                     {
-                        if (currentCountry != null)
-                        {
-                            currentCountry.CountryName = txtCountryName.Text.Trim();
-                            currentCountry.CountryCode = txtCountryCode.Text.Replace(" ", "");
-                            currentCountry.CountDigits = Convert.ToInt32(txtCountDigits.Text);
-                            currentCountry.Example = example;
+                        currentCountry.CountryName = txtCountryName.Text.Trim();
+                        currentCountry.CountryCode = txtCountryCode.Text.Replace(" ", "");
+                        currentCountry.CountDigits = Convert.ToInt32(txtCountDigits.Text);
+                        currentCountry.Example = example;
 
-                            db.Country.Update(currentCountry);
-                            db.SaveChanges();
-                        }
-                    }
-                    ClearTextBox();
-                    LoadDataCountry();
-                    btnAdd.Text = "Добавить";
-                    btnEdit.Enabled = true;
-                    btnDelete.Enabled = true;
-
-                }
-                else if (btnAdd.Text == "Добавить")
-                {
-
-                    using (var db = new ApplicationContext())
-                    {
-                        db.Country.Add(new Country()
-                        {
-                            CountryName = txtCountryName.Text.Trim(),
-                            CountryCode = txtCountryCode.Text.Replace(" ", ""),
-                            CountDigits = Convert.ToInt32(txtCountDigits.Text),
-                            Example = example
-                        });
-
+                        db.Country.Update(currentCountry);
                         db.SaveChanges();
                     }
-                    ClearTextBox();
-                    LoadDataCountry();
                 }
-                //else
-                //{
-                //    ;
-                //}
+                ClearTextBox();
+                LoadDataCountry();
+                btnAdd.Text = "Добавить";
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+
+            }
+            else if (btnAdd.Text == "Добавить")
+            {
+
+                using (var db = new ApplicationContext())
+                {
+                    db.Country.Add(new Country()
+                    {
+                        CountryName = txtCountryName.Text.Trim(),
+                        CountryCode = txtCountryCode.Text.Replace(" ", ""),
+                        CountDigits = Convert.ToInt32(txtCountDigits.Text),
+                        Example = example
+                    });
+
+                    db.SaveChanges();
+                }
+                ClearTextBox();
+                LoadDataCountry();
+            }
+            //else
+            //{
+            //    ;
+            //}
         }
         /// <summary>
         /// Очистка текстовых полей
@@ -190,7 +190,7 @@ namespace PhoneBook.Forms
                 var dialog = MessageBox.Show($"Вы действительно хотите удалить запись:\n " +
                     $"{currentCountry.CountryName} {currentCountry.CountryCode} {currentCountry.CountDigits}", "Уведомление",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialog == DialogResult.No) return; 
+                if (dialog == DialogResult.No) return;
                 using (var db = new ApplicationContext())
                 {
                     db.Country.Remove(currentCountry);
@@ -217,7 +217,7 @@ namespace PhoneBook.Forms
             {
                 return;
             }
-                
+
 
             txtExample.Mask = "+" + new string('0', Convert.ToInt32(txtCountDigits.Text));
             if (regex.Replace(txtExample.Text, "").Length == Convert.ToInt32(txtCountDigits.Text))
