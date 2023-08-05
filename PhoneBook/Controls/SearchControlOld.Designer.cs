@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook.Controls
 {
-    partial class SearchControl
+    partial class SearchControlOld
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchControlOld));
             tabControlAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             searchByAddressTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            btnExportToPdf = new Button();
+            btnClearResultSearch = new Button();
+            btnListResultAddresses = new Button();
+            btnAddSearch = new Button();
             btnSearch = new Button();
             pnlFilterPrivateHouse = new Panel();
             panel4 = new Panel();
@@ -49,11 +51,14 @@
             txtTo = new TextBox();
             lblFrom = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             txtFrom = new TextBox();
-            countryControlSearchByAddress = new UserControls.CountryControl();
-            addressControlSearchByAddress = new UserControls.AddressControl();
-            cityControlSearchByAddress = new UserControls.CityControl();
+            autoCompleteControlAddress = new UserControls.AutoCompleteControl();
+            lblAddress = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            lblCity = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoCompleteControlCity = new UserControls.AutoCompleteControl();
+            lblCountry = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoCompleteControlCountry = new UserControls.AutoCompleteControl();
+            tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             gridPhones = new UserControls.GridControl();
-            saveFileDialog = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)tabControlAdv).BeginInit();
             tabControlAdv.SuspendLayout();
             searchByAddressTab.SuspendLayout();
@@ -65,54 +70,92 @@
             // tabControlAdv
             // 
             tabControlAdv.BackColor = Color.FromArgb(0, 71, 160);
-            tabControlAdv.BeforeTouchSize = new Size(825, 230);
+            tabControlAdv.BeforeTouchSize = new Size(825, 250);
             tabControlAdv.Controls.Add(searchByAddressTab);
-            tabControlAdv.Dock = DockStyle.Fill;
+            tabControlAdv.Controls.Add(tabPageAdv2);
+            tabControlAdv.Dock = DockStyle.Top;
+            tabControlAdv.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             tabControlAdv.Location = new Point(5, 5);
             tabControlAdv.Name = "tabControlAdv";
-            tabControlAdv.Size = new Size(825, 230);
-            tabControlAdv.TabIndex = 0;
+            tabControlAdv.Size = new Size(825, 250);
+            tabControlAdv.TabIndex = 4;
             tabControlAdv.SelectedIndexChanged += tabControlAdv_SelectedIndexChanged;
             // 
             // searchByAddressTab
             // 
-            searchByAddressTab.Controls.Add(btnExportToPdf);
+            searchByAddressTab.Controls.Add(btnClearResultSearch);
+            searchByAddressTab.Controls.Add(btnListResultAddresses);
+            searchByAddressTab.Controls.Add(btnAddSearch);
             searchByAddressTab.Controls.Add(btnSearch);
             searchByAddressTab.Controls.Add(pnlFilterPrivateHouse);
             searchByAddressTab.Controls.Add(chkPrivateHouse);
             searchByAddressTab.Controls.Add(grpApartment);
             searchByAddressTab.Controls.Add(grpApartments);
-            searchByAddressTab.Controls.Add(countryControlSearchByAddress);
-            searchByAddressTab.Controls.Add(addressControlSearchByAddress);
-            searchByAddressTab.Controls.Add(cityControlSearchByAddress);
+            searchByAddressTab.Controls.Add(autoCompleteControlAddress);
+            searchByAddressTab.Controls.Add(lblAddress);
+            searchByAddressTab.Controls.Add(lblCity);
+            searchByAddressTab.Controls.Add(autoCompleteControlCity);
+            searchByAddressTab.Controls.Add(lblCountry);
+            searchByAddressTab.Controls.Add(autoCompleteControlCountry);
+            searchByAddressTab.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             searchByAddressTab.ForeColor = Color.White;
             searchByAddressTab.Image = null;
             searchByAddressTab.ImageSize = new Size(16, 16);
             searchByAddressTab.Location = new Point(1, 31);
             searchByAddressTab.Name = "searchByAddressTab";
             searchByAddressTab.ShowCloseButton = true;
-            searchByAddressTab.Size = new Size(822, 197);
-            searchByAddressTab.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            searchByAddressTab.Size = new Size(822, 217);
             searchByAddressTab.TabForeColor = Color.White;
             searchByAddressTab.TabIndex = 1;
             searchByAddressTab.Text = "Поиск по адресу";
             searchByAddressTab.ThemesEnabled = false;
             // 
-            // btnExportToPdf
+            // btnClearResultSearch
             // 
-            btnExportToPdf.BackColor = Color.White;
-            btnExportToPdf.FlatStyle = FlatStyle.Flat;
-            btnExportToPdf.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExportToPdf.ForeColor = Color.FromArgb(0, 71, 160);
-            btnExportToPdf.Image = (Image)resources.GetObject("btnExportToPdf.Image");
-            btnExportToPdf.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExportToPdf.Location = new Point(639, 148);
-            btnExportToPdf.Name = "btnExportToPdf";
-            btnExportToPdf.Size = new Size(173, 32);
-            btnExportToPdf.TabIndex = 17;
-            btnExportToPdf.Text = "     Экспорт в PDF";
-            btnExportToPdf.UseVisualStyleBackColor = false;
-            btnExportToPdf.Click += btnExportToPdf_Click;
+            btnClearResultSearch.BackColor = Color.White;
+            btnClearResultSearch.Enabled = false;
+            btnClearResultSearch.FlatStyle = FlatStyle.Flat;
+            btnClearResultSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearResultSearch.ForeColor = Color.FromArgb(0, 71, 160);
+            btnClearResultSearch.Image = (Image)resources.GetObject("btnClearResultSearch.Image");
+            btnClearResultSearch.Location = new Point(571, 146);
+            btnClearResultSearch.Name = "btnClearResultSearch";
+            btnClearResultSearch.Size = new Size(35, 32);
+            btnClearResultSearch.TabIndex = 14;
+            btnClearResultSearch.UseVisualStyleBackColor = false;
+            btnClearResultSearch.Click += btnClearResultSearch_Click;
+            // 
+            // btnListResultAddresses
+            // 
+            btnListResultAddresses.BackColor = Color.White;
+            btnListResultAddresses.Enabled = false;
+            btnListResultAddresses.FlatStyle = FlatStyle.Flat;
+            btnListResultAddresses.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnListResultAddresses.ForeColor = Color.FromArgb(0, 71, 160);
+            btnListResultAddresses.Image = (Image)resources.GetObject("btnListResultAddresses.Image");
+            btnListResultAddresses.Location = new Point(530, 146);
+            btnListResultAddresses.Name = "btnListResultAddresses";
+            btnListResultAddresses.Size = new Size(35, 32);
+            btnListResultAddresses.TabIndex = 13;
+            btnListResultAddresses.UseVisualStyleBackColor = false;
+            btnListResultAddresses.Click += btnListResultAddresses_Click;
+            // 
+            // btnAddSearch
+            // 
+            btnAddSearch.BackColor = Color.White;
+            btnAddSearch.Enabled = false;
+            btnAddSearch.FlatStyle = FlatStyle.Flat;
+            btnAddSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddSearch.ForeColor = Color.FromArgb(0, 71, 160);
+            btnAddSearch.Image = (Image)resources.GetObject("btnAddSearch.Image");
+            btnAddSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddSearch.Location = new Point(323, 146);
+            btnAddSearch.Name = "btnAddSearch";
+            btnAddSearch.Size = new Size(201, 32);
+            btnAddSearch.TabIndex = 12;
+            btnAddSearch.Text = "     Добавить к поиску";
+            btnAddSearch.UseVisualStyleBackColor = false;
+            btnAddSearch.Click += btnAddSearch_Click;
             // 
             // btnSearch
             // 
@@ -122,10 +165,10 @@
             btnSearch.ForeColor = Color.FromArgb(0, 71, 160);
             btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
             btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearch.Location = new Point(361, 146);
+            btnSearch.Location = new Point(216, 146);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(101, 32);
-            btnSearch.TabIndex = 16;
+            btnSearch.TabIndex = 11;
             btnSearch.Text = "     Найти";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
@@ -140,11 +183,10 @@
             pnlFilterPrivateHouse.Controls.Add(rdbEven);
             pnlFilterPrivateHouse.Controls.Add(rdbAll);
             pnlFilterPrivateHouse.Enabled = false;
-            pnlFilterPrivateHouse.ForeColor = Color.White;
             pnlFilterPrivateHouse.Location = new Point(517, 104);
             pnlFilterPrivateHouse.Name = "pnlFilterPrivateHouse";
             pnlFilterPrivateHouse.Size = new Size(295, 29);
-            pnlFilterPrivateHouse.TabIndex = 15;
+            pnlFilterPrivateHouse.TabIndex = 10;
             // 
             // panel4
             // 
@@ -224,11 +266,10 @@
             chkPrivateHouse.AutoSize = true;
             chkPrivateHouse.Enabled = false;
             chkPrivateHouse.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            chkPrivateHouse.ForeColor = Color.White;
-            chkPrivateHouse.Location = new Point(94, 97);
+            chkPrivateHouse.Location = new Point(93, 108);
             chkPrivateHouse.Name = "chkPrivateHouse";
             chkPrivateHouse.Size = new Size(123, 20);
-            chkPrivateHouse.TabIndex = 14;
+            chkPrivateHouse.TabIndex = 9;
             chkPrivateHouse.Text = "Частные дома";
             chkPrivateHouse.UseVisualStyleBackColor = true;
             chkPrivateHouse.CheckedChanged += chkPrivateHouse_CheckedChanged;
@@ -241,7 +282,7 @@
             grpApartment.Location = new Point(517, 13);
             grpApartment.Name = "grpApartment";
             grpApartment.Size = new Size(112, 85);
-            grpApartment.TabIndex = 13;
+            grpApartment.TabIndex = 8;
             grpApartment.TabStop = false;
             grpApartment.Text = "Квартира:";
             // 
@@ -266,7 +307,7 @@
             grpApartments.Location = new Point(635, 13);
             grpApartments.Name = "grpApartments";
             grpApartments.Size = new Size(177, 85);
-            grpApartments.TabIndex = 12;
+            grpApartments.TabIndex = 7;
             grpApartments.TabStop = false;
             grpApartments.Text = "Квартиры:";
             // 
@@ -313,52 +354,106 @@
             txtFrom.TextAlign = HorizontalAlignment.Center;
             txtFrom.TextChanged += txtFrom_TextChanged;
             // 
-            // countryControlSearchByAddress
+            // autoCompleteControlAddress
             // 
-            countryControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
-            countryControlSearchByAddress.Location = new Point(13, 25);
-            countryControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
-            countryControlSearchByAddress.Name = "countryControlSearchByAddress";
-            countryControlSearchByAddress.Size = new Size(234, 26);
-            countryControlSearchByAddress.TabIndex = 2;
+            autoCompleteControlAddress.AutoSize = true;
+            autoCompleteControlAddress.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlAddress.Location = new Point(93, 72);
+            autoCompleteControlAddress.MinimumSize = new Size(150, 26);
+            autoCompleteControlAddress.Name = "autoCompleteControlAddress";
+            autoCompleteControlAddress.Size = new Size(407, 26);
+            autoCompleteControlAddress.TabIndex = 2;
+            autoCompleteControlAddress.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             // 
-            // addressControlSearchByAddress
+            // lblAddress
             // 
-            addressControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
-            addressControlSearchByAddress.Location = new Point(21, 68);
-            addressControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
-            addressControlSearchByAddress.Name = "addressControlSearchByAddress";
-            addressControlSearchByAddress.Size = new Size(475, 26);
-            addressControlSearchByAddress.TabIndex = 1;
+            lblAddress.DX = -104;
+            lblAddress.DY = 1;
+            lblAddress.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAddress.LabeledControl = autoCompleteControlAddress;
+            lblAddress.Location = new Point(-11, 73);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(66, 19);
+            lblAddress.TabIndex = 5;
+            lblAddress.Text = "Адрес:";
             // 
-            // cityControlSearchByAddress
+            // lblCity
             // 
-            cityControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
-            cityControlSearchByAddress.Location = new Point(252, 25);
-            cityControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
-            cityControlSearchByAddress.Name = "cityControlSearchByAddress";
-            cityControlSearchByAddress.Size = new Size(244, 26);
-            cityControlSearchByAddress.TabIndex = 0;
+            lblCity.DX = -65;
+            lblCity.DY = 3;
+            lblCity.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCity.LabeledControl = autoCompleteControlCity;
+            lblCity.Location = new Point(264, 25);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new Size(61, 19);
+            lblCity.TabIndex = 4;
+            lblCity.Text = "Город:";
+            // 
+            // autoCompleteControlCity
+            // 
+            autoCompleteControlCity.AutoSize = true;
+            autoCompleteControlCity.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlCity.Location = new Point(329, 22);
+            autoCompleteControlCity.MinimumSize = new Size(150, 26);
+            autoCompleteControlCity.Name = "autoCompleteControlCity";
+            autoCompleteControlCity.Size = new Size(171, 26);
+            autoCompleteControlCity.TabIndex = 1;
+            autoCompleteControlCity.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            // 
+            // lblCountry
+            // 
+            lblCountry.DX = -80;
+            lblCountry.DY = 3;
+            lblCountry.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCountry.LabeledControl = autoCompleteControlCountry;
+            lblCountry.Location = new Point(12, 25);
+            lblCountry.Name = "lblCountry";
+            lblCountry.Size = new Size(76, 19);
+            lblCountry.TabIndex = 1;
+            lblCountry.Text = "Страна:";
+            // 
+            // autoCompleteControlCountry
+            // 
+            autoCompleteControlCountry.AutoSize = true;
+            autoCompleteControlCountry.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlCountry.Location = new Point(92, 22);
+            autoCompleteControlCountry.MinimumSize = new Size(150, 26);
+            autoCompleteControlCountry.Name = "autoCompleteControlCountry";
+            autoCompleteControlCountry.Size = new Size(150, 26);
+            autoCompleteControlCountry.TabIndex = 0;
+            autoCompleteControlCountry.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            // 
+            // tabPageAdv2
+            // 
+            tabPageAdv2.Image = null;
+            tabPageAdv2.ImageSize = new Size(16, 16);
+            tabPageAdv2.Location = new Point(1, 31);
+            tabPageAdv2.Name = "tabPageAdv2";
+            tabPageAdv2.ShowCloseButton = true;
+            tabPageAdv2.Size = new Size(822, 217);
+            tabPageAdv2.TabIndex = 2;
+            tabPageAdv2.Text = "tabPageAdv2";
+            tabPageAdv2.ThemesEnabled = false;
             // 
             // gridPhones
             // 
             gridPhones.BackColor = Color.White;
-            gridPhones.Dock = DockStyle.Bottom;
+            gridPhones.Dock = DockStyle.Fill;
             gridPhones.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             gridPhones.ForeColor = Color.FromArgb(0, 71, 160);
-            gridPhones.Location = new Point(5, 235);
+            gridPhones.Location = new Point(5, 255);
             gridPhones.Name = "gridPhones";
             gridPhones.Padding = new Padding(0, 5, 0, 0);
-            gridPhones.Size = new Size(825, 355);
-            gridPhones.TabIndex = 1;
+            gridPhones.Size = new Size(825, 335);
+            gridPhones.TabIndex = 5;
             // 
             // SearchControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(tabControlAdv);
             Controls.Add(gridPhones);
+            Controls.Add(tabControlAdv);
             Name = "SearchControl";
             Padding = new Padding(5);
             Size = new Size(835, 595);
@@ -377,31 +472,35 @@
         }
 
         #endregion
-
         private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv;
-        private UserControls.GridControl gridPhones;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv searchByAddressTab;
-        private UserControls.CountryControl countryControlSearchByAddress;
-        private UserControls.AddressControl addressControlSearchByAddress;
-        private UserControls.CityControl cityControlSearchByAddress;
-        private Button btnSearch;
-        private Panel pnlFilterPrivateHouse;
-        private Panel panel4;
-        private Panel panel3;
-        private Panel panel2;
-        private Panel panel1;
-        private RadioButton rdbOdd;
-        private RadioButton rdbEven;
-        private RadioButton rdbAll;
-        private CheckBox chkPrivateHouse;
-        private GroupBox grpApartment;
-        private TextBox txtSingle;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        private UserControls.AutoCompleteControl autoCompleteControlCountry;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblCountry;
+        private UserControls.AutoCompleteControl autoCompleteControlCity;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblCity;
         private GroupBox grpApartments;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblTo;
         private TextBox txtTo;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblFrom;
         private TextBox txtFrom;
-        private Button btnExportToPdf;
-        private SaveFileDialog saveFileDialog;
+        private UserControls.AutoCompleteControl autoCompleteControlAddress;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblAddress;
+        private GroupBox grpApartment;
+        private TextBox txtSingle;
+        private Panel pnlFilterPrivateHouse;
+        private RadioButton rdbOdd;
+        private RadioButton rdbEven;
+        private RadioButton rdbAll;
+        private CheckBox chkPrivateHouse;
+        private Panel panel4;
+        private Panel panel3;
+        private Panel panel2;
+        private Panel panel1;
+        private Button btnAddSearch;
+        private Button btnSearch;
+        private Button btnListResultAddresses;
+        private Button btnClearResultSearch;
+        private UserControls.GridControl gridPhones;
     }
 }

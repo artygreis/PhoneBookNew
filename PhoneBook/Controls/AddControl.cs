@@ -55,6 +55,8 @@ namespace PhoneBook.Controls
             _maskNumber = City.GetMaskNumberbyCityId(cityId);
 
             addressControlAddApartments.LoadAddress(cityId, chkPrivateHouse.Checked);
+
+            chkPrivateHouse.Enabled = true;
         }
 
         private void AddressControlAddApartments_AddressChanged(int addressId)
@@ -147,7 +149,6 @@ namespace PhoneBook.Controls
                     goto case "CityControl";
                 case "CityControl":
                     addressControlAddApartments.ClearDataAddress();
-                    chkPrivateHouse.Enabled = true;
                     goto case "AddressControl";
                 case "AddressControl":
                     UpdateData(new List<NumberPhoneView>());
@@ -215,13 +216,11 @@ namespace PhoneBook.Controls
 
         private void chkPrivateHouse_CheckedChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cityControlAddApartments.GetTextCity()))
+            if (!string.IsNullOrEmpty(cityControlAddApartments.GetTextCity()))
             {
-                return;
+                addressControlAddApartments.ClearDataAddress();
+                cityControlAddApartments.SelectCity(cityControlAddApartments.GetCityId());
             }
-            addressControlAddApartments.ClearDataAddress();
-            cityControlAddApartments.SelectCity(cityControlAddApartments.GetCityId());
-            ClearDataOnAddApartmentsTab("AddressControl");
         }
 
         private void btnAddSingle_Click(object sender, EventArgs e)

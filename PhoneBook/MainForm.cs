@@ -29,7 +29,6 @@ namespace PhoneBook
                 btn.NotifyDefault(false);
             }
         }
-
         
         private void btnMinimize_Click(object sender, EventArgs e)
         {

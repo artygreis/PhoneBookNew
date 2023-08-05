@@ -77,11 +77,11 @@
             addApartmentsTab.ForeColor = Color.White;
             addApartmentsTab.Image = null;
             addApartmentsTab.ImageSize = new Size(16, 16);
-            addApartmentsTab.Location = new Point(1, 32);
+            addApartmentsTab.Location = new Point(1, 31);
             addApartmentsTab.Name = "addApartmentsTab";
             addApartmentsTab.ShowCloseButton = true;
-            addApartmentsTab.Size = new Size(822, 190);
-            addApartmentsTab.TabFont = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            addApartmentsTab.Size = new Size(822, 191);
+            addApartmentsTab.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             addApartmentsTab.TabForeColor = Color.White;
             addApartmentsTab.TabIndex = 1;
             addApartmentsTab.Text = "Добавить квартиры";
@@ -225,7 +225,7 @@
             tabPageAdv2.Name = "tabPageAdv2";
             tabPageAdv2.ShowCloseButton = true;
             tabPageAdv2.Size = new Size(822, 190);
-            tabPageAdv2.TabFont = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            tabPageAdv2.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             tabPageAdv2.TabForeColor = Color.White;
             tabPageAdv2.TabIndex = 2;
             tabPageAdv2.Text = "tabPageAdv2";
