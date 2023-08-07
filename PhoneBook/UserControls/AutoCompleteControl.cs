@@ -7,14 +7,14 @@ namespace PhoneBook.UserControls
     {
         //public List<AutoCompleteData> Datas { get; set; } = new List<AutoCompleteData>();
         public event AutoCompleteItemEventHandler? AutoCompleteItemSelected;
-        public Font TextBoxFont 
-        { 
-            get => txtContent.Font; 
-            set => txtContent.Font = value; 
+        public Font TextBoxFont
+        {
+            get => txtContent.Font;
+            set => txtContent.Font = value;
         }
-        public AutoComplete AutoComplete 
-        { 
-            get => autoComplete; 
+        public AutoComplete AutoComplete
+        {
+            get => autoComplete;
         }
         public TextBox TextBox
         {
@@ -25,8 +25,8 @@ namespace PhoneBook.UserControls
             InitializeComponent();
             autoComplete.SetAutoComplete(this.txtContent, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.Both);
             autoComplete.ShowColumnHeader = false;
-            autoComplete.ShowCloseButton= false;
-            autoComplete.ShowGripper= false;
+            autoComplete.ShowCloseButton = false;
+            autoComplete.ShowGripper = false;
             autoComplete.TextColor = Color.Black;
             autoComplete.ItemFont = new Font("Century Gothic", 10.25F);
         }

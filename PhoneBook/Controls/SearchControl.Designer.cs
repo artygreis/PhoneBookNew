@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchControl));
             tabControlAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            searchByNumberPhone = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            txtNumberPhone = new MaskedTextBox();
+            btnSearchByNumberPhone = new Button();
+            countryControlSearchByNumberPhone = new UserControls.CountryControl();
+            cityControlSearchByNumberPhone = new UserControls.CityControl();
             searchByAddressTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             btnExportToPdf = new Button();
             btnSearch = new Button();
@@ -56,6 +62,7 @@
             saveFileDialog = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)tabControlAdv).BeginInit();
             tabControlAdv.SuspendLayout();
+            searchByNumberPhone.SuspendLayout();
             searchByAddressTab.SuspendLayout();
             pnlFilterPrivateHouse.SuspendLayout();
             grpApartment.SuspendLayout();
@@ -67,12 +74,89 @@
             tabControlAdv.BackColor = Color.FromArgb(0, 71, 160);
             tabControlAdv.BeforeTouchSize = new Size(825, 230);
             tabControlAdv.Controls.Add(searchByAddressTab);
+            tabControlAdv.Controls.Add(searchByNumberPhone);
             tabControlAdv.Dock = DockStyle.Fill;
             tabControlAdv.Location = new Point(5, 5);
             tabControlAdv.Name = "tabControlAdv";
             tabControlAdv.Size = new Size(825, 230);
             tabControlAdv.TabIndex = 0;
             tabControlAdv.SelectedIndexChanged += tabControlAdv_SelectedIndexChanged;
+            // 
+            // searchByNumberPhone
+            // 
+            searchByNumberPhone.Controls.Add(autoLabel1);
+            searchByNumberPhone.Controls.Add(txtNumberPhone);
+            searchByNumberPhone.Controls.Add(btnSearchByNumberPhone);
+            searchByNumberPhone.Controls.Add(countryControlSearchByNumberPhone);
+            searchByNumberPhone.Controls.Add(cityControlSearchByNumberPhone);
+            searchByNumberPhone.ForeColor = Color.White;
+            searchByNumberPhone.Image = null;
+            searchByNumberPhone.ImageSize = new Size(16, 16);
+            searchByNumberPhone.Location = new Point(1, 31);
+            searchByNumberPhone.Name = "searchByNumberPhone";
+            searchByNumberPhone.ShowCloseButton = true;
+            searchByNumberPhone.Size = new Size(822, 197);
+            searchByNumberPhone.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            searchByNumberPhone.TabForeColor = Color.White;
+            searchByNumberPhone.TabIndex = 2;
+            searchByNumberPhone.Text = "Поиск по номеру";
+            searchByNumberPhone.ThemesEnabled = false;
+            // 
+            // autoLabel1
+            // 
+            autoLabel1.DX = -160;
+            autoLabel1.DY = 3;
+            autoLabel1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            autoLabel1.LabeledControl = txtNumberPhone;
+            autoLabel1.Location = new Point(18, 71);
+            autoLabel1.Name = "autoLabel1";
+            autoLabel1.Size = new Size(156, 19);
+            autoLabel1.TabIndex = 23;
+            autoLabel1.Text = "Номер телефона:";
+            // 
+            // txtNumberPhone
+            // 
+            txtNumberPhone.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtNumberPhone.ForeColor = Color.FromArgb(0, 71, 160);
+            txtNumberPhone.Location = new Point(178, 68);
+            txtNumberPhone.Name = "txtNumberPhone";
+            txtNumberPhone.Size = new Size(225, 26);
+            txtNumberPhone.TabIndex = 22;
+            txtNumberPhone.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnSearchByNumberPhone
+            // 
+            btnSearchByNumberPhone.BackColor = Color.White;
+            btnSearchByNumberPhone.FlatStyle = FlatStyle.Flat;
+            btnSearchByNumberPhone.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearchByNumberPhone.ForeColor = Color.FromArgb(0, 71, 160);
+            btnSearchByNumberPhone.Image = (Image)resources.GetObject("btnSearchByNumberPhone.Image");
+            btnSearchByNumberPhone.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearchByNumberPhone.Location = new Point(601, 37);
+            btnSearchByNumberPhone.Name = "btnSearchByNumberPhone";
+            btnSearchByNumberPhone.Size = new Size(132, 53);
+            btnSearchByNumberPhone.TabIndex = 19;
+            btnSearchByNumberPhone.Text = "     Найти";
+            btnSearchByNumberPhone.UseVisualStyleBackColor = false;
+            btnSearchByNumberPhone.Click += btnSearchByNumberPhone_Click;
+            // 
+            // countryControlSearchByNumberPhone
+            // 
+            countryControlSearchByNumberPhone.BackColor = Color.FromArgb(0, 71, 160);
+            countryControlSearchByNumberPhone.Location = new Point(15, 25);
+            countryControlSearchByNumberPhone.Margin = new Padding(0, 0, 5, 0);
+            countryControlSearchByNumberPhone.Name = "countryControlSearchByNumberPhone";
+            countryControlSearchByNumberPhone.Size = new Size(255, 26);
+            countryControlSearchByNumberPhone.TabIndex = 18;
+            // 
+            // cityControlSearchByNumberPhone
+            // 
+            cityControlSearchByNumberPhone.BackColor = Color.FromArgb(0, 71, 160);
+            cityControlSearchByNumberPhone.Location = new Point(275, 25);
+            cityControlSearchByNumberPhone.Margin = new Padding(0, 0, 5, 0);
+            cityControlSearchByNumberPhone.Name = "cityControlSearchByNumberPhone";
+            cityControlSearchByNumberPhone.Size = new Size(281, 26);
+            cityControlSearchByNumberPhone.TabIndex = 17;
             // 
             // searchByAddressTab
             // 
@@ -365,6 +449,8 @@
             Load += SearchControl_Load;
             ((System.ComponentModel.ISupportInitialize)tabControlAdv).EndInit();
             tabControlAdv.ResumeLayout(false);
+            searchByNumberPhone.ResumeLayout(false);
+            searchByNumberPhone.PerformLayout();
             searchByAddressTab.ResumeLayout(false);
             searchByAddressTab.PerformLayout();
             pnlFilterPrivateHouse.ResumeLayout(false);
@@ -403,5 +489,11 @@
         private TextBox txtFrom;
         private Button btnExportToPdf;
         private SaveFileDialog saveFileDialog;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv searchByNumberPhone;
+        private Button btnSearchByNumberPhone;
+        private UserControls.CountryControl countryControlSearchByNumberPhone;
+        private UserControls.CityControl cityControlSearchByNumberPhone;
+        private MaskedTextBox txtNumberPhone;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
     }
 }

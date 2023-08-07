@@ -15,8 +15,8 @@ namespace PhoneBook.UserControls
 
         private void AutoCompleteControlAddress_AutoCompleteItemSelected(object sender, Syncfusion.Windows.Forms.Tools.AutoCompleteItemEventArgs args)
         {
-            var cityId = autoCompleteControlAddress.AutoComplete.GetItemArray(args.SelectedValue)[0];
-            AddressChanged?.Invoke(Convert.ToInt32(cityId));
+            var addressId = autoCompleteControlAddress.AutoComplete.GetItemArray(args.SelectedValue)[0];
+            AddressChanged?.Invoke(Convert.ToInt32(addressId));
         }
 
         public void LoadAddress(int cityId, bool privatehouse)

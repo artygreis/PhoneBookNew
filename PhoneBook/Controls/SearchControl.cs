@@ -26,12 +26,14 @@ namespace PhoneBook.Controls
             cityControlSearchByAddress.CityChanged += CityControlSearchByAddress_CityChanged;
             addressControlSearchByAddress.AddressChanged += AddressControlSearchByAddress_AddressChanged;
 
+            countryControlSearchByNumberPhone.CountryChanged += CountryControlSearchByNumberPhone_CountryChanged;
+            cityControlSearchByNumberPhone.CityChanged += CityControlSearchByNumberPhone_CityChanged;
+
             gridPhones.DataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
             gridPhones.DataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
 
             saveFileDialog.Filter = "Pdf files(*.pdf)|*.pdf";
         }
-
 
         #region Оформление grid для вывода результатов поиска
         RowAutoFitOptions autoFitOptions = new RowAutoFitOptions();
@@ -104,14 +106,16 @@ namespace PhoneBook.Controls
         /// <param name="e"></param>
         private void tabControlAdv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //UpdateData(new List<NumberPhoneView>() { new NumberPhoneView() });
+            UpdateData(new List<NumberPhoneView>() { new NumberPhoneView() });
 
-            //if (tabControlAdv.SelectedTab.Name == "searchByPhoneTab")
-            //{
-            //    LoadDataToCountry(autoCompleteCountry1, textBoxCountry1);
-            //}
+            if (tabControlAdv.SelectedTab.Name == "searchByNumberPhone")
+            {
+                gridPhones.Height = 435;
+                countryControlSearchByNumberPhone.LoadCountry();
+            }
             if (tabControlAdv.SelectedTab.Name == "searchByAddressTab")
             {
+                gridPhones.Height = 355;
                 countryControlSearchByAddress.LoadCountry();
             }
             //if (tabControlAdv.SelectedTab.Name == "searchNotCallTab")
@@ -167,6 +171,7 @@ namespace PhoneBook.Controls
             {
                 case "CountryControl":
                     cityControlSearchByAddress.ClearDataCity();
+                    chkPrivateHouse.Checked = false;
                     chkPrivateHouse.Enabled = false;
                     goto case "CityControl";
                 case "CityControl":
@@ -429,8 +434,62 @@ namespace PhoneBook.Controls
                 doc.Close(true);
                 MessageBox.Show("Файл успешно сохранен", "Сохранение файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
 
+        private void CountryControlSearchByNumberPhone_CountryChanged(int countryId)
+        {
+            ClearDataOnSearchByNumberPhone("CountryControl");
+            cityControlSearchByNumberPhone.LoadCity(countryId);
+        }
 
+        private void CityControlSearchByNumberPhone_CityChanged(int cityId)
+        {
+            ClearDataOnSearchByNumberPhone("CityControl");
+
+            _maskNumber = City.GetMaskNumberbyCityId(cityId);
+            _maskNumber = _maskNumber.Replace('#', '9');
+            txtNumberPhone.Mask = _maskNumber;
+        }
+
+        /// <summary>
+        /// Очистка данных на вкладке Поиск по номеру
+        /// </summary>
+        /// <param name="autoComplete"></param>
+        private void ClearDataOnSearchByNumberPhone(string autoComplete)
+        {
+            switch (autoComplete)
+            {
+                case "CountryControl":
+                    cityControlSearchByNumberPhone.ClearDataCity();
+                    goto case "CityControl";
+                case "CityControl":
+                    txtNumberPhone.Text = "";
+                    txtNumberPhone.Mask = null;
+                    break;
+            }
+        }
+
+        private void btnSearchByNumberPhone_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(countryControlSearchByNumberPhone.GetTextCountry()) ||
+                string.IsNullOrEmpty(cityControlSearchByNumberPhone.GetTextCity()))
+            {
+                MessageBox.Show("Укажите страну и город перед вводом номера телефона для поиска.",
+                    "Дополнительная информация",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            Regex regex = new Regex(@"[^0-9]");
+            using (var db = new ApplicationContext())
+            {
+                var numberPhones = db.NumberPhoneView
+                    .Where(n => n.Number == regex.Replace(txtNumberPhone.Text, ""))
+                    .ToList();
+
+                numberPhones.Sort();
+                UpdateData(numberPhones);
+            }
         }
     }
 }

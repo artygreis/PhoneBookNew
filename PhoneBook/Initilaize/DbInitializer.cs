@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhoneBook.Types;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace PhoneBook
 {

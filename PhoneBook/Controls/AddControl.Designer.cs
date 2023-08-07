@@ -30,6 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddControl));
             tabControlAddAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            addNotDisturbTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            txtNumberPhone = new MaskedTextBox();
+            lblNumberPhone = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            btnAddNotDisturbByNumberPhone = new Button();
+            btnAddNotDisturbByAddress = new Button();
+            apartmentControlAddNotDisturb = new UserControls.ApartmentControl();
+            addressControlAddNotDisturb = new UserControls.AddressControl();
+            cityControlAddNotDisturb = new UserControls.CityControl();
+            countryControlAddNotDisturb = new UserControls.CountryControl();
+            chkPrivateHouseAddNotDisturb = new CheckBox();
             addApartmentsTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             btnAddRange = new Button();
             btnEditNumber = new Button();
@@ -41,10 +51,11 @@
             btnEditAddressAdd = new Button();
             btnEditCityAdd = new Button();
             btnEditCountryAdd = new Button();
-            tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             gridPhones = new UserControls.GridControl();
+            btnEditNotDisturb = new Button();
             ((System.ComponentModel.ISupportInitialize)tabControlAddAdv).BeginInit();
             tabControlAddAdv.SuspendLayout();
+            addNotDisturbTab.SuspendLayout();
             addApartmentsTab.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,8 +63,8 @@
             // 
             tabControlAddAdv.BackColor = Color.FromArgb(0, 71, 160);
             tabControlAddAdv.BeforeTouchSize = new Size(825, 224);
+            tabControlAddAdv.Controls.Add(addNotDisturbTab);
             tabControlAddAdv.Controls.Add(addApartmentsTab);
-            tabControlAddAdv.Controls.Add(tabPageAdv2);
             tabControlAddAdv.Dock = DockStyle.Fill;
             tabControlAddAdv.Location = new Point(5, 5);
             tabControlAddAdv.Name = "tabControlAddAdv";
@@ -61,6 +72,136 @@
             tabControlAddAdv.TabIndex = 0;
             tabControlAddAdv.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
             tabControlAddAdv.SelectedIndexChanged += tabControlAddAdv_SelectedIndexChanged;
+            // 
+            // addNotDisturbTab
+            // 
+            addNotDisturbTab.Controls.Add(btnEditNotDisturb);
+            addNotDisturbTab.Controls.Add(txtNumberPhone);
+            addNotDisturbTab.Controls.Add(lblNumberPhone);
+            addNotDisturbTab.Controls.Add(btnAddNotDisturbByNumberPhone);
+            addNotDisturbTab.Controls.Add(btnAddNotDisturbByAddress);
+            addNotDisturbTab.Controls.Add(apartmentControlAddNotDisturb);
+            addNotDisturbTab.Controls.Add(addressControlAddNotDisturb);
+            addNotDisturbTab.Controls.Add(cityControlAddNotDisturb);
+            addNotDisturbTab.Controls.Add(countryControlAddNotDisturb);
+            addNotDisturbTab.Controls.Add(chkPrivateHouseAddNotDisturb);
+            addNotDisturbTab.ForeColor = Color.White;
+            addNotDisturbTab.Image = null;
+            addNotDisturbTab.ImageSize = new Size(16, 16);
+            addNotDisturbTab.Location = new Point(1, 31);
+            addNotDisturbTab.Name = "addNotDisturbTab";
+            addNotDisturbTab.ShowCloseButton = true;
+            addNotDisturbTab.Size = new Size(822, 191);
+            addNotDisturbTab.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            addNotDisturbTab.TabForeColor = Color.White;
+            addNotDisturbTab.TabIndex = 2;
+            addNotDisturbTab.Text = "Добавить \"Не беспокоить\"";
+            addNotDisturbTab.ThemesEnabled = false;
+            // 
+            // txtNumberPhone
+            // 
+            txtNumberPhone.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtNumberPhone.Location = new Point(597, 68);
+            txtNumberPhone.Name = "txtNumberPhone";
+            txtNumberPhone.Size = new Size(156, 26);
+            txtNumberPhone.TabIndex = 29;
+            txtNumberPhone.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblNumberPhone
+            // 
+            lblNumberPhone.DY = -33;
+            lblNumberPhone.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNumberPhone.Gap = 10;
+            lblNumberPhone.LabeledControl = txtNumberPhone;
+            lblNumberPhone.Location = new Point(597, 35);
+            lblNumberPhone.Name = "lblNumberPhone";
+            lblNumberPhone.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            lblNumberPhone.Size = new Size(156, 19);
+            lblNumberPhone.TabIndex = 28;
+            lblNumberPhone.Text = "Номер телефона:";
+            // 
+            // btnAddNotDisturbByNumberPhone
+            // 
+            btnAddNotDisturbByNumberPhone.BackColor = Color.White;
+            btnAddNotDisturbByNumberPhone.FlatAppearance.BorderSize = 0;
+            btnAddNotDisturbByNumberPhone.FlatStyle = FlatStyle.Flat;
+            btnAddNotDisturbByNumberPhone.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddNotDisturbByNumberPhone.ForeColor = Color.FromArgb(0, 71, 160);
+            btnAddNotDisturbByNumberPhone.Image = (Image)resources.GetObject("btnAddNotDisturbByNumberPhone.Image");
+            btnAddNotDisturbByNumberPhone.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddNotDisturbByNumberPhone.Location = new Point(551, 123);
+            btnAddNotDisturbByNumberPhone.Name = "btnAddNotDisturbByNumberPhone";
+            btnAddNotDisturbByNumberPhone.Size = new Size(248, 33);
+            btnAddNotDisturbByNumberPhone.TabIndex = 27;
+            btnAddNotDisturbByNumberPhone.Text = "     Добавить по номеру тел.";
+            btnAddNotDisturbByNumberPhone.UseVisualStyleBackColor = false;
+            btnAddNotDisturbByNumberPhone.Click += btnAddNotDisturbByNumberPhone_Click;
+            // 
+            // btnAddNotDisturbByAddress
+            // 
+            btnAddNotDisturbByAddress.BackColor = Color.White;
+            btnAddNotDisturbByAddress.FlatAppearance.BorderSize = 0;
+            btnAddNotDisturbByAddress.FlatStyle = FlatStyle.Flat;
+            btnAddNotDisturbByAddress.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddNotDisturbByAddress.ForeColor = Color.FromArgb(0, 71, 160);
+            btnAddNotDisturbByAddress.Image = (Image)resources.GetObject("btnAddNotDisturbByAddress.Image");
+            btnAddNotDisturbByAddress.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddNotDisturbByAddress.Location = new Point(92, 123);
+            btnAddNotDisturbByAddress.Name = "btnAddNotDisturbByAddress";
+            btnAddNotDisturbByAddress.Size = new Size(213, 33);
+            btnAddNotDisturbByAddress.TabIndex = 26;
+            btnAddNotDisturbByAddress.Text = "     Добавить по адресу";
+            btnAddNotDisturbByAddress.UseVisualStyleBackColor = false;
+            btnAddNotDisturbByAddress.Click += btnAddNotDisturbByAddress_Click;
+            // 
+            // apartmentControlAddNotDisturb
+            // 
+            apartmentControlAddNotDisturb.BackColor = Color.FromArgb(0, 71, 160);
+            apartmentControlAddNotDisturb.Location = new Point(431, 68);
+            apartmentControlAddNotDisturb.Margin = new Padding(0, 0, 5, 0);
+            apartmentControlAddNotDisturb.Name = "apartmentControlAddNotDisturb";
+            apartmentControlAddNotDisturb.Size = new Size(97, 26);
+            apartmentControlAddNotDisturb.TabIndex = 25;
+            // 
+            // addressControlAddNotDisturb
+            // 
+            addressControlAddNotDisturb.BackColor = Color.FromArgb(0, 71, 160);
+            addressControlAddNotDisturb.Location = new Point(22, 68);
+            addressControlAddNotDisturb.Margin = new Padding(0, 0, 5, 0);
+            addressControlAddNotDisturb.Name = "addressControlAddNotDisturb";
+            addressControlAddNotDisturb.Size = new Size(404, 26);
+            addressControlAddNotDisturb.TabIndex = 24;
+            // 
+            // cityControlAddNotDisturb
+            // 
+            cityControlAddNotDisturb.BackColor = Color.FromArgb(0, 71, 160);
+            cityControlAddNotDisturb.Location = new Point(283, 21);
+            cityControlAddNotDisturb.Margin = new Padding(0, 0, 5, 0);
+            cityControlAddNotDisturb.Name = "cityControlAddNotDisturb";
+            cityControlAddNotDisturb.Size = new Size(245, 26);
+            cityControlAddNotDisturb.TabIndex = 23;
+            // 
+            // countryControlAddNotDisturb
+            // 
+            countryControlAddNotDisturb.BackColor = Color.FromArgb(0, 71, 160);
+            countryControlAddNotDisturb.Location = new Point(14, 21);
+            countryControlAddNotDisturb.Margin = new Padding(0, 0, 5, 0);
+            countryControlAddNotDisturb.Name = "countryControlAddNotDisturb";
+            countryControlAddNotDisturb.Size = new Size(264, 26);
+            countryControlAddNotDisturb.TabIndex = 22;
+            // 
+            // chkPrivateHouseAddNotDisturb
+            // 
+            chkPrivateHouseAddNotDisturb.AutoSize = true;
+            chkPrivateHouseAddNotDisturb.Enabled = false;
+            chkPrivateHouseAddNotDisturb.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            chkPrivateHouseAddNotDisturb.Location = new Point(103, 97);
+            chkPrivateHouseAddNotDisturb.Name = "chkPrivateHouseAddNotDisturb";
+            chkPrivateHouseAddNotDisturb.Size = new Size(123, 20);
+            chkPrivateHouseAddNotDisturb.TabIndex = 21;
+            chkPrivateHouseAddNotDisturb.Text = "Частные дома";
+            chkPrivateHouseAddNotDisturb.UseVisualStyleBackColor = true;
+            chkPrivateHouseAddNotDisturb.CheckedChanged += chkPrivateHouseAddNotDisturb_CheckedChanged;
             // 
             // addApartmentsTab
             // 
@@ -217,20 +358,6 @@
             btnEditCountryAdd.UseVisualStyleBackColor = false;
             btnEditCountryAdd.Click += btnEditCountryAdd_Click;
             // 
-            // tabPageAdv2
-            // 
-            tabPageAdv2.Image = null;
-            tabPageAdv2.ImageSize = new Size(16, 16);
-            tabPageAdv2.Location = new Point(1, 32);
-            tabPageAdv2.Name = "tabPageAdv2";
-            tabPageAdv2.ShowCloseButton = true;
-            tabPageAdv2.Size = new Size(822, 190);
-            tabPageAdv2.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            tabPageAdv2.TabForeColor = Color.White;
-            tabPageAdv2.TabIndex = 2;
-            tabPageAdv2.Text = "tabPageAdv2";
-            tabPageAdv2.ThemesEnabled = false;
-            // 
             // gridPhones
             // 
             gridPhones.BackColor = Color.White;
@@ -242,6 +369,23 @@
             gridPhones.Padding = new Padding(0, 5, 0, 0);
             gridPhones.Size = new Size(825, 361);
             gridPhones.TabIndex = 1;
+            // 
+            // btnEditNotDisturb
+            // 
+            btnEditNotDisturb.BackColor = Color.White;
+            btnEditNotDisturb.FlatAppearance.BorderSize = 0;
+            btnEditNotDisturb.FlatStyle = FlatStyle.Flat;
+            btnEditNotDisturb.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEditNotDisturb.ForeColor = Color.FromArgb(0, 71, 160);
+            btnEditNotDisturb.Image = (Image)resources.GetObject("btnEditNotDisturb.Image");
+            btnEditNotDisturb.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditNotDisturb.Location = new Point(343, 123);
+            btnEditNotDisturb.Name = "btnEditNotDisturb";
+            btnEditNotDisturb.Size = new Size(168, 33);
+            btnEditNotDisturb.TabIndex = 30;
+            btnEditNotDisturb.Text = "     Редактировать";
+            btnEditNotDisturb.UseVisualStyleBackColor = false;
+            btnEditNotDisturb.Click += btnEditNotDisturb_Click;
             // 
             // AddControl
             // 
@@ -256,6 +400,8 @@
             Load += AddControl_Load;
             ((System.ComponentModel.ISupportInitialize)tabControlAddAdv).EndInit();
             tabControlAddAdv.ResumeLayout(false);
+            addNotDisturbTab.ResumeLayout(false);
+            addNotDisturbTab.PerformLayout();
             addApartmentsTab.ResumeLayout(false);
             addApartmentsTab.PerformLayout();
             ResumeLayout(false);
@@ -265,7 +411,7 @@
 
         private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAddAdv;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv addApartmentsTab;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv addNotDisturbTab;
         private Button btnEditCountryAdd;
         private Button btnEditAddressAdd;
         private Button btnEditCityAdd;
@@ -277,5 +423,15 @@
         private Button btnAddRange;
         private Button btnEditNumber;
         private Button btnAddSingle;
+        private UserControls.AddressControl addressControlAddNotDisturb;
+        private UserControls.CityControl cityControlAddNotDisturb;
+        private UserControls.CountryControl countryControlAddNotDisturb;
+        private CheckBox chkPrivateHouseAddNotDisturb;
+        private UserControls.ApartmentControl apartmentControlAddNotDisturb;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblNumberPhone;
+        private Button btnAddNotDisturbByNumberPhone;
+        private Button btnAddNotDisturbByAddress;
+        private MaskedTextBox txtNumberPhone;
+        private Button btnEditNotDisturb;
     }
 }
