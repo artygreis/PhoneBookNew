@@ -10,7 +10,12 @@
     <FileVersion>1.0.4</FileVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <ApplicationManifest>App.manifest</ApplicationManifest>
+    <ApplicationIcon>Icons\phone_logo_blue.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\phone_logo_blue.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="DataBase\" />
