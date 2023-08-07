@@ -44,8 +44,8 @@ namespace PhoneBook.Types
                 var typeStreets = db.TypeStreet.ToList();
 
                 return db.NotDisturb
-                    .Include(n => n.NumberPhone ?? new NumberPhone())
-                    .ThenInclude(a => a.Address ?? new Address())
+                    .Include(n => n.NumberPhone)
+                    .ThenInclude(a => a.Address)
                     .ThenInclude(c => c.City)
                     .ToList()
                     .Select(d => new NotDisturbCollection()

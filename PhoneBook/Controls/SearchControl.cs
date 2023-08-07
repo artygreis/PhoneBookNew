@@ -402,24 +402,29 @@ namespace PhoneBook.Controls
                 }
                 var settings = Settings.Load();
 
-                PdfGridRowStyle pdfGridRowStyle = new PdfGridRowStyle();
+                PdfGridRowStyle pdfGridRowStyleNotCall = new PdfGridRowStyle();
+                pdfGridRowStyleNotCall.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotCall ?? ColorSettings.GetDefaultColorNotCall.ToString())));
+                PdfGridRowStyle pdfGridRowStyleNotEnter = new PdfGridRowStyle();
+                pdfGridRowStyleNotEnter.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotDoor ?? ColorSettings.GetDefaultColorNotDoor.ToString())));
+                PdfGridRowStyle pdfGridRowStyleNotFull = new PdfGridRowStyle();
+                pdfGridRowStyleNotFull.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotFull ?? ColorSettings.GetDefaultColorNotFull.ToString())));
                 //pdfGridRowStyle.BackgroundBrush = PdfBrushes.IndianRed;
-                pdfGridRowStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotCall ?? ColorSettings.GetDefaultColorNotCall.ToString())));
+
                 foreach (var row in listNotCall)
                 {
-                    pdfGrid.Rows[row].Style = pdfGridRowStyle;
+                    pdfGrid.Rows[row].Style = pdfGridRowStyleNotCall;
                 }
 
-                pdfGridRowStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotDoor ?? ColorSettings.GetDefaultColorNotDoor.ToString())));
+                
                 foreach (var row in listNotEnter)
                 {
-                    pdfGrid.Rows[row].Style = pdfGridRowStyle;
+                    pdfGrid.Rows[row].Style = pdfGridRowStyleNotEnter;
                 }
 
-                pdfGridRowStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotFull ?? ColorSettings.GetDefaultColorNotFull.ToString())));
+                
                 foreach (var row in listNotFull)
                 {
-                    pdfGrid.Rows[row].Style = pdfGridRowStyle;
+                    pdfGrid.Rows[row].Style = pdfGridRowStyleNotFull;
                 }
 
                 //Creates the grid cell styles

@@ -99,7 +99,7 @@
             houseControl.Location = new Point(437, 97);
             houseControl.Name = "houseControl";
             houseControl.Size = new Size(91, 54);
-            houseControl.TabIndex = 16;
+            houseControl.TabIndex = 3;
             // 
             // btnDelete
             // 
@@ -111,7 +111,7 @@
             btnDelete.Location = new Point(353, 166);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(136, 35);
-            btnDelete.TabIndex = 15;
+            btnDelete.TabIndex = 6;
             btnDelete.Text = "Удалить";
             btnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDelete.UseVisualStyleBackColor = false;
@@ -127,7 +127,7 @@
             btnEdit.Location = new Point(205, 166);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(136, 35);
-            btnEdit.TabIndex = 14;
+            btnEdit.TabIndex = 5;
             btnEdit.Text = "Изменить";
             btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEdit.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             btnAdd.Location = new Point(57, 166);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(136, 35);
-            btnAdd.TabIndex = 13;
+            btnAdd.TabIndex = 4;
             btnAdd.Text = "Добавить";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdd.UseVisualStyleBackColor = false;
@@ -155,7 +155,7 @@
             streetNameControl.Location = new Point(172, 97);
             streetNameControl.Name = "streetNameControl";
             streetNameControl.Size = new Size(259, 54);
-            streetNameControl.TabIndex = 12;
+            streetNameControl.TabIndex = 2;
             // 
             // typeStreetControl
             // 
@@ -163,7 +163,7 @@
             typeStreetControl.Location = new Point(19, 97);
             typeStreetControl.Name = "typeStreetControl";
             typeStreetControl.Size = new Size(147, 54);
-            typeStreetControl.TabIndex = 11;
+            typeStreetControl.TabIndex = 1;
             // 
             // localityControl
             // 
@@ -171,7 +171,7 @@
             localityControl.Location = new Point(19, 37);
             localityControl.Name = "localityControl";
             localityControl.Size = new Size(315, 54);
-            localityControl.TabIndex = 10;
+            localityControl.TabIndex = 0;
             // 
             // btnClose
             // 

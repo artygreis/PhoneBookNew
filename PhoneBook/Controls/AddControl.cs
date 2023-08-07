@@ -493,29 +493,32 @@ namespace PhoneBook.Controls
 
         private void btnAddNotDisturbByNumberPhone_Click(object sender, EventArgs e)
         {
+            Regex regex = new Regex(@"[^0-9]");
             if (string.IsNullOrEmpty(countryControlAddNotDisturb.GetTextCountry()) ||
-                string.IsNullOrEmpty(cityControlAddNotDisturb.GetTextCity()))
+                string.IsNullOrEmpty(cityControlAddNotDisturb.GetTextCity()) ||
+                string.IsNullOrEmpty(regex.Replace(txtNumberPhone.Text, "")))
             {
-                MessageBox.Show("Укажите Страну и Город.", "Добавить \"Не беспокоить\"",
+                MessageBox.Show("Укажите Страну, Город и Номер телефона.", "Добавить \"Не беспокоить\"",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 using (var db = new ApplicationContext())
                 {
-                    Regex regex = new Regex(@"[^0-9]");
+
                     var findRecord = db.NotDisturb.Include(n => n.NumberPhone).ToList().Where(n => n.NumberPhone?.Number == regex.Replace(txtNumberPhone.Text, "")).ToList();
+                    var findNumber = db.NumberPhoneView.Where(n => n.Number == regex.Replace(txtNumberPhone.Text, "")).ToList();
                     if (findRecord.Count > 0)
                     {
                         MessageBox.Show("Информация об этой квартире уже есть в базе. Проверьте, пожалуйста, введенный адрес.", "Добавить \"Не беспокоить\"",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else
+                    else if (findNumber.Count > 0)
                     {
-                        var numberPhoneId = findRecord[0].NumberPhone?.Id;
+                        var numberPhoneId = findNumber[0].Id;
                         var addNotDisturb =
-                            new AddNotDisturb($"{addressControlAddNotDisturb.GetTextAddress()}, кв. {apartmentControlAddNotDisturb.GetTextApartment()}");
-                        addNotDisturb.NotDisturb = new NotDisturb() { NumberPhoneId = apartmentControlAddNotDisturb.GetApartmentId() };
+                            new AddNotDisturb($"{findNumber[0].TypeName} {findNumber[0].StreetName}, {(string.IsNullOrEmpty(findNumber[0].House) ? "" : findNumber[0].House + ", ")} кв. {findNumber[0].Apartment}");
+                        addNotDisturb.NotDisturb = new NotDisturb() { NumberPhoneId = numberPhoneId };
                         if (addNotDisturb.ShowDialog() == DialogResult.OK)
                         {
                             var record = addNotDisturb.NotDisturb;
@@ -524,6 +527,11 @@ namespace PhoneBook.Controls
 
                             UpdateDataNotDisturbBetween();
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Данный номер отсутствует в телефонном справочнике. Поэтому сохранить информацию о нем невозможно.", "Добавить \"Не беспокоить\"",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
