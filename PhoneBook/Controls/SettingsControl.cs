@@ -1,11 +1,15 @@
 ﻿using PhoneBook.Types.Settings;
 using PhoneBook.UserForms;
+using Squirrel;
 using Syncfusion.Windows.Forms;
+using System.Reflection;
 
 namespace PhoneBook.Controls
 {
     public partial class SettingsControl : UserControl
     {
+        private Button buttonSetting = new Button();
+
         public SettingsControl()
         {
             InitializeComponent();
@@ -13,6 +17,12 @@ namespace PhoneBook.Controls
             clrSelectNotCall.ColorUI.Font = new Font(Font, FontStyle.Regular);
             clrSelectNotDoor.ColorUI.BorderStyle = BorderStyle.None;
             clrSelectNotDoor.ColorUI.Font = new Font(Font, FontStyle.Regular);
+        }
+
+        public SettingsControl(Button button, bool update) : this()
+        {
+            buttonSetting = button;
+            btnApplyUpdate.Visible = update;
         }
 
         private void SettingsControl_Load(object sender, EventArgs e)
@@ -128,6 +138,28 @@ namespace PhoneBook.Controls
             settingsForm.Text = $"Настройка телефонного справоника (базы данных)";
             settingsForm.ShowDialog();
             UpdateDataSettings();
+        }
+
+        Squirrel.ReleaseEntry? newVersion;
+
+        private async Task UpdateMyApp()
+        {
+            using var mgr = new UpdateManager("https://github.com/artygreis/PhoneBookNew");
+            newVersion = await mgr.UpdateApp();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UpdateMyApp();
+        }
+
+        private void btnApplyUpdate_Load(object sender, EventArgs e)
+        {
+            // optionally restart the app automatically, or ask the user if/when they want to restart
+            if (newVersion != null)
+            {
+                UpdateManager.RestartApp();
+            }
         }
     }
 }

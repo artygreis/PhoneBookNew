@@ -288,6 +288,7 @@
             btnApplyUpdate.Size = new Size(145, 35);
             btnApplyUpdate.TabIndex = 19;
             btnApplyUpdate.TextButton = " Обновить !!!";
+            btnApplyUpdate.Load += btnApplyUpdate_Load;
             // 
             // linkLabel1
             // 
@@ -304,6 +305,7 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Проверить наличие обновлений";
             linkLabel1.VisitedLinkColor = Color.White;
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // SettingsControl
             // 

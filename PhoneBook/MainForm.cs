@@ -1,12 +1,16 @@
 using PhoneBook.Controls;
 using PhoneBook.Types.Settings;
 using PhoneBook.UserForms;
+using Squirrel;
 using System.Reflection;
 
 namespace PhoneBook
 {
     public partial class MainForm : Form
     {
+
+        private bool availableUpdate = false;
+
         public MainForm()
         {
             InitializeComponent();
@@ -21,6 +25,10 @@ namespace PhoneBook
                 var settingsForm = new DataBaseSettings();
                 settingsForm.ShowDialog();
             }
+
+#if (!DEBUG)
+            UpdateMyApp();
+#endif
 
             btnSearch_Click(btnSearch, new EventArgs());
         }
@@ -39,6 +47,17 @@ namespace PhoneBook
             return true;
         }
 
+        private async Task UpdateMyApp()
+        {
+            using var mgr = new UpdateManager("https://github.com/artygreis/PhoneBookNew");
+            var newVersion = await mgr.UpdateApp();
+            // optionally restart the app automatically, or ask the user if/when they want to restart
+            if (newVersion != null)
+            {
+                SettingsPicture.AddTextToPicture(btnSettings);
+                availableUpdate = true;
+            }
+        }
 
         /// <summary>
         /// Обработка события для снятия фокуса с кнопки
@@ -110,7 +129,7 @@ namespace PhoneBook
         private void btnSettings_Click_1(object sender, EventArgs e)
         {
             MoveSidePanel(btnSettings);
-                AddControlToPanel(new SettingsControl(/*btnSettings, availableUpdate*/));
+                AddControlToPanel(new SettingsControl(btnSettings, availableUpdate));
         }
     }
 }
