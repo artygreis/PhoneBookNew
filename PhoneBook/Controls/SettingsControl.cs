@@ -52,12 +52,27 @@ namespace PhoneBook.Controls
         }
         #endregion
 
+        #region Выбор цвета для тех, кто просил не беспокоить
+        private void clrSelectNotFull_ColorSelected(object sender, EventArgs e)
+        {
+            if (sender is ColorPickerButton color)
+            {
+                SaveColor(colorNotFull: color.SelectedColor.ToKnownColor().ToString());
+            }
+        }
+        private void btnResetColorNotFull_Load(object sender, EventArgs e)
+        {
+            SaveColor(colorNotFull: ColorSettings.GetDefaultColorNotFull.ToKnownColor().ToString());
+            clrSelectNotFull.SelectedColor = ColorSettings.GetDefaultColorNotFull;
+        }
+        #endregion
+
         /// <summary>
         /// Сохранение информации о цвете в БД
         /// </summary>
         /// <param name="colorNotCall"></param>
         /// <param name="colorNotDoor"></param>
-        private void SaveColor(string? colorNotCall = null, string? colorNotDoor = null)
+        private void SaveColor(string? colorNotCall = null, string? colorNotDoor = null, string? colorNotFull = null)
         {
             var settings = Settings.Load();
 
@@ -70,6 +85,10 @@ namespace PhoneBook.Controls
             if (colorNotDoor != null)
             {
                 settings.ColorNotDoor = colorNotDoor;
+            }
+            if (colorNotFull != null)
+            {
+                settings.ColorNotFull = colorNotFull;
             }
             settings.Save();
         }
@@ -95,6 +114,10 @@ namespace PhoneBook.Controls
                 if (!string.IsNullOrEmpty(settings.ColorNotDoor))
                 {
                     clrSelectNotDoor.SelectedColor = ColorTranslator.FromHtml(settings.ColorNotDoor);
+                }
+                if (!string.IsNullOrEmpty(settings.ColorNotFull))
+                {
+                    clrSelectNotFull.SelectedColor = ColorTranslator.FromHtml(settings.ColorNotFull);
                 }
             }
         }

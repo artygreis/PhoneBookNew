@@ -1,5 +1,6 @@
 using PhoneBook.Controls;
 using PhoneBook.Types.Settings;
+using PhoneBook.UserForms;
 using System.Reflection;
 
 namespace PhoneBook
@@ -14,7 +15,30 @@ namespace PhoneBook
             btnSearch.GotFocus += Button_GotFocus;
             btnAdd.GotFocus += Button_GotFocus;
             btnSettings.GotFocus += Button_GotFocus;
+
+            if (!CheckExistDb())
+            {
+                var settingsForm = new DataBaseSettings();
+                settingsForm.ShowDialog();
+            }
+
+            btnSearch_Click(btnSearch, new EventArgs());
         }
+
+        /// <summary>
+        /// Проверка существования БД
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckExistDb()
+        {
+            var settings = Settings.Load();
+
+            if (settings == null || string.IsNullOrEmpty(settings?.UserSourceDb ?? "") || !File.Exists(settings?.UserSourceDb))
+                return false;
+
+            return true;
+        }
+
 
         /// <summary>
         /// Обработка события для снятия фокуса с кнопки
@@ -68,19 +92,19 @@ namespace PhoneBook
         private void btnSearch_Click(object sender, EventArgs e)
         {
             MoveSidePanel(btnSearch);
-            //if (CheckExistDb())
+            if (CheckExistDb())
                 AddControlToPanel(new SearchControl());
-            //else
-            //    AddControlToPanel(new UC_ErrorConnect())
+            else
+                AddControlToPanel(new ErrorConnectControl());
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
             MoveSidePanel(btnAdd);
-            //if (CheckExistDb())
+            if (CheckExistDb())
                 AddControlToPanel(new AddControl());
-            //else
-            //    AddControlToPanel(new UC_ErrorConnect());
+            else
+                AddControlToPanel(new ErrorConnectControl());
         }
 
         private void btnSettings_Click_1(object sender, EventArgs e)

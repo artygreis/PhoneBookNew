@@ -6,6 +6,7 @@ using Syncfusion.Pdf;
 using Syncfusion.WinForms.DataGrid;
 using System.Data;
 using System.Text.RegularExpressions;
+using PhoneBook.Types.Settings;
 
 namespace PhoneBook.Controls
 {
@@ -328,6 +329,8 @@ namespace PhoneBook.Controls
             var numberPhones = gridPhones.DataGrid.DataSource as List<NumberPhoneView>;
 
             var listNotCall = new List<int>();
+            var listNotEnter = new List<int>();
+            var listNotFull = new List<int>();
 
             if (numberPhones != null)
             {
@@ -370,14 +373,20 @@ namespace PhoneBook.Controls
                     Regex regex = new Regex(@"[^0-9]");
                     var currentNumber = regex.Replace(numberPhone.Number ?? "", "");
                     //TODO: Реализовать работу с теми, куда не звонить
-                    //using (var db = new ApplicationContext())
-                    //{
-                    //    var notCallCount = db.NotCall.Where(n => n.Number == currentNumber && n.CityId == Convert.ToInt32(autoCompleteCity.GetItemArray(textBoxCity.Text)[0])).Count();
-                    //    if (notCallCount > 0)
-                    //    {
-                    //        listNotCall.Add(dataTable.Rows.Count - 1);
-                    //    }
-                    //}
+                    using (var db = new ApplicationContext())
+                    {
+                        var notCall = db.NotDisturb.Where(n => n.NumberPhoneId == numberPhone.Id).FirstOrDefault();
+                        if (notCall != null)
+                        {
+                            var numberRow = dataTable.Rows.Count - 1;
+                            if (notCall.NotCall && notCall.NotEnter)
+                                listNotFull.Add(numberRow);
+                            else if (notCall.NotCall)
+                                listNotCall.Add(numberRow);
+                            else
+                                listNotEnter.Add(numberRow);
+                        }
+                    }
                 }
 
                 //Assign data source.
@@ -391,10 +400,24 @@ namespace PhoneBook.Controls
                     pdfGrid.Columns[i].Format = new PdfStringFormat() { Alignment = PdfTextAlignment.Center, LineAlignment = PdfVerticalAlignment.Middle };
 
                 }
+                var settings = Settings.Load();
 
                 PdfGridRowStyle pdfGridRowStyle = new PdfGridRowStyle();
-                pdfGridRowStyle.BackgroundBrush = PdfBrushes.IndianRed;
+                //pdfGridRowStyle.BackgroundBrush = PdfBrushes.IndianRed;
+                pdfGridRowStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotCall ?? ColorSettings.GetDefaultColorNotCall.ToString())));
                 foreach (var row in listNotCall)
+                {
+                    pdfGrid.Rows[row].Style = pdfGridRowStyle;
+                }
+
+                pdfGridRowStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotDoor ?? ColorSettings.GetDefaultColorNotDoor.ToString())));
+                foreach (var row in listNotEnter)
+                {
+                    pdfGrid.Rows[row].Style = pdfGridRowStyle;
+                }
+
+                pdfGridRowStyle.BackgroundBrush = new PdfSolidBrush(new PdfColor(ColorTranslator.FromHtml(settings.ColorNotFull ?? ColorSettings.GetDefaultColorNotFull.ToString())));
+                foreach (var row in listNotFull)
                 {
                     pdfGrid.Rows[row].Style = pdfGridRowStyle;
                 }

@@ -171,6 +171,10 @@ namespace PhoneBook.UserForms
             {
                 settings.ColorNotDoor = ColorSettings.GetDefaultColorNotDoor.ToKnownColor().ToString();
             }
+            if (string.IsNullOrEmpty(settings.ColorNotFull))
+            {
+                settings.ColorNotFull = ColorSettings.GetDefaultColorNotFull.ToKnownColor().ToString();
+            }
             settings.Save();
             using (var db = new ApplicationContext())
             {

@@ -5,5 +5,6 @@
         public string? UserSourceDb { get; set; }
         public string? ColorNotCall { get; set; }
         public string? ColorNotDoor { get; set; }
+        public string? ColorNotFull { get; set; }
     }
 }

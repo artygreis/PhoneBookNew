@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddControl));
             tabControlAddAdv = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             addNotDisturbTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            btnEditNotDisturb = new Button();
             txtNumberPhone = new MaskedTextBox();
             lblNumberPhone = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             btnAddNotDisturbByNumberPhone = new Button();
@@ -52,7 +53,6 @@
             btnEditCityAdd = new Button();
             btnEditCountryAdd = new Button();
             gridPhones = new UserControls.GridControl();
-            btnEditNotDisturb = new Button();
             ((System.ComponentModel.ISupportInitialize)tabControlAddAdv).BeginInit();
             tabControlAddAdv.SuspendLayout();
             addNotDisturbTab.SuspendLayout();
@@ -63,8 +63,8 @@
             // 
             tabControlAddAdv.BackColor = Color.FromArgb(0, 71, 160);
             tabControlAddAdv.BeforeTouchSize = new Size(825, 224);
-            tabControlAddAdv.Controls.Add(addNotDisturbTab);
             tabControlAddAdv.Controls.Add(addApartmentsTab);
+            tabControlAddAdv.Controls.Add(addNotDisturbTab);
             tabControlAddAdv.Dock = DockStyle.Fill;
             tabControlAddAdv.Location = new Point(5, 5);
             tabControlAddAdv.Name = "tabControlAddAdv";
@@ -97,6 +97,23 @@
             addNotDisturbTab.TabIndex = 2;
             addNotDisturbTab.Text = "Добавить \"Не беспокоить\"";
             addNotDisturbTab.ThemesEnabled = false;
+            // 
+            // btnEditNotDisturb
+            // 
+            btnEditNotDisturb.BackColor = Color.White;
+            btnEditNotDisturb.FlatAppearance.BorderSize = 0;
+            btnEditNotDisturb.FlatStyle = FlatStyle.Flat;
+            btnEditNotDisturb.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEditNotDisturb.ForeColor = Color.FromArgb(0, 71, 160);
+            btnEditNotDisturb.Image = (Image)resources.GetObject("btnEditNotDisturb.Image");
+            btnEditNotDisturb.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditNotDisturb.Location = new Point(343, 123);
+            btnEditNotDisturb.Name = "btnEditNotDisturb";
+            btnEditNotDisturb.Size = new Size(168, 33);
+            btnEditNotDisturb.TabIndex = 30;
+            btnEditNotDisturb.Text = "     Редактировать";
+            btnEditNotDisturb.UseVisualStyleBackColor = false;
+            btnEditNotDisturb.Click += btnEditNotDisturb_Click;
             // 
             // txtNumberPhone
             // 
@@ -369,23 +386,6 @@
             gridPhones.Padding = new Padding(0, 5, 0, 0);
             gridPhones.Size = new Size(825, 361);
             gridPhones.TabIndex = 1;
-            // 
-            // btnEditNotDisturb
-            // 
-            btnEditNotDisturb.BackColor = Color.White;
-            btnEditNotDisturb.FlatAppearance.BorderSize = 0;
-            btnEditNotDisturb.FlatStyle = FlatStyle.Flat;
-            btnEditNotDisturb.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEditNotDisturb.ForeColor = Color.FromArgb(0, 71, 160);
-            btnEditNotDisturb.Image = (Image)resources.GetObject("btnEditNotDisturb.Image");
-            btnEditNotDisturb.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditNotDisturb.Location = new Point(343, 123);
-            btnEditNotDisturb.Name = "btnEditNotDisturb";
-            btnEditNotDisturb.Size = new Size(168, 33);
-            btnEditNotDisturb.TabIndex = 30;
-            btnEditNotDisturb.Text = "     Редактировать";
-            btnEditNotDisturb.UseVisualStyleBackColor = false;
-            btnEditNotDisturb.Click += btnEditNotDisturb_Click;
             // 
             // AddControl
             // 
