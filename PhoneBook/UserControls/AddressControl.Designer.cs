@@ -34,14 +34,14 @@
             // 
             // lblAddress
             // 
-            lblAddress.DX = -87;
-            lblAddress.DY = 6;
+            lblAddress.DX = -70;
+            lblAddress.DY = 3;
             lblAddress.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblAddress.ForeColor = Color.White;
             lblAddress.LabeledControl = autoCompleteControlAddress;
-            lblAddress.Location = new Point(-2, 6);
+            lblAddress.Location = new Point(4, 3);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(83, 23);
+            lblAddress.Size = new Size(66, 19);
             lblAddress.TabIndex = 5;
             lblAddress.Text = "Адрес:";
             // 
@@ -50,24 +50,24 @@
             autoCompleteControlAddress.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             autoCompleteControlAddress.AutoSize = true;
             autoCompleteControlAddress.BackColor = Color.FromArgb(0, 71, 160);
-            autoCompleteControlAddress.Location = new Point(85, 0);
-            autoCompleteControlAddress.Margin = new Padding(3, 4, 3, 4);
-            autoCompleteControlAddress.MinimumSize = new Size(171, 35);
+            autoCompleteControlAddress.Location = new Point(74, 0);
+            autoCompleteControlAddress.Margin = new Padding(3, 2, 3, 2);
+            autoCompleteControlAddress.MinimumSize = new Size(150, 26);
             autoCompleteControlAddress.Name = "autoCompleteControlAddress";
-            autoCompleteControlAddress.Size = new Size(250, 35);
+            autoCompleteControlAddress.Size = new Size(219, 26);
             autoCompleteControlAddress.TabIndex = 4;
             autoCompleteControlAddress.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             // 
             // AddressControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 71, 160);
             Controls.Add(lblAddress);
             Controls.Add(autoCompleteControlAddress);
-            Margin = new Padding(0, 0, 6, 0);
+            Margin = new Padding(0, 0, 5, 0);
             Name = "AddressControl";
-            Size = new Size(338, 35);
+            Size = new Size(296, 26);
             ResumeLayout(false);
             PerformLayout();
         }

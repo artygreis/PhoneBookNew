@@ -47,27 +47,29 @@
             // txtContent
             // 
             autoComplete.SetAutoComplete(txtContent, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.AutoSuggest);
-            txtContent.BeforeTouchSize = new Size(150, 30);
+            txtContent.BeforeTouchSize = new Size(163, 26);
             txtContent.Dock = DockStyle.Fill;
             txtContent.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtContent.ForeColor = Color.FromArgb(0, 71, 160);
             txtContent.Location = new Point(0, 0);
-            txtContent.MinimumSize = new Size(1, 26);
+            txtContent.Margin = new Padding(3, 2, 3, 2);
+            txtContent.MinimumSize = new Size(4, 26);
             txtContent.Name = "txtContent";
-            txtContent.Size = new Size(150, 30);
+            txtContent.Size = new Size(163, 26);
             txtContent.TabIndex = 1;
             txtContent.Resize += txtContent_Resize;
             // 
             // AutoCompleteControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(0, 71, 160);
             Controls.Add(txtContent);
-            MinimumSize = new Size(50, 26);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(44, 20);
             Name = "AutoCompleteControl";
-            Size = new Size(150, 26);
+            Size = new Size(163, 26);
             Load += AutoCompleteControl_Load;
             Resize += AutoCompleteControl_Resize;
             ((System.ComponentModel.ISupportInitialize)autoComplete).EndInit();
