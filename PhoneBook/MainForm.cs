@@ -49,7 +49,7 @@ namespace PhoneBook
 
         private async Task UpdateMyApp()
         {
-            using var mgr = new UpdateManager("https://github.com/artygreis/PhoneBookNew");
+            using var mgr = new UpdateManager("https://github.com/artygreis/PhoneBookNew/releases/latest");
             var newVersion = await mgr.UpdateApp();
             // optionally restart the app automatically, or ask the user if/when they want to restart
             if (newVersion != null)

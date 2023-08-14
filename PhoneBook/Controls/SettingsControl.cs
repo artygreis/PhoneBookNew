@@ -144,7 +144,7 @@ namespace PhoneBook.Controls
 
         private async Task UpdateMyApp()
         {
-            using var mgr = new UpdateManager("https://github.com/artygreis/PhoneBookNew");
+            using var mgr = new UpdateManager("https://github.com/artygreis/PhoneBookNew/releases/latest");
             newVersion = await mgr.UpdateApp();
         }
 
