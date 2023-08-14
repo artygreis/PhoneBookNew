@@ -7,10 +7,10 @@
             get => button.Image;
             set => button.Image = value;
         }
-        public string TextButton 
-        { 
-            get => button.Text; 
-            set => button.Text = value; 
+        public string TextButton
+        {
+            get => button.Text;
+            set => button.Text = value;
         }
         public Font FontButton
         {

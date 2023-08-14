@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            button = new Button();
+            SuspendLayout();
             // 
             // button
             // 
-            this.button.BackColor = System.Drawing.Color.White;
-            this.button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button.FlatAppearance.BorderSize = 0;
-            this.button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button.Location = new System.Drawing.Point(0, 0);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(120, 35);
-            this.button.TabIndex = 0;
-            this.button.Text = "button1";
-            this.button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button.UseVisualStyleBackColor = false;
-            this.button.Click += new System.EventHandler(this.button_Click);
+            button.BackColor = Color.White;
+            button.Dock = DockStyle.Fill;
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseDownBackColor = Color.White;
+            button.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
+            button.FlatStyle = FlatStyle.Flat;
+            button.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button.ForeColor = Color.FromArgb(0, 71, 160);
+            button.Location = new Point(0, 0);
+            button.Name = "button";
+            button.Size = new Size(120, 35);
+            button.TabIndex = 0;
+            button.Text = "button1";
+            button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button.UseVisualStyleBackColor = false;
+            button.Click += button_Click;
             // 
             // ButtonControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button);
-            this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "ButtonControl";
-            this.Size = new System.Drawing.Size(120, 35);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button);
+            Margin = new Padding(0);
+            Name = "ButtonControl";
+            Size = new Size(120, 35);
+            ResumeLayout(false);
         }
 
         #endregion

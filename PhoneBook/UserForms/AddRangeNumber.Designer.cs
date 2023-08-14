@@ -52,7 +52,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(1);
-            panel1.Size = new Size(378, 524);
+            panel1.Size = new Size(378, 599);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -64,7 +64,7 @@
             panel2.Location = new Point(1, 1);
             panel2.Name = "panel2";
             panel2.Padding = new Padding(4);
-            panel2.Size = new Size(376, 522);
+            panel2.Size = new Size(376, 597);
             panel2.TabIndex = 0;
             // 
             // pnlTop
@@ -77,7 +77,7 @@
             pnlTop.Dock = DockStyle.Fill;
             pnlTop.Location = new Point(4, 4);
             pnlTop.Name = "pnlTop";
-            pnlTop.Size = new Size(368, 123);
+            pnlTop.Size = new Size(368, 169);
             pnlTop.TabIndex = 0;
             // 
             // lblAddress
@@ -85,10 +85,10 @@
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             lblAddress.ForeColor = Color.White;
-            lblAddress.Location = new Point(59, 41);
+            lblAddress.Location = new Point(56, 67);
             lblAddress.MaximumSize = new Size(300, 0);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(273, 19);
+            lblAddress.Size = new Size(255, 46);
             lblAddress.TabIndex = 16;
             lblAddress.Text = "Добавление данных по адресу: ";
             // 
@@ -113,7 +113,7 @@
             lblHeader.Location = new Point(7, 9);
             lblHeader.MaximumSize = new Size(300, 0);
             lblHeader.Name = "lblHeader";
-            lblHeader.Size = new Size(273, 19);
+            lblHeader.Size = new Size(255, 46);
             lblHeader.TabIndex = 15;
             lblHeader.Text = "Добавление данных по адресу: ";
             // 
@@ -124,9 +124,9 @@
             btnSave.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.FromArgb(0, 71, 160);
             btnSave.Image = Properties.Resources.save;
-            btnSave.Location = new Point(225, 79);
+            btnSave.Location = new Point(207, 123);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(136, 32);
+            btnSave.Size = new Size(154, 40);
             btnSave.TabIndex = 13;
             btnSave.Text = "Сохранить";
             btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -137,9 +137,9 @@
             // 
             pnlGrid.Controls.Add(gridNumberPhones);
             pnlGrid.Dock = DockStyle.Bottom;
-            pnlGrid.Location = new Point(4, 127);
+            pnlGrid.Location = new Point(4, 173);
             pnlGrid.Name = "pnlGrid";
-            pnlGrid.Size = new Size(368, 391);
+            pnlGrid.Size = new Size(368, 420);
             pnlGrid.TabIndex = 1;
             // 
             // gridNumberPhones
@@ -151,14 +151,15 @@
             gridNumberPhones.Location = new Point(0, 0);
             gridNumberPhones.Name = "gridNumberPhones";
             gridNumberPhones.Padding = new Padding(0, 5, 0, 0);
-            gridNumberPhones.Size = new Size(368, 391);
+            gridNumberPhones.Size = new Size(368, 420);
             gridNumberPhones.TabIndex = 0;
             // 
             // AddRangeNumber
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(378, 524);
+            ClientSize = new Size(378, 599);
             ControlBox = false;
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);

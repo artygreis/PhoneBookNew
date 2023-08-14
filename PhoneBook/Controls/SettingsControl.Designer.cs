@@ -61,9 +61,10 @@
             pnlContent.Controls.Add(grpSourceDataBase);
             pnlContent.Controls.Add(grpUpdate);
             pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Location = new Point(5, 5);
+            pnlContent.Location = new Point(6, 7);
+            pnlContent.Margin = new Padding(3, 4, 3, 4);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(820, 580);
+            pnlContent.Size = new Size(942, 779);
             pnlContent.TabIndex = 0;
             // 
             // grpSelectColor
@@ -77,23 +78,26 @@
             grpSelectColor.Controls.Add(clrSelectNotCall);
             grpSelectColor.Controls.Add(lblColorNotDoor);
             grpSelectColor.Controls.Add(lblColorNotCall);
-            grpSelectColor.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpSelectColor.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             grpSelectColor.ForeColor = Color.White;
-            grpSelectColor.Location = new Point(26, 162);
+            grpSelectColor.Location = new Point(30, 216);
+            grpSelectColor.Margin = new Padding(3, 4, 3, 4);
             grpSelectColor.Name = "grpSelectColor";
-            grpSelectColor.Size = new Size(773, 177);
+            grpSelectColor.Padding = new Padding(3, 4, 3, 4);
+            grpSelectColor.Size = new Size(883, 236);
             grpSelectColor.TabIndex = 18;
             grpSelectColor.TabStop = false;
             grpSelectColor.Text = "Выберите цвета:";
             // 
             // btnResetColorNotFull
             // 
-            btnResetColorNotFull.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotFull.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotFull.FontButton = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnResetColorNotFull.ImageButton = (Image)resources.GetObject("btnResetColorNotFull.ImageButton");
-            btnResetColorNotFull.Location = new Point(444, 121);
+            btnResetColorNotFull.Location = new Point(516, 163);
             btnResetColorNotFull.Margin = new Padding(0);
             btnResetColorNotFull.Name = "btnResetColorNotFull";
-            btnResetColorNotFull.Size = new Size(120, 35);
+            btnResetColorNotFull.Size = new Size(150, 44);
             btnResetColorNotFull.TabIndex = 25;
             btnResetColorNotFull.TextButton = " Сбросить";
             btnResetColorNotFull.Load += btnResetColorNotFull_Load;
@@ -102,20 +106,21 @@
             // 
             clrSelectNotFull.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             clrSelectNotFull.BackColor = Color.LightCoral;
-            clrSelectNotFull.BeforeTouchSize = new Size(115, 35);
+            clrSelectNotFull.BeforeTouchSize = new Size(131, 47);
             clrSelectNotFull.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
             clrSelectNotFull.ColorUISize = new Size(220, 230);
             clrSelectNotFull.FlatAppearance.BorderSize = 5;
             clrSelectNotFull.FlatStyle = FlatStyle.Flat;
             clrSelectNotFull.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             clrSelectNotFull.ForeColor = Color.White;
-            clrSelectNotFull.Location = new Point(322, 121);
+            clrSelectNotFull.Location = new Point(381, 161);
+            clrSelectNotFull.Margin = new Padding(3, 4, 3, 4);
             clrSelectNotFull.MetroColor = Color.LightCoral;
             clrSelectNotFull.Name = "clrSelectNotFull";
             clrSelectNotFull.SelectedAsBackcolor = true;
             clrSelectNotFull.SelectedColor = Color.LightCoral;
             clrSelectNotFull.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
-            clrSelectNotFull.Size = new Size(115, 35);
+            clrSelectNotFull.Size = new Size(131, 47);
             clrSelectNotFull.StandardTabName = "Цвета";
             clrSelectNotFull.TabIndex = 24;
             clrSelectNotFull.Text = "Выбрать";
@@ -128,32 +133,34 @@
             // 
             // lblColorNotDisturb
             // 
-            lblColorNotDisturb.Location = new Point(23, 128);
+            lblColorNotDisturb.Location = new Point(26, 171);
             lblColorNotDisturb.Name = "lblColorNotDisturb";
-            lblColorNotDisturb.Size = new Size(293, 20);
+            lblColorNotDisturb.Size = new Size(354, 23);
             lblColorNotDisturb.TabIndex = 23;
             lblColorNotDisturb.Text = "Цвет записей где не беспокоить:";
             // 
             // btnResetColorNotDoor
             // 
-            btnResetColorNotDoor.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotDoor.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotDoor.FontButton = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnResetColorNotDoor.ImageButton = (Image)resources.GetObject("btnResetColorNotDoor.ImageButton");
-            btnResetColorNotDoor.Location = new Point(434, 75);
+            btnResetColorNotDoor.Location = new Point(504, 101);
             btnResetColorNotDoor.Margin = new Padding(0);
             btnResetColorNotDoor.Name = "btnResetColorNotDoor";
-            btnResetColorNotDoor.Size = new Size(120, 35);
+            btnResetColorNotDoor.Size = new Size(150, 44);
             btnResetColorNotDoor.TabIndex = 22;
             btnResetColorNotDoor.TextButton = " Сбросить";
             btnResetColorNotDoor.ButtonClick += btnResetColorNotDoor_Click;
             // 
             // btnResetColorNotCall
             // 
-            btnResetColorNotCall.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotCall.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnResetColorNotCall.FontButton = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnResetColorNotCall.ImageButton = (Image)resources.GetObject("btnResetColorNotCall.ImageButton");
-            btnResetColorNotCall.Location = new Point(423, 29);
+            btnResetColorNotCall.Location = new Point(492, 40);
             btnResetColorNotCall.Margin = new Padding(0);
             btnResetColorNotCall.Name = "btnResetColorNotCall";
-            btnResetColorNotCall.Size = new Size(120, 35);
+            btnResetColorNotCall.Size = new Size(150, 44);
             btnResetColorNotCall.TabIndex = 21;
             btnResetColorNotCall.TextButton = " Сбросить";
             btnResetColorNotCall.ButtonClick += btnResetColorNotCall_Click;
@@ -162,20 +169,21 @@
             // 
             clrSelectNotDoor.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             clrSelectNotDoor.BackColor = Color.LightSalmon;
-            clrSelectNotDoor.BeforeTouchSize = new Size(115, 35);
+            clrSelectNotDoor.BeforeTouchSize = new Size(131, 47);
             clrSelectNotDoor.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
             clrSelectNotDoor.ColorUISize = new Size(220, 230);
             clrSelectNotDoor.FlatAppearance.BorderSize = 5;
             clrSelectNotDoor.FlatStyle = FlatStyle.Flat;
             clrSelectNotDoor.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             clrSelectNotDoor.ForeColor = Color.White;
-            clrSelectNotDoor.Location = new Point(312, 75);
+            clrSelectNotDoor.Location = new Point(370, 100);
+            clrSelectNotDoor.Margin = new Padding(3, 4, 3, 4);
             clrSelectNotDoor.MetroColor = Color.LightSalmon;
             clrSelectNotDoor.Name = "clrSelectNotDoor";
             clrSelectNotDoor.SelectedAsBackcolor = true;
             clrSelectNotDoor.SelectedColor = Color.LightSalmon;
             clrSelectNotDoor.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
-            clrSelectNotDoor.Size = new Size(115, 35);
+            clrSelectNotDoor.Size = new Size(131, 47);
             clrSelectNotDoor.StandardTabName = "Цвета";
             clrSelectNotDoor.TabIndex = 20;
             clrSelectNotDoor.Text = "Выбрать";
@@ -190,20 +198,21 @@
             // 
             clrSelectNotCall.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             clrSelectNotCall.BackColor = Color.LightPink;
-            clrSelectNotCall.BeforeTouchSize = new Size(115, 35);
+            clrSelectNotCall.BeforeTouchSize = new Size(131, 47);
             clrSelectNotCall.ColorGroups = Syncfusion.Windows.Forms.ColorUIGroups.StandardColors;
             clrSelectNotCall.ColorUISize = new Size(220, 230);
             clrSelectNotCall.FlatAppearance.BorderSize = 5;
             clrSelectNotCall.FlatStyle = FlatStyle.Flat;
             clrSelectNotCall.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             clrSelectNotCall.ForeColor = Color.White;
-            clrSelectNotCall.Location = new Point(301, 29);
+            clrSelectNotCall.Location = new Point(357, 39);
+            clrSelectNotCall.Margin = new Padding(3, 4, 3, 4);
             clrSelectNotCall.MetroColor = Color.LightPink;
             clrSelectNotCall.Name = "clrSelectNotCall";
             clrSelectNotCall.SelectedAsBackcolor = true;
             clrSelectNotCall.SelectedColor = Color.LightPink;
             clrSelectNotCall.SelectedColorGroup = Syncfusion.Windows.Forms.ColorUISelectedGroup.StandardColors;
-            clrSelectNotCall.Size = new Size(115, 35);
+            clrSelectNotCall.Size = new Size(131, 47);
             clrSelectNotCall.StandardTabName = "Цвета";
             clrSelectNotCall.TabIndex = 19;
             clrSelectNotCall.Text = "Выбрать";
@@ -216,17 +225,17 @@
             // 
             // lblColorNotDoor
             // 
-            lblColorNotDoor.Location = new Point(23, 82);
+            lblColorNotDoor.Location = new Point(26, 109);
             lblColorNotDoor.Name = "lblColorNotDoor";
-            lblColorNotDoor.Size = new Size(283, 20);
+            lblColorNotDoor.Size = new Size(340, 23);
             lblColorNotDoor.TabIndex = 1;
             lblColorNotDoor.Text = "Цвет записей куда не заходить:";
             // 
             // lblColorNotCall
             // 
-            lblColorNotCall.Location = new Point(23, 36);
+            lblColorNotCall.Location = new Point(26, 48);
             lblColorNotCall.Name = "lblColorNotCall";
-            lblColorNotCall.Size = new Size(273, 20);
+            lblColorNotCall.Size = new Size(326, 23);
             lblColorNotCall.TabIndex = 0;
             lblColorNotCall.Text = "Цвет записей куда не звонить:";
             // 
@@ -234,23 +243,26 @@
             // 
             grpSourceDataBase.Controls.Add(btnSearchFile);
             grpSourceDataBase.Controls.Add(textBoxSourceFile);
-            grpSourceDataBase.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpSourceDataBase.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             grpSourceDataBase.ForeColor = Color.White;
-            grpSourceDataBase.Location = new Point(26, 30);
+            grpSourceDataBase.Location = new Point(30, 40);
+            grpSourceDataBase.Margin = new Padding(3, 4, 3, 4);
             grpSourceDataBase.Name = "grpSourceDataBase";
-            grpSourceDataBase.Size = new Size(773, 126);
+            grpSourceDataBase.Padding = new Padding(3, 4, 3, 4);
+            grpSourceDataBase.Size = new Size(883, 168);
             grpSourceDataBase.TabIndex = 17;
             grpSourceDataBase.TabStop = false;
             grpSourceDataBase.Text = "Путь к справочнику:";
             // 
             // btnSearchFile
             // 
-            btnSearchFile.FontButton = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearchFile.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearchFile.FontButton = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearchFile.ImageButton = (Image)resources.GetObject("btnSearchFile.ImageButton");
-            btnSearchFile.Location = new Point(629, 75);
+            btnSearchFile.Location = new Point(706, 100);
             btnSearchFile.Margin = new Padding(0);
             btnSearchFile.Name = "btnSearchFile";
-            btnSearchFile.Size = new Size(120, 34);
+            btnSearchFile.Size = new Size(150, 43);
             btnSearchFile.TabIndex = 19;
             btnSearchFile.TextButton = " Изменить";
             btnSearchFile.ButtonClick += btnSearchFile_Click;
@@ -259,33 +271,37 @@
             // 
             textBoxSourceFile.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             textBoxSourceFile.ForeColor = Color.FromArgb(0, 71, 160);
-            textBoxSourceFile.Location = new Point(23, 37);
+            textBoxSourceFile.Location = new Point(26, 49);
+            textBoxSourceFile.Margin = new Padding(3, 4, 3, 4);
             textBoxSourceFile.Name = "textBoxSourceFile";
             textBoxSourceFile.ReadOnly = true;
-            textBoxSourceFile.Size = new Size(726, 24);
+            textBoxSourceFile.Size = new Size(829, 29);
             textBoxSourceFile.TabIndex = 13;
             // 
             // grpUpdate
             // 
             grpUpdate.Controls.Add(btnApplyUpdate);
             grpUpdate.Controls.Add(linkLabel1);
-            grpUpdate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            grpUpdate.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             grpUpdate.ForeColor = Color.White;
-            grpUpdate.Location = new Point(26, 450);
+            grpUpdate.Location = new Point(30, 600);
+            grpUpdate.Margin = new Padding(3, 4, 3, 4);
             grpUpdate.Name = "grpUpdate";
-            grpUpdate.Size = new Size(773, 81);
+            grpUpdate.Padding = new Padding(3, 4, 3, 4);
+            grpUpdate.Size = new Size(883, 108);
             grpUpdate.TabIndex = 16;
             grpUpdate.TabStop = false;
             grpUpdate.Text = "Обновление:";
             // 
             // btnApplyUpdate
             // 
+            btnApplyUpdate.AutoSize = true;
             btnApplyUpdate.FontButton = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnApplyUpdate.ImageButton = (Image)resources.GetObject("btnApplyUpdate.ImageButton");
-            btnApplyUpdate.Location = new Point(604, 27);
+            btnApplyUpdate.Location = new Point(613, 35);
             btnApplyUpdate.Margin = new Padding(0);
             btnApplyUpdate.Name = "btnApplyUpdate";
-            btnApplyUpdate.Size = new Size(145, 35);
+            btnApplyUpdate.Size = new Size(199, 44);
             btnApplyUpdate.TabIndex = 19;
             btnApplyUpdate.TextButton = " Обновить !!!";
             btnApplyUpdate.Load += btnApplyUpdate_Load;
@@ -298,9 +314,9 @@
             linkLabel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             linkLabel1.ForeColor = Color.Transparent;
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(41, 36);
+            linkLabel1.Location = new Point(47, 48);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(284, 20);
+            linkLabel1.Size = new Size(338, 25);
             linkLabel1.TabIndex = 14;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Проверить наличие обновлений";
@@ -309,13 +325,14 @@
             // 
             // SettingsControl
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(pnlContent);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SettingsControl";
-            Padding = new Padding(5);
-            Size = new Size(830, 590);
+            Padding = new Padding(6, 7, 6, 7);
+            Size = new Size(954, 793);
             Load += SettingsControl_Load;
             pnlContent.ResumeLayout(false);
             grpSelectColor.ResumeLayout(false);

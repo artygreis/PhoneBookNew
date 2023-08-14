@@ -58,9 +58,10 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(1);
-            panel1.Size = new Size(557, 524);
+            panel1.Size = new Size(637, 699);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -70,9 +71,10 @@
             panel2.Controls.Add(pnlGrid);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(1, 1);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(4);
-            panel2.Size = new Size(555, 522);
+            panel2.Padding = new Padding(5);
+            panel2.Size = new Size(635, 697);
             panel2.TabIndex = 0;
             // 
             // pnlTop
@@ -88,17 +90,19 @@
             pnlTop.Controls.Add(btnClose);
             pnlTop.Controls.Add(labelHeader);
             pnlTop.Dock = DockStyle.Fill;
-            pnlTop.Location = new Point(4, 4);
+            pnlTop.Location = new Point(5, 5);
+            pnlTop.Margin = new Padding(3, 4, 3, 4);
             pnlTop.Name = "pnlTop";
-            pnlTop.Size = new Size(547, 217);
+            pnlTop.Size = new Size(625, 269);
             pnlTop.TabIndex = 0;
             // 
             // houseControl
             // 
             houseControl.BackColor = Color.FromArgb(0, 71, 160);
-            houseControl.Location = new Point(437, 97);
+            houseControl.Location = new Point(499, 129);
+            houseControl.Margin = new Padding(3, 5, 3, 5);
             houseControl.Name = "houseControl";
-            houseControl.Size = new Size(91, 54);
+            houseControl.Size = new Size(104, 72);
             houseControl.TabIndex = 3;
             // 
             // btnDelete
@@ -108,9 +112,10 @@
             btnDelete.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.FromArgb(0, 71, 160);
             btnDelete.Image = Properties.Resources.delete;
-            btnDelete.Location = new Point(353, 166);
+            btnDelete.Location = new Point(404, 210);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(136, 35);
+            btnDelete.Size = new Size(155, 40);
             btnDelete.TabIndex = 6;
             btnDelete.Text = "Удалить";
             btnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -124,9 +129,10 @@
             btnEdit.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEdit.ForeColor = Color.FromArgb(0, 71, 160);
             btnEdit.Image = Properties.Resources.edit;
-            btnEdit.Location = new Point(205, 166);
+            btnEdit.Location = new Point(235, 210);
+            btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(136, 35);
+            btnEdit.Size = new Size(155, 40);
             btnEdit.TabIndex = 5;
             btnEdit.Text = "Изменить";
             btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -140,9 +146,10 @@
             btnAdd.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.FromArgb(0, 71, 160);
             btnAdd.Image = Properties.Resources.add;
-            btnAdd.Location = new Point(57, 166);
+            btnAdd.Location = new Point(66, 210);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(136, 35);
+            btnAdd.Size = new Size(155, 40);
             btnAdd.TabIndex = 4;
             btnAdd.Text = "Добавить";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -152,37 +159,40 @@
             // streetNameControl
             // 
             streetNameControl.BackColor = Color.FromArgb(0, 71, 160);
-            streetNameControl.Location = new Point(172, 97);
+            streetNameControl.Location = new Point(197, 129);
+            streetNameControl.Margin = new Padding(3, 5, 3, 5);
             streetNameControl.Name = "streetNameControl";
-            streetNameControl.Size = new Size(259, 54);
+            streetNameControl.Size = new Size(296, 72);
             streetNameControl.TabIndex = 2;
             // 
             // typeStreetControl
             // 
             typeStreetControl.BackColor = Color.FromArgb(0, 71, 160);
-            typeStreetControl.Location = new Point(19, 97);
+            typeStreetControl.Location = new Point(22, 129);
+            typeStreetControl.Margin = new Padding(3, 5, 3, 5);
             typeStreetControl.Name = "typeStreetControl";
-            typeStreetControl.Size = new Size(147, 54);
+            typeStreetControl.Size = new Size(168, 72);
             typeStreetControl.TabIndex = 1;
             // 
             // localityControl
             // 
             localityControl.BackColor = Color.FromArgb(0, 71, 160);
-            localityControl.Location = new Point(19, 37);
+            localityControl.Location = new Point(22, 49);
+            localityControl.Margin = new Padding(3, 5, 3, 5);
             localityControl.Name = "localityControl";
-            localityControl.Size = new Size(315, 54);
+            localityControl.Size = new Size(360, 72);
             localityControl.TabIndex = 0;
             // 
             // btnClose
             // 
-            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnClose.BackColor = Color.Transparent;
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(517, -1);
+            btnClose.Location = new Point(587, -1);
+            btnClose.Margin = new Padding(3, 4, 3, 4);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(31, 29);
+            btnClose.Size = new Size(35, 39);
             btnClose.TabIndex = 8;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
@@ -192,10 +202,10 @@
             labelHeader.AutoSize = true;
             labelHeader.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             labelHeader.ForeColor = Color.White;
-            labelHeader.Location = new Point(7, 6);
-            labelHeader.MaximumSize = new Size(500, 0);
+            labelHeader.Location = new Point(8, 8);
+            labelHeader.MaximumSize = new Size(571, 0);
             labelHeader.Name = "labelHeader";
-            labelHeader.Size = new Size(232, 19);
+            labelHeader.Size = new Size(289, 23);
             labelHeader.TabIndex = 9;
             labelHeader.Text = "Редактирование адреса n:";
             // 
@@ -203,9 +213,10 @@
             // 
             pnlGrid.Controls.Add(gridAddresses);
             pnlGrid.Dock = DockStyle.Bottom;
-            pnlGrid.Location = new Point(4, 221);
+            pnlGrid.Location = new Point(5, 274);
+            pnlGrid.Margin = new Padding(3, 4, 3, 4);
             pnlGrid.Name = "pnlGrid";
-            pnlGrid.Size = new Size(547, 297);
+            pnlGrid.Size = new Size(625, 418);
             pnlGrid.TabIndex = 1;
             // 
             // gridAddresses
@@ -215,9 +226,10 @@
             gridAddresses.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             gridAddresses.ForeColor = Color.FromArgb(0, 71, 160);
             gridAddresses.Location = new Point(0, 0);
+            gridAddresses.Margin = new Padding(3, 4, 3, 4);
             gridAddresses.Name = "gridAddresses";
-            gridAddresses.Padding = new Padding(0, 5, 0, 0);
-            gridAddresses.Size = new Size(547, 297);
+            gridAddresses.Padding = new Padding(0, 7, 0, 0);
+            gridAddresses.Size = new Size(625, 418);
             gridAddresses.TabIndex = 0;
             // 
             // errorValidating
@@ -227,12 +239,13 @@
             // 
             // EditAddress
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(557, 524);
+            ClientSize = new Size(637, 699);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "EditAddress";
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;

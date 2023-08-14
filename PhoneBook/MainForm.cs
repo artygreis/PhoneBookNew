@@ -72,7 +72,7 @@ namespace PhoneBook
                 btn.NotifyDefault(false);
             }
         }
-        
+
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -129,7 +129,7 @@ namespace PhoneBook
         private void btnSettings_Click_1(object sender, EventArgs e)
         {
             MoveSidePanel(btnSettings);
-                AddControlToPanel(new SettingsControl(btnSettings, availableUpdate));
+            AddControlToPanel(new SettingsControl(btnSettings, availableUpdate));
         }
     }
 }

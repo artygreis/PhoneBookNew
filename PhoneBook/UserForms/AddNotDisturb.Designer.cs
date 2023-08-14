@@ -51,9 +51,10 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(1);
-            panel1.Size = new Size(400, 290);
+            panel1.Size = new Size(457, 387);
             panel1.TabIndex = 1;
             // 
             // panel2
@@ -62,9 +63,10 @@
             panel2.Controls.Add(panel3);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(1, 1);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(4);
-            panel2.Size = new Size(398, 288);
+            panel2.Padding = new Padding(5, 5, 5, 5);
+            panel2.Size = new Size(455, 385);
             panel2.TabIndex = 0;
             // 
             // panel3
@@ -81,17 +83,19 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             panel3.ForeColor = Color.White;
-            panel3.Location = new Point(4, 4);
+            panel3.Location = new Point(5, 5);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(390, 280);
+            panel3.Size = new Size(445, 375);
             panel3.TabIndex = 0;
             // 
             // chkNotEnter
             // 
             chkNotEnter.AutoSize = true;
-            chkNotEnter.Location = new Point(193, 88);
+            chkNotEnter.Location = new Point(221, 117);
+            chkNotEnter.Margin = new Padding(3, 4, 3, 4);
             chkNotEnter.Name = "chkNotEnter";
-            chkNotEnter.Size = new Size(126, 23);
+            chkNotEnter.Size = new Size(157, 27);
             chkNotEnter.TabIndex = 21;
             chkNotEnter.Text = "Не заходить";
             chkNotEnter.UseVisualStyleBackColor = true;
@@ -99,9 +103,10 @@
             // chkNotCall
             // 
             chkNotCall.AutoSize = true;
-            chkNotCall.Location = new Point(72, 88);
+            chkNotCall.Location = new Point(82, 117);
+            chkNotCall.Margin = new Padding(3, 4, 3, 4);
             chkNotCall.Name = "chkNotCall";
-            chkNotCall.Size = new Size(115, 23);
+            chkNotCall.Size = new Size(143, 27);
             chkNotCall.TabIndex = 20;
             chkNotCall.Text = "Не звонить";
             chkNotCall.UseVisualStyleBackColor = true;
@@ -110,20 +115,21 @@
             // 
             txtNote.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             txtNote.ForeColor = Color.FromArgb(0, 71, 160);
-            txtNote.Location = new Point(26, 145);
+            txtNote.Location = new Point(30, 193);
+            txtNote.Margin = new Padding(3, 4, 3, 4);
             txtNote.Multiline = true;
             txtNote.Name = "txtNote";
-            txtNote.Size = new Size(338, 85);
+            txtNote.Size = new Size(386, 112);
             txtNote.TabIndex = 19;
             // 
             // lblAddress
             // 
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblAddress.Location = new Point(29, 44);
-            lblAddress.MaximumSize = new Size(350, 0);
+            lblAddress.Location = new Point(33, 59);
+            lblAddress.MaximumSize = new Size(400, 0);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(273, 19);
+            lblAddress.Size = new Size(344, 23);
             lblAddress.TabIndex = 18;
             lblAddress.Text = "Добавление данных по адресу: ";
             // 
@@ -133,9 +139,10 @@
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(360, -1);
+            btnClose.Location = new Point(411, -1);
+            btnClose.Margin = new Padding(3, 4, 3, 4);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(31, 29);
+            btnClose.Size = new Size(35, 39);
             btnClose.TabIndex = 16;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
@@ -144,10 +151,10 @@
             // 
             lblHeader.AutoSize = true;
             lblHeader.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblHeader.Location = new Point(10, 14);
-            lblHeader.MaximumSize = new Size(350, 0);
+            lblHeader.Location = new Point(11, 19);
+            lblHeader.MaximumSize = new Size(400, 0);
             lblHeader.Name = "lblHeader";
-            lblHeader.Size = new Size(273, 19);
+            lblHeader.Size = new Size(344, 23);
             lblHeader.TabIndex = 17;
             lblHeader.Text = "Добавление данных по адресу: ";
             // 
@@ -159,9 +166,10 @@
             btnSave.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.FromArgb(0, 71, 160);
             btnSave.Image = Properties.Resources.save;
-            btnSave.Location = new Point(247, 241);
+            btnSave.Location = new Point(284, 328);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(136, 32);
+            btnSave.Size = new Size(155, 40);
             btnSave.TabIndex = 2;
             btnSave.Text = "Сохранить";
             btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -170,26 +178,27 @@
             // 
             // lblNote
             // 
-            lblNote.DY = -24;
+            lblNote.DY = -28;
             lblNote.ForeColor = Color.White;
             lblNote.Gap = 5;
             lblNote.LabeledControl = txtNote;
-            lblNote.Location = new Point(26, 121);
+            lblNote.Location = new Point(30, 165);
             lblNote.Name = "lblNote";
             lblNote.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            lblNote.Size = new Size(118, 19);
+            lblNote.Size = new Size(145, 23);
             lblNote.TabIndex = 13;
             lblNote.Text = "Примечание:";
             // 
             // AddNotDisturb
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(400, 290);
+            ClientSize = new Size(457, 387);
             ControlBox = false;
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "AddNotDisturb";
             ShowIcon = false;

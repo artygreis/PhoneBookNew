@@ -46,7 +46,7 @@
             pnlContent.Dock = DockStyle.Fill;
             pnlContent.Location = new Point(5, 5);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(820, 580);
+            pnlContent.Size = new Size(825, 585);
             pnlContent.TabIndex = 0;
             // 
             // label2
@@ -89,7 +89,7 @@
             Controls.Add(pnlContent);
             Name = "ErrorConnectControl";
             Padding = new Padding(5);
-            Size = new Size(830, 590);
+            Size = new Size(835, 595);
             pnlContent.ResumeLayout(false);
             pnlContent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

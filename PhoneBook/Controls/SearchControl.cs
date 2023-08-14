@@ -111,12 +111,12 @@ namespace PhoneBook.Controls
 
             if (tabControlAdv.SelectedTab.Name == "searchByNumberPhone")
             {
-                gridPhones.Height = 435;
+                //gridPhones.Height = 435;
                 countryControlSearchByNumberPhone.LoadCountry();
             }
             if (tabControlAdv.SelectedTab.Name == "searchByAddressTab")
             {
-                gridPhones.Height = 355;
+                //gridPhones.Height = 355;
                 countryControlSearchByAddress.LoadCountry();
             }
             //if (tabControlAdv.SelectedTab.Name == "searchNotCallTab")
@@ -415,13 +415,13 @@ namespace PhoneBook.Controls
                     pdfGrid.Rows[row].Style = pdfGridRowStyleNotCall;
                 }
 
-                
+
                 foreach (var row in listNotEnter)
                 {
                     pdfGrid.Rows[row].Style = pdfGridRowStyleNotEnter;
                 }
 
-                
+
                 foreach (var row in listNotFull)
                 {
                     pdfGrid.Rows[row].Style = pdfGridRowStyleNotFull;

@@ -61,14 +61,14 @@ namespace PhoneBook.Forms
             // 
             // lblCountryName
             // 
-            lblCountryName.DX = -148;
+            lblCountryName.DX = -180;
             lblCountryName.DY = 3;
             lblCountryName.ForeColor = Color.White;
             lblCountryName.Gap = 10;
             lblCountryName.LabeledControl = txtCountryName;
-            lblCountryName.Location = new Point(123, 46);
+            lblCountryName.Location = new Point(91, 46);
             lblCountryName.Name = "lblCountryName";
-            lblCountryName.Size = new Size(138, 19);
+            lblCountryName.Size = new Size(170, 23);
             lblCountryName.TabIndex = 0;
             lblCountryName.Text = "Наименование:";
             // 
@@ -78,20 +78,20 @@ namespace PhoneBook.Forms
             txtCountryName.ForeColor = Color.FromArgb(0, 71, 160);
             txtCountryName.Location = new Point(271, 43);
             txtCountryName.Name = "txtCountryName";
-            txtCountryName.Size = new Size(184, 26);
+            txtCountryName.Size = new Size(184, 30);
             txtCountryName.TabIndex = 0;
             txtCountryName.TextAlign = HorizontalAlignment.Center;
             // 
             // lblCountryCode
             // 
-            lblCountryCode.DX = -119;
+            lblCountryCode.DX = -147;
             lblCountryCode.DY = 4;
             lblCountryCode.ForeColor = Color.White;
             lblCountryCode.Gap = 10;
             lblCountryCode.LabeledControl = txtCountryCode;
-            lblCountryCode.Location = new Point(152, 79);
+            lblCountryCode.Location = new Point(124, 79);
             lblCountryCode.Name = "lblCountryCode";
-            lblCountryCode.Size = new Size(109, 19);
+            lblCountryCode.Size = new Size(137, 23);
             lblCountryCode.TabIndex = 0;
             lblCountryCode.Text = "Код страны:";
             // 
@@ -102,22 +102,22 @@ namespace PhoneBook.Forms
             txtCountryCode.Location = new Point(271, 75);
             txtCountryCode.Mask = "+00000";
             txtCountryCode.Name = "txtCountryCode";
-            txtCountryCode.Size = new Size(184, 27);
+            txtCountryCode.Size = new Size(184, 32);
             txtCountryCode.TabIndex = 1;
             txtCountryCode.TextAlign = HorizontalAlignment.Center;
             // 
             // lblCountDigits
             // 
-            lblCountDigits.DX = -251;
+            lblCountDigits.DX = -261;
             lblCountDigits.DY = 4;
             lblCountDigits.ForeColor = Color.White;
             lblCountDigits.Gap = 10;
             lblCountDigits.LabeledControl = txtCountDigits;
-            lblCountDigits.Location = new Point(20, 112);
+            lblCountDigits.Location = new Point(10, 112);
             lblCountDigits.Name = "lblCountDigits";
-            lblCountDigits.Size = new Size(241, 19);
+            lblCountDigits.Size = new Size(251, 23);
             lblCountDigits.TabIndex = 0;
-            lblCountDigits.Text = "Количество цифр в номере:";
+            lblCountDigits.Text = "Кол-во цифр в номере:";
             // 
             // txtCountDigits
             // 
@@ -126,20 +126,20 @@ namespace PhoneBook.Forms
             txtCountDigits.Location = new Point(271, 108);
             txtCountDigits.Mask = "00";
             txtCountDigits.Name = "txtCountDigits";
-            txtCountDigits.Size = new Size(184, 27);
+            txtCountDigits.Size = new Size(184, 32);
             txtCountDigits.TabIndex = 2;
             txtCountDigits.TextAlign = HorizontalAlignment.Center;
             // 
             // lblExample
             // 
-            lblExample.DX = -158;
+            lblExample.DX = -193;
             lblExample.DY = 4;
             lblExample.ForeColor = Color.White;
             lblExample.Gap = 10;
             lblExample.LabeledControl = txtExample;
-            lblExample.Location = new Point(113, 145);
+            lblExample.Location = new Point(78, 145);
             lblExample.Name = "lblExample";
-            lblExample.Size = new Size(148, 19);
+            lblExample.Size = new Size(183, 23);
             lblExample.TabIndex = 0;
             lblExample.Text = "Пример номера:";
             // 
@@ -148,7 +148,7 @@ namespace PhoneBook.Forms
             txtExample.ForeColor = Color.FromArgb(0, 71, 160);
             txtExample.Location = new Point(271, 141);
             txtExample.Name = "txtExample";
-            txtExample.Size = new Size(184, 27);
+            txtExample.Size = new Size(184, 32);
             txtExample.TabIndex = 3;
             txtExample.TextAlign = HorizontalAlignment.Center;
             txtExample.Enter += txtExample_Enter;
@@ -159,9 +159,9 @@ namespace PhoneBook.Forms
             pnlGrid.BackColor = Color.FromArgb(0, 71, 160);
             pnlGrid.Controls.Add(gridCountries);
             pnlGrid.Dock = DockStyle.Bottom;
-            pnlGrid.Location = new Point(4, 233);
+            pnlGrid.Location = new Point(4, 257);
             pnlGrid.Name = "pnlGrid";
-            pnlGrid.Size = new Size(488, 292);
+            pnlGrid.Size = new Size(488, 321);
             pnlGrid.TabIndex = 0;
             // 
             // gridCountries
@@ -174,7 +174,7 @@ namespace PhoneBook.Forms
             gridCountries.Margin = new Padding(4);
             gridCountries.Name = "gridCountries";
             gridCountries.Padding = new Padding(0, 5, 0, 0);
-            gridCountries.Size = new Size(488, 292);
+            gridCountries.Size = new Size(488, 321);
             gridCountries.TabIndex = 7;
             // 
             // panel1
@@ -198,7 +198,7 @@ namespace PhoneBook.Forms
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(488, 229);
+            panel1.Size = new Size(488, 253);
             panel1.TabIndex = 1;
             // 
             // btnClose
@@ -207,7 +207,7 @@ namespace PhoneBook.Forms
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(458, -1);
+            btnClose.Location = new Point(454, 3);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(31, 29);
             btnClose.TabIndex = 8;
@@ -220,7 +220,7 @@ namespace PhoneBook.Forms
             label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(269, 19);
+            label1.Size = new Size(335, 23);
             label1.TabIndex = 7;
             label1.Text = "Редактирование списка стран:";
             // 
@@ -232,9 +232,9 @@ namespace PhoneBook.Forms
             btnDelete.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.FromArgb(0, 71, 160);
             btnDelete.Image = Properties.Resources.delete;
-            btnDelete.Location = new Point(321, 190);
+            btnDelete.Location = new Point(321, 202);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(136, 32);
+            btnDelete.Size = new Size(136, 40);
             btnDelete.TabIndex = 6;
             btnDelete.Text = "Удалить";
             btnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -249,9 +249,9 @@ namespace PhoneBook.Forms
             btnEdit.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEdit.ForeColor = Color.FromArgb(0, 71, 160);
             btnEdit.Image = Properties.Resources.edit;
-            btnEdit.Location = new Point(173, 190);
+            btnEdit.Location = new Point(173, 202);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(136, 32);
+            btnEdit.Size = new Size(136, 40);
             btnEdit.TabIndex = 5;
             btnEdit.Text = "Изменить";
             btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -266,9 +266,9 @@ namespace PhoneBook.Forms
             btnAdd.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.FromArgb(0, 71, 160);
             btnAdd.Image = Properties.Resources.add;
-            btnAdd.Location = new Point(25, 190);
+            btnAdd.Location = new Point(25, 202);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(136, 32);
+            btnAdd.Size = new Size(136, 40);
             btnAdd.TabIndex = 4;
             btnAdd.Text = "Добавить";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -288,7 +288,7 @@ namespace PhoneBook.Forms
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Padding = new Padding(1);
-            panel2.Size = new Size(498, 531);
+            panel2.Size = new Size(498, 584);
             panel2.TabIndex = 9;
             // 
             // panel3
@@ -300,14 +300,15 @@ namespace PhoneBook.Forms
             panel3.Location = new Point(1, 1);
             panel3.Name = "panel3";
             panel3.Padding = new Padding(4);
-            panel3.Size = new Size(496, 529);
+            panel3.Size = new Size(496, 582);
             panel3.TabIndex = 9;
             // 
             // EditCountry
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(498, 531);
+            ClientSize = new Size(498, 584);
             Controls.Add(panel2);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
