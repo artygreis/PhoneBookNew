@@ -64,5 +64,11 @@ namespace PhoneBook.UserControls
             autoCompleteControlCity.AutoComplete.ActiveFocusControl = null;
             CityChanged?.Invoke(Convert.ToInt32(cityId));
         }
+
+        public void ChangeWidthTextBox(int width)
+        {
+            if (width > 0)
+                autoCompleteControlCity.Width += width;
+        }
     }
 }

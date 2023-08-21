@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace PhoneBook.Services
+﻿namespace PhoneBook.Services
 {
     public static class ApartmentExtension
     {

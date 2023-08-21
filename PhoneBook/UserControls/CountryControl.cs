@@ -1,4 +1,5 @@
-﻿using PhoneBook.Types;
+﻿using PhoneBook.Services;
+using PhoneBook.Types;
 using System.Data;
 namespace PhoneBook.UserControls
 {
@@ -64,6 +65,12 @@ namespace PhoneBook.UserControls
         public string GetTextCountry()
         {
             return autoCompleteControlCountry.TextBox.Text;
+        }
+
+        public void ChangeWidthTextBox(int width)
+        {
+            if (width > 0)
+                autoCompleteControlCountry.Width += width;
         }
     }
 }

@@ -50,5 +50,11 @@ namespace PhoneBook.UserControls
         {
             return autoCompleteControlAddress.TextBox.Text;
         }
+
+        public void ChangeWidthTextBox(int width)
+        {
+            if (width > 0)
+                autoCompleteControlAddress.Width += width;
+        }
     }
 }

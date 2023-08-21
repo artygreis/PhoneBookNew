@@ -111,17 +111,17 @@ namespace PhoneBook.Controls
 
             if (tabControlAdv.SelectedTab.Name == "searchByNumberPhone")
             {
-                //gridPhones.Height = 435;
+                gridPhones.Height = (int)(this.Height * 0.75);
+                countryControlSearchByNumberPhone.ChangeWidthTextBox(countryControlSearchByNumberPhone.Width - DefaultSettingsControl.CountryControlSearchByNumberPhone);
+                cityControlSearchByNumberPhone.ChangeWidthTextBox(cityControlSearchByNumberPhone.Width - DefaultSettingsControl.CityControlSearchByNumberPhone);
                 countryControlSearchByNumberPhone.LoadCountry();
             }
             if (tabControlAdv.SelectedTab.Name == "searchByAddressTab")
             {
-                //gridPhones.Height = 355;
-                //MessageBox.Show($"{gridPhones.Height}", "Высота grid");
-                //MessageBox.Show($"{countryControlSearchByAddress.Height}", "Длина country");
-                //MessageBox.Show($"{cityControlSearchByAddress.Width}", "Длина city");
-                //MessageBox.Show($"{addressControlSearchByAddress.Width}", "Длина address");
-                //addressControlSearchByAddress.Width = (int)((searchByAddressTab.Width - grpApartment.Width - grpApartments.Width) * 0.89);
+                gridPhones.Height = (int)(this.Height * 0.61);
+                countryControlSearchByAddress.ChangeWidthTextBox(countryControlSearchByAddress.Width - DefaultSettingsControl.CountryControlSearchByAddress);
+                cityControlSearchByAddress.ChangeWidthTextBox(cityControlSearchByAddress.Width - DefaultSettingsControl.CityControlSearchByAddress);
+                addressControlSearchByAddress.ChangeWidthTextBox(addressControlSearchByAddress.Width - DefaultSettingsControl.AddressControlSearchByAddress);
                 countryControlSearchByAddress.LoadCountry();
             }
             //if (tabControlAdv.SelectedTab.Name == "searchNotCallTab")
