@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhoneBook.Forms;
 using PhoneBook.Properties;
+using PhoneBook.Services;
 using PhoneBook.Types;
 using PhoneBook.UserForms;
 using Syncfusion.WinForms.DataGrid;
@@ -165,12 +166,19 @@ namespace PhoneBook.Controls
         {
             if (tabControlAddAdv.SelectedTab.Name == "addApartmentsTab")
             {
+                countryControlAddApartments.ChangeWidthTextBox(countryControlAddApartments.Width - DefaultSettingsControl.CountryControlAddApartments);
+                cityControlAddApartments.ChangeWidthTextBox(cityControlAddApartments.Width - DefaultSettingsControl.CityControlAddApartments);
+                addressControlAddApartments.ChangeWidthTextBox(addressControlAddApartments.Width - DefaultSettingsControl.AddressControlAddApartments);
                 UpdateData(new List<NumberPhoneView>());
                 countryControlAddApartments.LoadCountry();
             }
 
             if (tabControlAddAdv.SelectedTab.Name == "addNotDisturbTab")
             {
+                countryControlAddNotDisturb.ChangeWidthTextBox(countryControlAddNotDisturb.Width - DefaultSettingsControl.CountryControlAddNotDisturb);
+                cityControlAddNotDisturb.ChangeWidthTextBox(cityControlAddNotDisturb.Width - DefaultSettingsControl.CityControlAddNotDisturb);
+                addressControlAddNotDisturb.ChangeWidthTextBox(addressControlAddNotDisturb.Width - DefaultSettingsControl.AddressControlAddNotDisturb);
+                apartmentControlAddNotDisturb.ChangeWidthTextBox(apartmentControlAddNotDisturb.Width - DefaultSettingsControl.ApartmentControlAddNotDisturb);
                 UpdateDataNotDisturb(new List<NotDisturbCollection>());
                 countryControlAddNotDisturb.LoadCountry();
             }

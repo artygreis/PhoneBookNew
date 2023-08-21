@@ -324,7 +324,6 @@
             // countryControlSearchByAddress
             // 
             countryControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
-            countryControlSearchByAddress.BorderStyle = BorderStyle.FixedSingle;
             countryControlSearchByAddress.Location = new Point(21, 25);
             countryControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
             countryControlSearchByAddress.Name = "countryControlSearchByAddress";
@@ -334,7 +333,6 @@
             // addressControlSearchByAddress
             // 
             addressControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
-            addressControlSearchByAddress.BorderStyle = BorderStyle.FixedSingle;
             addressControlSearchByAddress.Location = new Point(21, 68);
             addressControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
             addressControlSearchByAddress.Name = "addressControlSearchByAddress";
@@ -344,7 +342,6 @@
             // cityControlSearchByAddress
             // 
             cityControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
-            cityControlSearchByAddress.BorderStyle = BorderStyle.FixedSingle;
             cityControlSearchByAddress.Location = new Point(252, 25);
             cityControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
             cityControlSearchByAddress.Name = "cityControlSearchByAddress";
@@ -364,7 +361,7 @@
             searchByNumberPhone.Location = new Point(1, 31);
             searchByNumberPhone.Name = "searchByNumberPhone";
             searchByNumberPhone.ShowCloseButton = true;
-            searchByNumberPhone.Size = new Size(822, 552);
+            searchByNumberPhone.Size = new Size(822, 197);
             searchByNumberPhone.TabFont = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             searchByNumberPhone.TabForeColor = Color.White;
             searchByNumberPhone.TabIndex = 2;

@@ -419,7 +419,6 @@
         private Button btnEditCityAdd;
         private CheckBox chkPrivateHouse;
         private UserControls.CountryControl countryControlAddApartments;
-        private UserControls.CityControl cityControlAddApartments;
         private UserControls.AddressControl addressControlAddApartments;
         private UserControls.GridControl gridPhones;
         private Button btnAddRange;
@@ -435,5 +434,6 @@
         private Button btnAddNotDisturbByAddress;
         private MaskedTextBox txtNumberPhone;
         private Button btnEditNotDisturb;
+        private UserControls.CityControl cityControlAddApartments;
     }
 }
