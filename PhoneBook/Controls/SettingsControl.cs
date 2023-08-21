@@ -144,8 +144,15 @@ namespace PhoneBook.Controls
 
         private async Task UpdateMyApp()
         {
-            using var mgr = new GithubUpdateManager("https://github.com/artygreis/PhoneBookNew");
-            newVersion = await mgr.UpdateApp();
+            using (var mgr = new GithubUpdateManager("https://github.com/artygreis/PhoneBookNew"))
+            {
+                newVersion = await mgr.UpdateApp();
+                if (newVersion != null)
+                {
+                    SettingsPicture.AddTextToPicture(buttonSetting);
+                    btnApplyUpdate.Visible = true;
+                }
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
