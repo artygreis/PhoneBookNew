@@ -47,7 +47,7 @@
             // 
             // autoCompleteControlAddress
             // 
-            autoCompleteControlAddress.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            autoCompleteControlAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             autoCompleteControlAddress.AutoSize = true;
             autoCompleteControlAddress.BackColor = Color.FromArgb(0, 71, 160);
             autoCompleteControlAddress.Location = new Point(74, 0);

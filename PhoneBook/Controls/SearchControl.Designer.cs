@@ -324,6 +324,7 @@
             // countryControlSearchByAddress
             // 
             countryControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
+            countryControlSearchByAddress.BorderStyle = BorderStyle.FixedSingle;
             countryControlSearchByAddress.Location = new Point(13, 25);
             countryControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
             countryControlSearchByAddress.Name = "countryControlSearchByAddress";
@@ -333,6 +334,7 @@
             // addressControlSearchByAddress
             // 
             addressControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
+            addressControlSearchByAddress.BorderStyle = BorderStyle.FixedSingle;
             addressControlSearchByAddress.Location = new Point(21, 68);
             addressControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
             addressControlSearchByAddress.Name = "addressControlSearchByAddress";
@@ -342,6 +344,7 @@
             // cityControlSearchByAddress
             // 
             cityControlSearchByAddress.BackColor = Color.FromArgb(0, 71, 160);
+            cityControlSearchByAddress.BorderStyle = BorderStyle.FixedSingle;
             cityControlSearchByAddress.Location = new Point(252, 25);
             cityControlSearchByAddress.Margin = new Padding(0, 0, 5, 0);
             cityControlSearchByAddress.Name = "cityControlSearchByAddress";

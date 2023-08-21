@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCity = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.autoCompleteControlCity = new PhoneBook.UserControls.AutoCompleteControl();
-            this.SuspendLayout();
+            lblCity = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoCompleteControlCity = new AutoCompleteControl();
+            SuspendLayout();
             // 
             // lblCity
             // 
-            this.lblCity.DX = -65;
-            this.lblCity.DY = 3;
-            this.lblCity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCity.ForeColor = System.Drawing.Color.White;
-            this.lblCity.LabeledControl = this.autoCompleteControlCity;
-            this.lblCity.Location = new System.Drawing.Point(3, 3);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(61, 19);
-            this.lblCity.TabIndex = 3;
-            this.lblCity.Text = "Город:";
+            lblCity.DX = -65;
+            lblCity.DY = 3;
+            lblCity.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCity.ForeColor = Color.White;
+            lblCity.LabeledControl = autoCompleteControlCity;
+            lblCity.Location = new Point(3, 3);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new Size(61, 19);
+            lblCity.TabIndex = 3;
+            lblCity.Text = "Город:";
             // 
             // autoCompleteControlCity
             // 
-            this.autoCompleteControlCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.autoCompleteControlCity.AutoSize = true;
-            this.autoCompleteControlCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.autoCompleteControlCity.Location = new System.Drawing.Point(68, 0);
-            this.autoCompleteControlCity.MinimumSize = new System.Drawing.Size(150, 26);
-            this.autoCompleteControlCity.Name = "autoCompleteControlCity";
-            this.autoCompleteControlCity.Size = new System.Drawing.Size(210, 26);
-            this.autoCompleteControlCity.TabIndex = 2;
-            this.autoCompleteControlCity.TextBoxFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            autoCompleteControlCity.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            autoCompleteControlCity.AutoSize = true;
+            autoCompleteControlCity.BackColor = Color.FromArgb(0, 71, 160);
+            autoCompleteControlCity.Location = new Point(68, 0);
+            autoCompleteControlCity.Margin = new Padding(3, 2, 3, 2);
+            autoCompleteControlCity.MinimumSize = new Size(150, 26);
+            autoCompleteControlCity.Name = "autoCompleteControlCity";
+            autoCompleteControlCity.Size = new Size(210, 26);
+            autoCompleteControlCity.TabIndex = 2;
+            autoCompleteControlCity.TextBoxFont = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             // 
             // CityControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.autoCompleteControlCity);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.Name = "CityControl";
-            this.Size = new System.Drawing.Size(281, 26);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 71, 160);
+            Controls.Add(lblCity);
+            Controls.Add(autoCompleteControlCity);
+            Margin = new Padding(0, 0, 5, 0);
+            Name = "CityControl";
+            Size = new Size(281, 26);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

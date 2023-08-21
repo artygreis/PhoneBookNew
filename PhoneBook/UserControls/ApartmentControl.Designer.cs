@@ -47,10 +47,11 @@
             // 
             // autoCompleteControlApartment
             // 
-            autoCompleteControlApartment.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            autoCompleteControlApartment.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             autoCompleteControlApartment.AutoSize = true;
             autoCompleteControlApartment.BackColor = Color.FromArgb(0, 71, 160);
             autoCompleteControlApartment.Location = new Point(39, 0);
+            autoCompleteControlApartment.Margin = new Padding(3, 2, 3, 2);
             autoCompleteControlApartment.MinimumSize = new Size(50, 26);
             autoCompleteControlApartment.Name = "autoCompleteControlApartment";
             autoCompleteControlApartment.Size = new Size(55, 26);

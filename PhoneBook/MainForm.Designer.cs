@@ -56,9 +56,10 @@
             panel1.Controls.Add(btnSearch);
             panel1.Dock = DockStyle.Left;
             panel1.ForeColor = Color.White;
-            panel1.Location = new Point(0, 53);
+            panel1.Location = new Point(0, 40);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(211, 799);
+            panel1.Size = new Size(185, 599);
             panel1.TabIndex = 2;
             // 
             // btnSettings
@@ -70,10 +71,11 @@
             btnSettings.Font = new Font("Century Gothic", 13.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSettings.Image = (Image)resources.GetObject("btnSettings.Image");
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(11, 713);
+            btnSettings.Location = new Point(10, 535);
+            btnSettings.Margin = new Padding(3, 2, 3, 2);
             btnSettings.Name = "btnSettings";
-            btnSettings.Padding = new Padding(7, 0, 0, 0);
-            btnSettings.Size = new Size(194, 65);
+            btnSettings.Padding = new Padding(6, 0, 0, 0);
+            btnSettings.Size = new Size(170, 49);
             btnSettings.TabIndex = 7;
             btnSettings.Text = " Настройки";
             btnSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -83,9 +85,10 @@
             // panelSide
             // 
             panelSide.BackColor = Color.White;
-            panelSide.Location = new Point(2, 37);
+            panelSide.Location = new Point(2, 28);
+            panelSide.Margin = new Padding(3, 2, 3, 2);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(7, 65);
+            panelSide.Size = new Size(6, 49);
             panelSide.TabIndex = 4;
             // 
             // btnAdd
@@ -96,10 +99,11 @@
             btnAdd.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
             btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdd.Location = new Point(11, 108);
+            btnAdd.Location = new Point(10, 81);
+            btnAdd.Margin = new Padding(3, 2, 3, 2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Padding = new Padding(7, 0, 0, 0);
-            btnAdd.Size = new Size(194, 65);
+            btnAdd.Padding = new Padding(6, 0, 0, 0);
+            btnAdd.Size = new Size(170, 49);
             btnAdd.TabIndex = 6;
             btnAdd.Text = "  Добавить";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -114,10 +118,11 @@
             btnSearch.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
             btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearch.Location = new Point(11, 37);
+            btnSearch.Location = new Point(10, 28);
+            btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
-            btnSearch.Padding = new Padding(7, 0, 0, 0);
-            btnSearch.Size = new Size(194, 65);
+            btnSearch.Padding = new Padding(6, 0, 0, 0);
+            btnSearch.Size = new Size(170, 49);
             btnSearch.TabIndex = 5;
             btnSearch.Text = "  Поиск";
             btnSearch.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -133,8 +138,9 @@
             pnlTitleBar.Controls.Add(pictureBox1);
             pnlTitleBar.Dock = DockStyle.Top;
             pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Margin = new Padding(3, 2, 3, 2);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(1170, 53);
+            pnlTitleBar.Size = new Size(1024, 40);
             pnlTitleBar.TabIndex = 3;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
             // 
@@ -144,9 +150,10 @@
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(1136, 8);
+            btnClose.Location = new Point(994, 6);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(30, 35);
+            btnClose.Size = new Size(26, 26);
             btnClose.TabIndex = 3;
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
@@ -157,9 +164,10 @@
             btnMinimize.FlatAppearance.BorderSize = 0;
             btnMinimize.FlatStyle = FlatStyle.Flat;
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(1103, 8);
+            btnMinimize.Location = new Point(965, 6);
+            btnMinimize.Margin = new Padding(3, 2, 3, 2);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(30, 35);
+            btnMinimize.Size = new Size(26, 26);
             btnMinimize.TabIndex = 2;
             btnMinimize.UseVisualStyleBackColor = true;
             btnMinimize.Click += btnMinimize_Click;
@@ -168,52 +176,56 @@
             // 
             lblCaption.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblCaption.ForeColor = Color.White;
-            lblCaption.Location = new Point(50, 8);
+            lblCaption.Location = new Point(44, 6);
             lblCaption.Name = "lblCaption";
-            lblCaption.Size = new Size(357, 32);
+            lblCaption.Size = new Size(280, 25);
             lblCaption.TabIndex = 1;
             lblCaption.Text = "Телефонный справочник";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(11, 7);
+            pictureBox1.Location = new Point(10, 5);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 43);
+            pictureBox1.Size = new Size(32, 32);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // pnlControl
             // 
             pnlControl.Dock = DockStyle.Fill;
-            pnlControl.Location = new Point(211, 53);
+            pnlControl.Location = new Point(185, 40);
+            pnlControl.Margin = new Padding(3, 2, 3, 2);
             pnlControl.Name = "pnlControl";
-            pnlControl.Size = new Size(954, 794);
+            pnlControl.Size = new Size(835, 595);
             pnlControl.TabIndex = 4;
             // 
             // pnlFooter
             // 
             pnlFooter.BackColor = Color.FromArgb(0, 71, 160);
             pnlFooter.Dock = DockStyle.Bottom;
-            pnlFooter.Location = new Point(211, 847);
+            pnlFooter.Location = new Point(185, 635);
+            pnlFooter.Margin = new Padding(3, 2, 3, 2);
             pnlFooter.Name = "pnlFooter";
-            pnlFooter.Size = new Size(954, 5);
+            pnlFooter.Size = new Size(835, 4);
             pnlFooter.TabIndex = 0;
             // 
             // pnlRight
             // 
             pnlRight.BackColor = Color.FromArgb(0, 71, 160);
             pnlRight.Dock = DockStyle.Right;
-            pnlRight.Location = new Point(1165, 53);
+            pnlRight.Location = new Point(1020, 40);
+            pnlRight.Margin = new Padding(3, 2, 3, 2);
             pnlRight.Name = "pnlRight";
-            pnlRight.Size = new Size(5, 799);
+            pnlRight.Size = new Size(4, 599);
             pnlRight.TabIndex = 0;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1170, 852);
+            ClientSize = new Size(1024, 639);
             Controls.Add(pnlControl);
             Controls.Add(pnlFooter);
             Controls.Add(pnlRight);
@@ -221,6 +233,7 @@
             Controls.Add(pnlTitleBar);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;

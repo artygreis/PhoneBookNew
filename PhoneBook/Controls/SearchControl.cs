@@ -117,6 +117,11 @@ namespace PhoneBook.Controls
             if (tabControlAdv.SelectedTab.Name == "searchByAddressTab")
             {
                 //gridPhones.Height = 355;
+                //MessageBox.Show($"{gridPhones.Height}", "Высота grid");
+                //MessageBox.Show($"{countryControlSearchByAddress.Height}", "Длина country");
+                //MessageBox.Show($"{cityControlSearchByAddress.Width}", "Длина city");
+                //MessageBox.Show($"{addressControlSearchByAddress.Width}", "Длина address");
+                //addressControlSearchByAddress.Width = (int)((searchByAddressTab.Width - grpApartment.Width - grpApartments.Width) * 0.89);
                 countryControlSearchByAddress.LoadCountry();
             }
             //if (tabControlAdv.SelectedTab.Name == "searchNotCallTab")
