@@ -7,6 +7,7 @@ using Syncfusion.WinForms.DataGrid;
 using System.Data;
 using System.Text.RegularExpressions;
 using PhoneBook.Types.Settings;
+using Syncfusion.WinForms.DataGrid.Enums;
 
 namespace PhoneBook.Controls
 {
@@ -20,8 +21,8 @@ namespace PhoneBook.Controls
         {
             InitializeComponent();
 
-            gridPhones.SelectionModeGrid = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Extended;
-            gridPhones.SelectionUnitGrid = Syncfusion.WinForms.DataGrid.Enums.SelectionUnit.Any;
+            gridPhones.SelectionModeGrid = GridSelectionMode.Extended;
+            gridPhones.SelectionUnitGrid = SelectionUnit.Any;
 
             countryControlSearchByAddress.CountryChanged += CountryControlSearchByAddress_CountryChanged;
             cityControlSearchByAddress.CityChanged += CityControlSearchByAddress_CityChanged;
@@ -32,6 +33,7 @@ namespace PhoneBook.Controls
 
             gridPhones.DataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
             gridPhones.DataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
+            gridPhones.DataGrid.QueryRowStyle += DataGrid_QueryRowStyle;
 
             saveFileDialog.Filter = "Pdf files(*.pdf)|*.pdf";
         }
@@ -58,6 +60,37 @@ namespace PhoneBook.Controls
                 e.Column = new GridMaskColumn() { MappingName = "Number", HeaderText = "Номер телефона", Mask = _maskNumber };
             }
         }
+
+        private void DataGrid_QueryRowStyle(object sender, Syncfusion.WinForms.DataGrid.Events.QueryRowStyleEventArgs e)
+        {
+            if (tabControlAdv.SelectedTab.Name != "searchByAddressTab") return;
+
+            if (string.IsNullOrEmpty(addressControlSearchByAddress.GetTextAddress())) return;
+
+            var settings = Settings.Load();
+
+            if (e.RowType == RowType.DefaultRow)
+            {
+                if (e.RowData is NumberPhoneView)
+                {
+                    var currentNumber = (e.RowData as NumberPhoneView)?.Number;
+                    using (var db = new ApplicationContext())
+                    {
+                        var notDisturb = NotDisturbCollection.GetNotDisturbCollections(cityControlSearchByAddress.GetCityId(), addressControlSearchByAddress.GetAddressId());
+                        var notCallCount = notDisturb.Where(c => c.Number == currentNumber && c.NotCall && !c.NotEnter).Count();
+                        var notEnterCount = notDisturb.Where(c => c.Number == currentNumber && !c.NotCall && c.NotEnter).Count();
+                        var notFullCount = notDisturb.Where(c => c.Number == currentNumber && c.NotCall && c.NotEnter).Count();
+
+                        if (notCallCount > 0)
+                            e.Style.BackColor = ColorTranslator.FromHtml(settings.ColorNotCall ?? ColorSettings.GetDefaultColorNotCall.ToString());
+                        else if (notEnterCount > 0)
+                            e.Style.BackColor = ColorTranslator.FromHtml(settings.ColorNotDoor ?? ColorSettings.GetDefaultColorNotDoor.ToString());
+                        else if (notFullCount > 0)
+                            e.Style.BackColor = ColorTranslator.FromHtml(settings.ColorNotFull ?? ColorSettings.GetDefaultColorNotFull.ToString());
+                    }
+                }
+            }
+        }
         #endregion
 
         private void SearchControl_Load(object sender, EventArgs e)
@@ -79,7 +112,7 @@ namespace PhoneBook.Controls
             gridPhones.DataGrid.DataSource = allNumbers;
             gridPhones.DataGrid.Columns["Locality"].Width = 200;
             gridPhones.DataGrid.Columns["TypeName"].Width = 100;
-            gridPhones.DataGrid.Columns["StreetName"].AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.LastColumnFill;
+            gridPhones.DataGrid.Columns["StreetName"].AutoSizeColumnsMode = AutoSizeColumnsMode.LastColumnFill;
             gridPhones.DataGrid.Columns["House"].Width = 70;
             gridPhones.DataGrid.Columns["House"].Visible = !chkPrivateHouse.Checked;
             gridPhones.DataGrid.Columns["Apartment"].Width = 70;
@@ -94,7 +127,7 @@ namespace PhoneBook.Controls
             gridPhones.DataGrid.DataSource = numberPhones;
             gridPhones.DataGrid.Columns["Locality"].Width = 200;
             gridPhones.DataGrid.Columns["TypeName"].Width = 100;
-            gridPhones.DataGrid.Columns["StreetName"].AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.LastColumnFill;
+            gridPhones.DataGrid.Columns["StreetName"].AutoSizeColumnsMode = AutoSizeColumnsMode.LastColumnFill;
             gridPhones.DataGrid.Columns["House"].Width = 70;
             gridPhones.DataGrid.Columns["House"].Visible = !chkPrivateHouse.Checked;
             gridPhones.DataGrid.Columns["Apartment"].Width = 70;
