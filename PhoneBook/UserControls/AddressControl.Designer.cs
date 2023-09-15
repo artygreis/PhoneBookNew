@@ -68,6 +68,7 @@
             Margin = new Padding(0, 0, 5, 0);
             Name = "AddressControl";
             Size = new Size(296, 26);
+            Load += AddressControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }

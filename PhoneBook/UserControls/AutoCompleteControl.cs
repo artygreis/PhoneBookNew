@@ -23,7 +23,6 @@ namespace PhoneBook.UserControls
         public AutoCompleteControl()
         {
             InitializeComponent();
-            autoComplete.SetAutoComplete(this.txtContent, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.Both);
             autoComplete.ShowColumnHeader = false;
             autoComplete.ShowCloseButton = false;
             autoComplete.ShowGripper = false;
@@ -33,7 +32,7 @@ namespace PhoneBook.UserControls
 
         private void AutoCompleteControl_Load(object sender, EventArgs e)
         {
-
+            autoComplete.SetAutoComplete(this.txtContent, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.AutoSuggest);
         }
 
         private void AutoCompleteControl_Resize(object sender, EventArgs e)

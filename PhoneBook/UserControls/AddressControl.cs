@@ -56,5 +56,10 @@ namespace PhoneBook.UserControls
             if (width > 0)
                 autoCompleteControlAddress.Width += width;
         }
+
+        private void AddressControl_Load(object sender, EventArgs e)
+        {
+            autoCompleteControlAddress.AutoComplete.SetAutoComplete(autoCompleteControlAddress.TextBox, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.MultiSuggestExtended);
+        }
     }
 }
