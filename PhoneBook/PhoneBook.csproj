@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyVersion>1.0.7</AssemblyVersion>
-    <FileVersion>1.0.7</FileVersion>
+    <AssemblyVersion>1.0.8</AssemblyVersion>
+    <FileVersion>1.0.8</FileVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <ApplicationManifest>App.manifest</ApplicationManifest>
     <ApplicationIcon>Icons\phone_logo_blue.ico</ApplicationIcon>
